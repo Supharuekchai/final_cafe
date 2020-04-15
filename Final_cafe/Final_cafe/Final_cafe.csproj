@@ -68,24 +68,24 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Mainmenu.cs">
+    <Compile Include="GUI\Mainmenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Mainmenu.Designer.cs">
+    <Compile Include="GUI\Mainmenu.Designer.cs">
       <DependentUpon>Mainmenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="login.cs">
+    <Compile Include="GUI\login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="login.Designer.cs">
+    <Compile Include="GUI\login.Designer.cs">
       <DependentUpon>login.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Mainmenu.resx">
+    <EmbeddedResource Include="GUI\Mainmenu.resx">
       <DependentUpon>Mainmenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="login.resx">
+    <EmbeddedResource Include="GUI\login.resx">
       <DependentUpon>login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

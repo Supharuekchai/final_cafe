@@ -59,15 +59,5 @@ namespace Final_cafe.Properties {
                 resourceCulture = value;
             }
         }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap _3013b48871614d77867db86ae3180e4f {
-            get {
-                object obj = ResourceManager.GetObject("3013b48871614d77867db86ae3180e4f", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
     }
 }

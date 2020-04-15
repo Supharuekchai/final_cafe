@@ -70,7 +70,7 @@ namespace Final_cafe
             connection.Open();
             MySqlCommand cmd = connection.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select * from bank_member where username ='" + Username.Text + "' and password ='" + Pass.Text + "'";
+            cmd.CommandText = "select * from customers where UserName ='" + Username.Text + "' and Pass ='" + Pass.Text + "'";
             cmd.ExecuteNonQuery();
             DataTable dt = new DataTable();
             MySqlDataAdapter da = new MySqlDataAdapter(cmd);
@@ -86,11 +86,11 @@ namespace Final_cafe
             {
                 this.getTheName(Username.Text);
                 this.Hide();
-                string CustomerName = this.customername.Trim();
-                string CostomerID = this.costomerID.Trim();
-                string CustomerType = this.customertype.Trim();
-                string Gender = this.gender.Trim();
-                string CustomerTelNo = this.customertelno.Trim();
+                string CustomerName = this.customername;
+                string CostomerID = this.costomerID;
+                string CustomerType = this.customertype;
+                string Gender = this.gender;
+                string CustomerTelNo = this.customertelno;
 
                 Mainmenu fm = new Mainmenu(CustomerName, CostomerID, CustomerType, Gender, CustomerTelNo);
                 fm.Show();
@@ -102,9 +102,9 @@ namespace Final_cafe
 
         private void Register_button_Click(object sender, EventArgs e)
         {
-            this.Hide();
+           /* this.Hide();
             Register register = new Register();
-            register.ShowDialog();
+            register.ShowDialog();*/
         }
     }
 }

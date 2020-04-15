@@ -46,26 +46,19 @@ namespace Final_cafe
         public Mainmenu(string CustomerName, string CostomerID, string CustomerType, string Gender, string CustomerTelNo)
         {
             InitializeComponent();
-            this.label1.Text = string.Format("{0} {1}", CostomerID, CustomerName);
+            //this.label1.Text = string.Format("{0} {1}", CostomerID, CustomerName);
             this.CustomerName = CustomerName;
             this.CostomerID = CostomerID;
             this.CustomerType = CustomerType;
             this.Gender = Gender;
             this.CustomerTelNo = CustomerTelNo;
         }
-        private void button1_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
+        private void X_button_Click(object sender, EventArgs e)
         {
             this.Dispose();
+            login login = new login();
+            login.ShowDialog();
         }
     }
 }

@@ -95,7 +95,7 @@
             this.Username.BackColor = System.Drawing.Color.Linen;
             this.Username.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Username.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.Username.Location = new System.Drawing.Point(107, 202);
+            this.Username.Location = new System.Drawing.Point(105, 209);
             this.Username.Name = "Username";
             this.Username.Size = new System.Drawing.Size(178, 24);
             this.Username.TabIndex = 4;
@@ -114,11 +114,12 @@
             this.Pass.BackColor = System.Drawing.Color.Linen;
             this.Pass.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Pass.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.Pass.Location = new System.Drawing.Point(108, 239);
+            this.Pass.Location = new System.Drawing.Point(105, 246);
             this.Pass.Name = "Pass";
+            this.Pass.PasswordChar = '*';
             this.Pass.Size = new System.Drawing.Size(178, 24);
             this.Pass.TabIndex = 6;
-            this.Pass.Text = "Pass";
+            this.Pass.Text = "Passwrod";
             // 
             // panel2
             // 
@@ -169,6 +170,7 @@
             this.Controls.Add(this.X_button);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "login";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
