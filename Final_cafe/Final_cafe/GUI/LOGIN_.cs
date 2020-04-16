@@ -9,25 +9,26 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
-namespace Final_cafe
+namespace Final_cafe.GUI
 {
-    public partial class login : Form
+    public partial class LOGIN : Form
     {
-        private string username;
-        private string pass;
-        private string costomerID;
-        private string customername;
-        private string customertype;
-        private string gender;
-        private string customertelno;
 
-        MySqlConnection connection = new MySqlConnection("server = localhost; user id = root; password = 1234567890; persistsecurityinfo=True;database=final_cafe;allowuservariables=True");
+        private String costomerID;
+        private String customername;
+        private String customertype;
+        private String gender;
+        private String customertelno;
+
+        public string conn = "server = localhost; user id = root; password = 1234567890; persistsecurityinfo=True; database = final_cafe; allowuservariables=True";
+
+        
 
         private void getTheName(String username)
         {
-            MySqlConnection connection = new MySqlConnection("server = localhost; user id = root; password = 1234567890; persistsecurityinfo=True;database=final_cafe;allowuservariables=True");
-            connection.ConnectionString = "server = localhost; user id = root; password = 1234567890; persistsecurityinfo = True; database = finalcafe; allowuservariables = True";
-            String query = "SELECT * FROM customers WHERE UserName = '" + Username.Text + "'AND Pass = '" + Pass.Text;
+            MySqlConnection connection = new MySqlConnection(conn);
+            connection.ConnectionString = conn;
+            String query = "SELECT CostomerID,CustomerName,Gender,CustomerType,CustomerTelNo  FROM customerss WHERE UserName = " + Username.Text;
             try
             {
                 connection.Open();
@@ -37,10 +38,10 @@ namespace Final_cafe
                 MySqlDataReader rdr = cmd.ExecuteReader();
                 if (rdr.Read())
                 {
-                    this.customername = rdr["CustomerName"].ToString();
                     this.costomerID = rdr["CostomerID"].ToString();
-                    this.customertype = rdr["CustomerType"].ToString();
+                    this.customername = rdr["CustomerName"].ToString();
                     this.gender = rdr["Gender"].ToString();
+                    this.customertype = rdr["CustomerType"].ToString();
                     this.customertelno = rdr["CustomerTelNo"].ToString();
 
                 }
@@ -54,10 +55,11 @@ namespace Final_cafe
             }
         }
 
-        public login()
+        public LOGIN()
         {
             InitializeComponent();
         }
+
 
         private void X_button_Click(object sender, EventArgs e)
         {
@@ -67,6 +69,7 @@ namespace Final_cafe
         private void Login_button_Click(object sender, EventArgs e)
         {
             int i = 0;
+            MySqlConnection connection = new MySqlConnection(conn);
             connection.Open();
             MySqlCommand cmd = connection.CreateCommand();
             cmd.CommandType = CommandType.Text;
@@ -86,22 +89,22 @@ namespace Final_cafe
             {
                 this.getTheName(Username.Text);
                 this.Hide();
-                string CustomerName = this.customername;
                 string CostomerID = this.costomerID;
-                string CustomerType = this.customertype;
+                string CustomerName = this.customername;
                 string Gender = this.gender;
+                string CustomerType = this.customertype;
                 string CustomerTelNo = this.customertelno;
-
-                Mainmenu fm = new Mainmenu(CustomerName, CostomerID, CustomerType, Gender, CustomerTelNo);
-                fm.Show();
+                Menu manu = new Menu(CustomerName, CostomerID, CustomerType, Gender, CustomerTelNo);
+                manu.Show();
+                
             }
 
             connection.Close();
         }
-    
 
         private void Register_button_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD:Final_cafe/Final_cafe/GUI/login.cs
             this.Hide();
             GUI.Register register = new GUI.Register();
             register.ShowDialog();
@@ -120,6 +123,11 @@ namespace Final_cafe
         private void Username_TextChanged(object sender, EventArgs e)
         {
 
+=======
+            /* this.Hide();
+               Register register = new Register();
+               register.ShowDialog();*/
+>>>>>>> 36aedb002e543cfec7865792dcf8c1be4e39daf7:Final_cafe/Final_cafe/GUI/LOGIN_.cs
         }
     }
 }

@@ -7,17 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
 
-namespace Final_cafe
+namespace Final_cafe.GUI
 {
-    public partial class Mainmenu : Form
+    public partial class Menu : Form
     {
+
         private string customername;
         private string CustomerName
         {
-            get { return customername; }
-            set { customername = value; }
+           get { return customername; }
+           set { customername = value; }
         }
         private string costomerID;
         private string CostomerID
@@ -25,11 +25,11 @@ namespace Final_cafe
             get { return costomerID; }
             set { costomerID = value; }
         }
-        private string customerType;
+        private string customertype;
         private string CustomerType
         {
-            get { return customerType; }
-            set { customerType = value; }
+            get { return customertype; }
+            set { customertype = value; }
         }
         private string gender;
         private string Gender
@@ -37,28 +37,38 @@ namespace Final_cafe
             get { return gender; }
             set { gender = value; }
         }
-        private string customerTelNo;
+        private string customertelno;
         private string CustomerTelNo
         {
-            get { return customerTelNo; }
-            set { customerTelNo = value; }
+            get { return customertelno; }
+            set { customertelno = value; }
         }
-        public Mainmenu(string CustomerName, string CostomerID, string CustomerType, string Gender, string CustomerTelNo)
+
+
+        public Menu(string CustomerName, string CostomerID, string CustomerType, string Gender, string CustomerTelNo)
         {
             InitializeComponent();
-            //this.label1.Text = string.Format("{0} {1}", CostomerID, CustomerName);
             this.CustomerName = CustomerName;
             this.CostomerID = CostomerID;
             this.CustomerType = CustomerType;
             this.Gender = Gender;
             this.CustomerTelNo = CustomerTelNo;
+            this.name.Text = string.Format("{0} {1}", CostomerID, CustomerName);
         }
+
+        public Menu()
+        {
+            InitializeComponent();
+        }
+
 
         private void X_button_Click(object sender, EventArgs e)
         {
             this.Dispose();
-            login login = new login();
+            LOGIN login = new LOGIN();
             login.ShowDialog();
         }
     }
 }
+
+

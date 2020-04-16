@@ -15,6 +15,7 @@ D:\final_cafe\Final_cafe\Final_cafe\obj\Debug\Final_cafe.csproj.GenerateResource
 D:\final_cafe\Final_cafe\Final_cafe\obj\Debug\Final_cafe.csproj.CopyComplete
 D:\final_cafe\Final_cafe\Final_cafe\obj\Debug\Final_cafe.exe
 D:\final_cafe\Final_cafe\Final_cafe\obj\Debug\Final_cafe.pdb
+<<<<<<< HEAD
 D:\final_cafe\Final_cafe\Final_cafe\obj\Debug\Final_cafe.Mainmenu.resources
 D:\final_cafe\Final_cafe\Final_cafe\obj\Debug\Final_cafe.login.resources
 C:\Users\AsadaYoon\Desktop\PPro\final_cafe\Final_cafe\Final_cafe\bin\Debug\Final_cafe.exe.config
@@ -48,3 +49,8 @@ C:\Users\AsadaYoon\Desktop\PPro\final_cafe\Final_cafe\Final_cafe\bin\Debug\Micro
 C:\Users\AsadaYoon\Desktop\PPro\final_cafe\Final_cafe\Final_cafe\bin\Debug\Microsoft.Owin.xml
 C:\Users\AsadaYoon\Desktop\PPro\final_cafe\Final_cafe\Final_cafe\bin\Debug\Microsoft.Owin.Security.xml
 C:\Users\AsadaYoon\Desktop\PPro\final_cafe\Final_cafe\Final_cafe\bin\Debug\Newtonsoft.Json.xml
+=======
+D:\final_cafe\Final_cafe\Final_cafe\obj\Debug\Final_cafe.csproj.CoreCompileInputs.cache
+D:\final_cafe\Final_cafe\Final_cafe\obj\Debug\Final_cafe.GUI.Menu.resources
+D:\final_cafe\Final_cafe\Final_cafe\obj\Debug\Final_cafe.GUI.LOGIN.resources
+>>>>>>> 36aedb002e543cfec7865792dcf8c1be4e39daf7
