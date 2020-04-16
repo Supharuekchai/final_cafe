@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
-namespace Final_cafe
+namespace Final_cafe.GUI
 {
-    public partial class login : Form
+    public partial class LOGIN : Form
     {
 
         private String costomerID;
@@ -19,16 +19,16 @@ namespace Final_cafe
         private String customertype;
         private String gender;
         private String customertelno;
-        private String UserName;
-        private String Passworde;
 
-        MySqlConnection connection = new MySqlConnection("server = localhost; user id = root; password = 1234567890; persistsecurityinfo=True; database = final_cafe; allowuservariables=True");
+        public string conn = "server = localhost; user id = root; password = 1234567890; persistsecurityinfo=True; database = final_cafe; allowuservariables=True";
+
+        
 
         private void getTheName(String username)
         {
-            MySqlConnection connection = new MySqlConnection("server = localhost; user id = root; password = 1234567890; persistsecurityinfo=True; database = final_cafe; allowuservariables=True");
-            connection.ConnectionString = "server = localhost; user id = root; password = 1234567890; persistsecurityinfo = True; database = final_cafe; allowuservariables = True";
-            String query = "SELECT CostomerID,CustomerName,Gender,CustomerType,CustomerTelNo,Pass,UserName  FROM customers WHERE UserName = " + Username.Text;
+            MySqlConnection connection = new MySqlConnection(conn);
+            connection.ConnectionString = conn;
+            String query = "SELECT CostomerID,CustomerName,Gender,CustomerType,CustomerTelNo  FROM customerss WHERE UserName = " + Username.Text;
             try
             {
                 connection.Open();
@@ -43,8 +43,7 @@ namespace Final_cafe
                     this.gender = rdr["Gender"].ToString();
                     this.customertype = rdr["CustomerType"].ToString();
                     this.customertelno = rdr["CustomerTelNo"].ToString();
-                    this.Passworde = rdr["Pass"].ToString();
-                    this.UserName = rdr["UserName"].ToString();
+
                 }
             }
             catch (Exception)
@@ -56,10 +55,11 @@ namespace Final_cafe
             }
         }
 
-        public login()
+        public LOGIN()
         {
             InitializeComponent();
         }
+
 
         private void X_button_Click(object sender, EventArgs e)
         {
@@ -69,6 +69,7 @@ namespace Final_cafe
         private void Login_button_Click(object sender, EventArgs e)
         {
             int i = 0;
+            MySqlConnection connection = new MySqlConnection(conn);
             connection.Open();
             MySqlCommand cmd = connection.CreateCommand();
             cmd.CommandType = CommandType.Text;
@@ -88,25 +89,24 @@ namespace Final_cafe
             {
                 this.getTheName(Username.Text);
                 this.Hide();
-                string CustomerName = this.customername;
                 string CostomerID = this.costomerID;
-                string CustomerType = this.customertype;
+                string CustomerName = this.customername;
                 string Gender = this.gender;
+                string CustomerType = this.customertype;
                 string CustomerTelNo = this.customertelno;
-
-                Mainmenu fm = new Mainmenu(CustomerName, CostomerID, CustomerType, Gender, CustomerTelNo);
-                fm.Show();
+                Menu manu = new Menu(CustomerName, CostomerID, CustomerType, Gender, CustomerTelNo);
+                manu.Show();
+                
             }
 
             connection.Close();
         }
-    
 
         private void Register_button_Click(object sender, EventArgs e)
         {
-           /* this.Hide();
-            Register register = new Register();
-            register.ShowDialog();*/
+            /* this.Hide();
+               Register register = new Register();
+               register.ShowDialog();*/
         }
     }
 }

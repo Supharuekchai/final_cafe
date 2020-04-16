@@ -15,5 +15,6 @@ D:\final_cafe\Final_cafe\Final_cafe\obj\Debug\Final_cafe.csproj.GenerateResource
 D:\final_cafe\Final_cafe\Final_cafe\obj\Debug\Final_cafe.csproj.CopyComplete
 D:\final_cafe\Final_cafe\Final_cafe\obj\Debug\Final_cafe.exe
 D:\final_cafe\Final_cafe\Final_cafe\obj\Debug\Final_cafe.pdb
-D:\final_cafe\Final_cafe\Final_cafe\obj\Debug\Final_cafe.Mainmenu.resources
-D:\final_cafe\Final_cafe\Final_cafe\obj\Debug\Final_cafe.login.resources
+D:\final_cafe\Final_cafe\Final_cafe\obj\Debug\Final_cafe.csproj.CoreCompileInputs.cache
+D:\final_cafe\Final_cafe\Final_cafe\obj\Debug\Final_cafe.GUI.Menu.resources
+D:\final_cafe\Final_cafe\Final_cafe\obj\Debug\Final_cafe.GUI.LOGIN.resources
