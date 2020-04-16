@@ -13,21 +13,22 @@ namespace Final_cafe
 {
     public partial class login : Form
     {
-        private string username;
-        private string pass;
-        private string costomerID;
-        private string customername;
-        private string customertype;
-        private string gender;
-        private string customertelno;
 
-        MySqlConnection connection = new MySqlConnection("server = localhost; user id = root; password = 1234567890; persistsecurityinfo=True;database=final_cafe;allowuservariables=True");
+        private String costomerID;
+        private String customername;
+        private String customertype;
+        private String gender;
+        private String customertelno;
+        private String UserName;
+        private String Passworde;
+
+        MySqlConnection connection = new MySqlConnection("server = localhost; user id = root; password = 1234567890; persistsecurityinfo=True; database = final_cafe; allowuservariables=True");
 
         private void getTheName(String username)
         {
-            MySqlConnection connection = new MySqlConnection("server = localhost; user id = root; password = 1234567890; persistsecurityinfo=True;database=final_cafe;allowuservariables=True");
-            connection.ConnectionString = "server = localhost; user id = root; password = 1234567890; persistsecurityinfo = True; database = finalcafe; allowuservariables = True";
-            String query = "SELECT * FROM customers WHERE UserName = '" + Username.Text + "'AND Pass = '" + Pass.Text;
+            MySqlConnection connection = new MySqlConnection("server = localhost; user id = root; password = 1234567890; persistsecurityinfo=True; database = final_cafe; allowuservariables=True");
+            connection.ConnectionString = "server = localhost; user id = root; password = 1234567890; persistsecurityinfo = True; database = final_cafe; allowuservariables = True";
+            String query = "SELECT * FROM customers WHERE UserName = '" + Username.Text;
             try
             {
                 connection.Open();
@@ -37,12 +38,14 @@ namespace Final_cafe
                 MySqlDataReader rdr = cmd.ExecuteReader();
                 if (rdr.Read())
                 {
-                    this.customername = rdr["CustomerName"].ToString();
                     this.costomerID = rdr["CostomerID"].ToString();
-                    this.customertype = rdr["CustomerType"].ToString();
+                    this.customername = rdr["CustomerName"].ToString();
                     this.gender = rdr["Gender"].ToString();
+                    this.customertype = rdr["CustomerType"].ToString();
                     this.customertelno = rdr["CustomerTelNo"].ToString();
-
+                    this.customertelno = rdr["CustomerTelNo"].ToString();
+                    this.Passworde = rdr["Pass"].ToString();
+                    this.UserName = rdr["UserName"].ToString();
                 }
             }
             catch (Exception)
@@ -91,9 +94,10 @@ namespace Final_cafe
                 string CustomerType = this.customertype;
                 string Gender = this.gender;
                 string CustomerTelNo = this.customertelno;
+                MessageBox.Show("{0}", CustomerName);
 
-                Mainmenu fm = new Mainmenu(CustomerName, CostomerID, CustomerType, Gender, CustomerTelNo);
-                fm.Show();
+//                Mainmenu fm = new Mainmenu(CustomerName, CostomerID, CustomerType, Gender, CustomerTelNo);
+//                fm.Show();
             }
 
             connection.Close();

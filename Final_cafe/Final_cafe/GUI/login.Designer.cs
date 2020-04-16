@@ -48,6 +48,7 @@
             // 
             this.X_button.AutoSize = true;
             this.X_button.BackColor = System.Drawing.Color.Transparent;
+            this.X_button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.X_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.X_button.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.X_button.Location = new System.Drawing.Point(345, -2);
@@ -132,6 +133,7 @@
             // Login_button
             // 
             this.Login_button.AutoSize = true;
+            this.Login_button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Login_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.Login_button.Location = new System.Drawing.Point(104, 288);
             this.Login_button.Name = "Login_button";
@@ -143,6 +145,7 @@
             // Register_button
             // 
             this.Register_button.AutoSize = true;
+            this.Register_button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Register_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.Register_button.Location = new System.Drawing.Point(190, 288);
             this.Register_button.Name = "Register_button";
