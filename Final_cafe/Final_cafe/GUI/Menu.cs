@@ -19,11 +19,11 @@ namespace Final_cafe.GUI
            get { return customername; }
            set { customername = value; }
         }
-        private string costomerID;
-        private string CostomerID
+        private string customerID;
+        private string CustomerID
         {
-            get { return costomerID; }
-            set { costomerID = value; }
+            get { return customerID; }
+            set { customerID = value; }
         }
         private string customertype;
         private string CustomerType
@@ -45,15 +45,15 @@ namespace Final_cafe.GUI
         }
 
 
-        public Menu(string CustomerName, string CostomerID, string CustomerType, string Gender, string CustomerTelNo)
+        public Menu(string CustomerName, string CustomerID, string CustomerType, string Gender, string CustomerTelNo)
         {
             InitializeComponent();
             this.CustomerName = CustomerName;
-            this.CostomerID = CostomerID;
+            this.CustomerID = CustomerID;
             this.CustomerType = CustomerType;
             this.Gender = Gender;
             this.CustomerTelNo = CustomerTelNo;
-            this.name.Text = string.Format("{0} {1}", CostomerID, CustomerName);
+            this.name.Text = string.Format("{0} {1}", CustomerID, CustomerName);
         }
 
         public Menu()
