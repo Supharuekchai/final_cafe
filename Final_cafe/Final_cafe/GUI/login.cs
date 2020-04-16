@@ -28,7 +28,7 @@ namespace Final_cafe
         {
             MySqlConnection connection = new MySqlConnection("server = localhost; user id = root; password = 1234567890; persistsecurityinfo=True; database = final_cafe; allowuservariables=True");
             connection.ConnectionString = "server = localhost; user id = root; password = 1234567890; persistsecurityinfo = True; database = final_cafe; allowuservariables = True";
-            String query = "SELECT * FROM customers WHERE UserName = '" + Username.Text;
+            String query = "SELECT CostomerID,CustomerName,Gender,CustomerType,CustomerTelNo,Pass,UserName  FROM customers WHERE UserName = " + Username.Text;
             try
             {
                 connection.Open();
@@ -42,7 +42,6 @@ namespace Final_cafe
                     this.customername = rdr["CustomerName"].ToString();
                     this.gender = rdr["Gender"].ToString();
                     this.customertype = rdr["CustomerType"].ToString();
-                    this.customertelno = rdr["CustomerTelNo"].ToString();
                     this.customertelno = rdr["CustomerTelNo"].ToString();
                     this.Passworde = rdr["Pass"].ToString();
                     this.UserName = rdr["UserName"].ToString();
@@ -94,10 +93,9 @@ namespace Final_cafe
                 string CustomerType = this.customertype;
                 string Gender = this.gender;
                 string CustomerTelNo = this.customertelno;
-                MessageBox.Show("{0}", CustomerName);
 
-//                Mainmenu fm = new Mainmenu(CustomerName, CostomerID, CustomerType, Gender, CustomerTelNo);
-//                fm.Show();
+                Mainmenu fm = new Mainmenu(CustomerName, CostomerID, CustomerType, Gender, CustomerTelNo);
+                fm.Show();
             }
 
             connection.Close();

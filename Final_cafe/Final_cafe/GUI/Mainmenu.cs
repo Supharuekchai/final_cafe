@@ -13,6 +13,7 @@ namespace Final_cafe
 {
     public partial class Mainmenu : Form
     {
+
         private string customername;
         private string CustomerName
         {
@@ -46,7 +47,7 @@ namespace Final_cafe
         public Mainmenu(string CustomerName, string CostomerID, string CustomerType, string Gender, string CustomerTelNo)
         {
             InitializeComponent();
-            this.welcome.Text = string.Format("{0} {1}", CostomerID, CustomerName);
+            this.Name.Text = string.Format("{0}", CustomerName);
             this.CustomerName = CustomerName;
             this.CostomerID = CostomerID;
             this.CustomerType = CustomerType;
@@ -59,7 +60,6 @@ namespace Final_cafe
         {
             InitializeComponent();
         }
-
 
         private void X_button_Click(object sender, EventArgs e)
         {
