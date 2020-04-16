@@ -51,7 +51,7 @@ namespace Final_cafe.GUI
         private void button2_Click(object sender, EventArgs e)
         {
             this.Dispose();
-            login login = new login();
+            LOGIN login = new LOGIN();
             login.Show();
         }
 
