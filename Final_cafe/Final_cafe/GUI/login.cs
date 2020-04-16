@@ -102,9 +102,24 @@ namespace Final_cafe
 
         private void Register_button_Click(object sender, EventArgs e)
         {
-           /* this.Hide();
-            Register register = new Register();
-            register.ShowDialog();*/
+            this.Hide();
+            GUI.Register register = new GUI.Register();
+            register.ShowDialog();
+        }
+
+        private void login_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Pass_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Username_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

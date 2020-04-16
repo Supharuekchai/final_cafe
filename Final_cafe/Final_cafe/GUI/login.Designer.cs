@@ -100,6 +100,7 @@
             this.Username.Size = new System.Drawing.Size(178, 24);
             this.Username.TabIndex = 4;
             this.Username.Text = "User";
+            this.Username.TextChanged += new System.EventHandler(this.Username_TextChanged);
             // 
             // panel1
             // 
@@ -120,6 +121,7 @@
             this.Pass.Size = new System.Drawing.Size(178, 24);
             this.Pass.TabIndex = 6;
             this.Pass.Text = "Passwrod";
+            this.Pass.TextChanged += new System.EventHandler(this.Pass_TextChanged);
             // 
             // panel2
             // 
@@ -172,6 +174,7 @@
             this.Name = "login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "login";
+            this.Load += new System.EventHandler(this.login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
