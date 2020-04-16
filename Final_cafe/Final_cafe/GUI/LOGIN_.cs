@@ -96,13 +96,18 @@ namespace Final_cafe.GUI
 
         private void Register_button_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD:Final_cafe/Final_cafe/GUI/login.cs
             this.Hide();
             GUI.Register register = new GUI.Register();
             register.ShowDialog();
         }
 
-        private void login_Load(object sender, EventArgs e)
+
+
+        private void X_button_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+           private void login_Load(object sender, EventArgs e)
         {
 
         }
@@ -115,16 +120,6 @@ namespace Final_cafe.GUI
         private void Username_TextChanged(object sender, EventArgs e)
         {
 
-=======
-            /* this.Hide();
-               Register register = new Register();
-               register.ShowDialog();*/
->>>>>>> 36aedb002e543cfec7865792dcf8c1be4e39daf7:Final_cafe/Final_cafe/GUI/LOGIN_.cs
         }
-
-        private void X_button_Click(object sender, EventArgs e)
-        {
-            this.Dispose();
-        }
-    }
-}
+    } 
+}   

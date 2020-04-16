@@ -35,13 +35,13 @@
             this.Pass = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.Username = new System.Windows.Forms.TextBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.X_button = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // Register_button
@@ -83,12 +83,13 @@
             this.Pass.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Pass.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.Pass.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.Pass.Location = new System.Drawing.Point(103, 246);
+            this.Pass.Location = new System.Drawing.Point(105, 246);
             this.Pass.Name = "Pass";
             this.Pass.PasswordChar = '*';
             this.Pass.Size = new System.Drawing.Size(178, 24);
-            this.Pass.TabIndex = 16;
+            this.Pass.TabIndex = 6;
             this.Pass.Text = "Passwrod";
+            this.Pass.TextChanged += new System.EventHandler(this.Pass_TextChanged);
             // 
             // panel1
             // 
@@ -111,30 +112,6 @@
             this.Username.TabIndex = 13;
             this.Username.Text = "User";
             this.Username.TextChanged += new System.EventHandler(this.Username_TextChanged);
-            // 
-            // pictureBox3
-            // 
-<<<<<<< HEAD:Final_cafe/Final_cafe/GUI/login.Designer.cs
-            this.Pass.BackColor = System.Drawing.Color.Linen;
-            this.Pass.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Pass.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.Pass.Location = new System.Drawing.Point(105, 246);
-            this.Pass.Name = "Pass";
-            this.Pass.PasswordChar = '*';
-            this.Pass.Size = new System.Drawing.Size(178, 24);
-            this.Pass.TabIndex = 6;
-            this.Pass.Text = "Passwrod";
-            this.Pass.TextChanged += new System.EventHandler(this.Pass_TextChanged);
-=======
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(65, 239);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(34, 31);
-            this.pictureBox3.TabIndex = 12;
-            this.pictureBox3.TabStop = false;
->>>>>>> 36aedb002e543cfec7865792dcf8c1be4e39daf7:Final_cafe/Final_cafe/GUI/LOGIN_.Designer.cs
             // 
             // pictureBox2
             // 
@@ -173,6 +150,16 @@
             this.pictureBox1.TabIndex = 19;
             this.pictureBox1.TabStop = false;
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox3.Location = new System.Drawing.Point(65, 239);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(34, 31);
+            this.pictureBox3.TabIndex = 20;
+            this.pictureBox3.TabStop = false;
+            // 
             // LOGIN
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -193,17 +180,11 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LOGIN";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-<<<<<<< HEAD:Final_cafe/Final_cafe/GUI/login.Designer.cs
             this.Text = "login";
             this.Load += new System.EventHandler(this.login_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-=======
-            this.Text = "LOGIN";
->>>>>>> 36aedb002e543cfec7865792dcf8c1be4e39daf7:Final_cafe/Final_cafe/GUI/LOGIN_.Designer.cs
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -217,9 +198,9 @@
         private System.Windows.Forms.TextBox Pass;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox Username;
-        private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label X_button;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

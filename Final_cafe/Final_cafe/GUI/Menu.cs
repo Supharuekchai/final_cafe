@@ -48,12 +48,13 @@ namespace Final_cafe.GUI
         public Menu(string CustomerName, string CustomerID, string CustomerType, string Gender, string CustomerTelNo)
         {
             InitializeComponent();
+            this.name.Text = string.Format("{0} {1}", CustomerID, CustomerName);
             this.CustomerName = CustomerName;
             this.CustomerID = CustomerID;
             this.CustomerType = CustomerType;
             this.Gender = Gender;
             this.CustomerTelNo = CustomerTelNo;
-            this.name.Text = string.Format("{0} {1}", CustomerID, CustomerName);
+
         }
 
         public Menu()

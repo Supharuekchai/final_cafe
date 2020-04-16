@@ -40,11 +40,16 @@
             this.X_button = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.gender = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.type = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.gender = new System.Windows.Forms.ComboBox();
-            this.type = new System.Windows.Forms.ComboBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -56,14 +61,14 @@
             // flname
             // 
             this.flname.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.flname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.flname.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.flname.Cursor = System.Windows.Forms.Cursors.Default;
             this.flname.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.flname.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.flname.Location = new System.Drawing.Point(49, 120);
             this.flname.Name = "flname";
             this.flname.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.flname.Size = new System.Drawing.Size(257, 24);
+            this.flname.Size = new System.Drawing.Size(257, 17);
             this.flname.TabIndex = 1;
             this.flname.Text = "ชื่อ-นามสกุล";
             this.flname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -72,24 +77,24 @@
             // user
             // 
             this.user.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.user.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.user.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.user.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.user.Location = new System.Drawing.Point(49, 314);
+            this.user.Location = new System.Drawing.Point(52, 321);
             this.user.Name = "user";
             this.user.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.user.Size = new System.Drawing.Size(257, 24);
+            this.user.Size = new System.Drawing.Size(257, 17);
             this.user.TabIndex = 4;
             this.user.Text = "ชื่อผู้ใช้";
             // 
             // pass
             // 
             this.pass.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.pass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pass.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.pass.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.pass.Location = new System.Drawing.Point(49, 360);
+            this.pass.Location = new System.Drawing.Point(49, 367);
             this.pass.Name = "pass";
             this.pass.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.pass.Size = new System.Drawing.Size(257, 24);
+            this.pass.Size = new System.Drawing.Size(257, 17);
             this.pass.TabIndex = 4;
             this.pass.Text = "รหัสผ่าน";
             // 
@@ -128,9 +133,11 @@
             // 
             // button1
             // 
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(49, 401);
+            this.button1.Location = new System.Drawing.Point(51, 401);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(110, 30);
             this.button1.TabIndex = 10;
@@ -140,9 +147,11 @@
             // 
             // button2
             // 
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button2.Location = new System.Drawing.Point(196, 401);
+            this.button2.Location = new System.Drawing.Point(190, 401);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(110, 30);
             this.button2.TabIndex = 11;
@@ -154,10 +163,11 @@
             // 
             this.X_button.AutoSize = true;
             this.X_button.BackColor = System.Drawing.Color.Transparent;
+            this.X_button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.X_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.X_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.X_button.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.X_button.Location = new System.Drawing.Point(315, 9);
+            this.X_button.Location = new System.Drawing.Point(328, -2);
             this.X_button.Name = "X_button";
             this.X_button.Size = new System.Drawing.Size(26, 25);
             this.X_button.TabIndex = 12;
@@ -187,6 +197,19 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "เพศ";
             // 
+            // gender
+            // 
+            this.gender.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.gender.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.gender.FormattingEnabled = true;
+            this.gender.Items.AddRange(new object[] {
+            "ชาย",
+            "หญิง"});
+            this.gender.Location = new System.Drawing.Point(52, 21);
+            this.gender.Name = "gender";
+            this.gender.Size = new System.Drawing.Size(147, 26);
+            this.gender.TabIndex = 0;
+            // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
@@ -199,15 +222,29 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "ระดับสมาชิก";
             // 
+            // type
+            // 
+            this.type.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.type.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.type.FormattingEnabled = true;
+            this.type.Items.AddRange(new object[] {
+            "ทั่วไป",
+            "VIP ",
+            "อื่นๆ"});
+            this.type.Location = new System.Drawing.Point(52, 23);
+            this.type.Name = "type";
+            this.type.Size = new System.Drawing.Size(147, 26);
+            this.type.TabIndex = 1;
+            // 
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(49, 261);
+            this.textBox1.Location = new System.Drawing.Point(49, 274);
             this.textBox1.Name = "textBox1";
             this.textBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.textBox1.Size = new System.Drawing.Size(257, 24);
+            this.textBox1.Size = new System.Drawing.Size(257, 17);
             this.textBox1.TabIndex = 17;
             this.textBox1.Text = "เบอร์โทรศัพท์";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -223,30 +260,45 @@
             this.pictureBox1.TabIndex = 18;
             this.pictureBox1.TabStop = false;
             // 
-            // gender
+            // panel1
             // 
-            this.gender.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.gender.FormattingEnabled = true;
-            this.gender.Items.AddRange(new object[] {
-            "ชาย",
-            "หญิง"});
-            this.gender.Location = new System.Drawing.Point(52, 21);
-            this.gender.Name = "gender";
-            this.gender.Size = new System.Drawing.Size(147, 26);
-            this.gender.TabIndex = 0;
+            this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.Location = new System.Drawing.Point(51, 136);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(255, 1);
+            this.panel1.TabIndex = 19;
             // 
-            // type
+            // panel2
             // 
-            this.type.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.type.FormattingEnabled = true;
-            this.type.Items.AddRange(new object[] {
-            "ทั่วไป",
-            "VIP ",
-            "อื่นๆ"});
-            this.type.Location = new System.Drawing.Point(52, 23);
-            this.type.Name = "type";
-            this.type.Size = new System.Drawing.Size(147, 26);
-            this.type.TabIndex = 1;
+            this.panel2.BackColor = System.Drawing.Color.Black;
+            this.panel2.Location = new System.Drawing.Point(51, 293);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(255, 1);
+            this.panel2.TabIndex = 20;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Black;
+            this.panel3.Location = new System.Drawing.Point(49, 293);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(255, 1);
+            this.panel3.TabIndex = 20;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.Black;
+            this.panel4.Location = new System.Drawing.Point(49, 337);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(255, 1);
+            this.panel4.TabIndex = 21;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.Black;
+            this.panel5.Location = new System.Drawing.Point(51, 383);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(255, 1);
+            this.panel5.TabIndex = 22;
             // 
             // Register
             // 
@@ -256,6 +308,11 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(353, 480);
+            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.groupBox2);
@@ -306,5 +363,10 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ComboBox gender;
         private System.Windows.Forms.ComboBox type;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel5;
     }
 }
