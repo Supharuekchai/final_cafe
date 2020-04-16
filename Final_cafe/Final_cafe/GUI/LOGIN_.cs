@@ -14,21 +14,25 @@ namespace Final_cafe.GUI
     public partial class LOGIN : Form
     {
 
-        private String costomerID;
+        private String customerID;
         private String customername;
         private String customertype;
         private String gender;
         private String customertelno;
 
-        public string conn = "server = localhost; user id = root; password = 1234567890; persistsecurityinfo=True; database = final_cafe; allowuservariables=True";
+        private string conn = "server = localhost; user id = root; password = 1234567890; persistsecurityinfo=True; database = final_cafe; allowuservariables=True";
+        int i;
 
-        
+        public LOGIN()
+        {
+            InitializeComponent();
+        }
 
-        private void getTheName(String username)
+        private void Getdata(String username)
         {
             MySqlConnection connection = new MySqlConnection(conn);
             connection.ConnectionString = conn;
-            String query = "SELECT CostomerID,CustomerName,Gender,CustomerType,CustomerTelNo  FROM customerss WHERE UserName = " + Username.Text;
+            String query = "SELECT CustomerID , CustomerName, CustomerType, Gender, CustomerTelNo FROM customers WHERE UserName = '" + Username.Text + "'";
             try
             {
                 connection.Open();
@@ -38,12 +42,11 @@ namespace Final_cafe.GUI
                 MySqlDataReader rdr = cmd.ExecuteReader();
                 if (rdr.Read())
                 {
-                    this.costomerID = rdr["CostomerID"].ToString();
+                    this.customerID = rdr["CustomerID"].ToString();
                     this.customername = rdr["CustomerName"].ToString();
-                    this.gender = rdr["Gender"].ToString();
                     this.customertype = rdr["CustomerType"].ToString();
+                    this.gender = rdr["Gender"].ToString();
                     this.customertelno = rdr["CustomerTelNo"].ToString();
-
                 }
             }
             catch (Exception)
@@ -55,20 +58,9 @@ namespace Final_cafe.GUI
             }
         }
 
-        public LOGIN()
-        {
-            InitializeComponent();
-        }
-
-
-        private void X_button_Click(object sender, EventArgs e)
-        {
-            this.Dispose();
-        }
-
         private void Login_button_Click(object sender, EventArgs e)
         {
-            int i = 0;
+            i = 0;
             MySqlConnection connection = new MySqlConnection(conn);
             connection.Open();
             MySqlCommand cmd = connection.CreateCommand();
@@ -87,14 +79,14 @@ namespace Final_cafe.GUI
 
             else
             {
-                this.getTheName(Username.Text);
+                Getdata(Username.Text);
                 this.Hide();
-                string CostomerID = this.costomerID;
-                string CustomerName = this.customername;
-                string Gender = this.gender;
-                string CustomerType = this.customertype;
-                string CustomerTelNo = this.customertelno;
-                Menu manu = new Menu(CustomerName, CostomerID, CustomerType, Gender, CustomerTelNo);
+                string CustomerID = this.customerID.Trim();
+                string CustomerName = this.customername.Trim();
+                string Gender = this.gender.Trim();
+                string CustomerType = this.customertype.Trim();
+                string CustomerTelNo = this.customertelno.Trim();
+                Menu manu = new Menu(CustomerName, CustomerID, CustomerType, Gender, CustomerTelNo);
                 manu.Show();
                 
             }
@@ -128,6 +120,11 @@ namespace Final_cafe.GUI
                Register register = new Register();
                register.ShowDialog();*/
 >>>>>>> 36aedb002e543cfec7865792dcf8c1be4e39daf7:Final_cafe/Final_cafe/GUI/LOGIN_.cs
+        }
+
+        private void X_button_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
     }
 }
