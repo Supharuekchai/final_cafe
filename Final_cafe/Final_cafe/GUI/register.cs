@@ -58,12 +58,13 @@ namespace Final_cafe
         }
 
         private void button1_Click(object sender, EventArgs e)
-        { 
+        {
+            String point = "10";
 
             conn.Open();
             MySqlCommand cmd = conn.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "INSERT INTO customers(CustomerID,CustomerName,Gender,CustomerType,CustomerTelNo,Password,username) VALUES ('" + null + "','" + flname.Text + "','" + comboBox1 + "','" + comboBox2 + "','" + telNo.Text + "','" + pass.Text + "','" + user.Text + "')";
+            cmd.CommandText = "INSERT INTO customers(CustomerID,CustomerName,Gender,CustomerType,CustomerTelNo,Password,username, Point) VALUES ('" + null + "','" + flname.Text + "','" + comboBox1 + "','" + comboBox2 + "','" + telNo.Text + "','" + pass.Text + "','" + user.Text + "','" + point + "')";
             cmd.ExecuteNonQuery(); 
             conn.Close();
             flname.Text = "";

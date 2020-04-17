@@ -41,6 +41,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -49,7 +50,6 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.flname = new System.Windows.Forms.TextBox();
             this.telNo = new System.Windows.Forms.TextBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -209,6 +209,19 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "ระดับสมาชิก";
             // 
+            // comboBox2
+            // 
+            this.comboBox2.BackColor = System.Drawing.SystemColors.Info;
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "Member",
+            "VIP"});
+            this.comboBox2.Location = new System.Drawing.Point(78, 23);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(122, 26);
+            this.comboBox2.TabIndex = 1;
+            this.comboBox2.Text = "กรุณาเลือกระดับ";
+            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
@@ -286,19 +299,6 @@
             this.telNo.Text = "เบอร์โทรศัพท์";
             this.telNo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.telNo.TextChanged += new System.EventHandler(this.telNo_TextChanged);
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.BackColor = System.Drawing.SystemColors.Info;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "Member",
-            "VIP"});
-            this.comboBox2.Location = new System.Drawing.Point(78, 23);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(122, 26);
-            this.comboBox2.TabIndex = 1;
-            this.comboBox2.Text = "กรุณาเลือกระดับ";
             // 
             // Register
             // 

@@ -1,8 +1,10 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -43,17 +45,24 @@ namespace Final_cafe.GUI
             get { return customertelno; }
             set { customertelno = value; }
         }
+        private string point;
+        private string Point
+        {
+            get { return point; }
+            set { point = value; }
+        }
 
 
-        public Menu(string CustomerName, string CustomerID, string CustomerType, string Gender, string CustomerTelNo)
+        public Menu(string CustomerName, string CustomerID, string CustomerType, string Gender, string CustomerTelNo, string Point)
         {
             InitializeComponent();
-            this.name.Text = string.Format("{0} {1}", CustomerID, CustomerName);
+            this.name.Text = string.Format("ยินดีต้อนรับสู่ final cafe {0} จำนวน Point ของคุณคือ : {1}", CustomerName, Point);
             this.CustomerName = CustomerName;
             this.CustomerID = CustomerID;
             this.CustomerType = CustomerType;
             this.Gender = Gender;
             this.CustomerTelNo = CustomerTelNo;
+            this.Point = Point;
 
         }
 
@@ -68,6 +77,31 @@ namespace Final_cafe.GUI
             this.Dispose();
             LOGIN login = new LOGIN();
             login.ShowDialog();
+        }
+
+        private void Menu_Load(object sender, EventArgs e)
+        {
+            
+            Products _DataAccess = new Products(CustomerID);
+            ArrayList AllCategories = _DataAccess.RetreiveAllCategoriesFromDatabase();
+
+            foreach (Details Category in AllCategories)
+            {
+                Button btn = new Button();
+                //btn.Text = Category.Name;
+                btn.Size = new System.Drawing.Size(100, 100);
+                btn.ForeColor = Color.Black;
+
+                MemoryStream ms = new MemoryStream(Category.Picture);
+                btn.Image = Image.FromStream(ms);
+                btn.Image = new Bitmap(btn.Image, btn.Size);
+
+                btn.Tag = Category.ID;
+
+                CategoriesFlowPanel.Controls.Add(btn);
+
+                //btn.Click += CategoryButtonClick;
+            }
         }
     }
 }

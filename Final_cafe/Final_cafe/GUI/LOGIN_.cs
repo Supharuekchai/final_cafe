@@ -19,6 +19,7 @@ namespace Final_cafe.GUI
         private String customertype;
         private String gender;
         private String customertelno;
+        private String point;
 
         private string conn = "server = localhost; user id = root; password = 1234567890; persistsecurityinfo=True; database = final_cafe; allowuservariables=True";
         int i;
@@ -32,7 +33,7 @@ namespace Final_cafe.GUI
         {
             MySqlConnection connection = new MySqlConnection(conn);
             connection.ConnectionString = conn;
-            String query = "SELECT CustomerID , CustomerName, CustomerType, Gender, CustomerTelNo FROM customers WHERE UserName = '" + Username.Text + "'";
+            String query = "SELECT CustomerID , CustomerName, CustomerType, Gender, CustomerTelNo, Point FROM customers WHERE UserName = '" + Username.Text + "'";
             try
             {
                 connection.Open();
@@ -47,6 +48,7 @@ namespace Final_cafe.GUI
                     this.customertype = rdr["CustomerType"].ToString();
                     this.gender = rdr["Gender"].ToString();
                     this.customertelno = rdr["CustomerTelNo"].ToString();
+                    this.point = rdr["Point"].ToString();
                 }
             }
             catch (Exception)
@@ -86,7 +88,8 @@ namespace Final_cafe.GUI
                 string Gender = this.gender.Trim();
                 string CustomerType = this.customertype.Trim();
                 string CustomerTelNo = this.customertelno.Trim();
-                Menu manu = new Menu(CustomerName, CustomerID, CustomerType, Gender, CustomerTelNo);
+                string Point = this.point.Trim();
+                Menu manu = new Menu(CustomerName, CustomerID, CustomerType, Gender, CustomerTelNo, Point);
                 manu.Show();
                 
             }
