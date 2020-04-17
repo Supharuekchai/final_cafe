@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.1
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Apr 16, 2020 at 05:50 AM
--- Server version: 8.0.17
--- PHP Version: 7.3.10
+-- Host: 127.0.0.1
+-- Generation Time: Apr 03, 2020 at 12:44 PM
+-- Server version: 10.1.38-MariaDB
+-- PHP Version: 7.3.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `final_cafe`
+-- Database: `final`
 --
 
 -- --------------------------------------------------------
@@ -29,13 +29,11 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `customers` (
-  `CustomerID` int(13) NOT NULL,
-  `CustomerName` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `Gender` enum('M','F') CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `CustomerType` enum('Member','VIP','Other') CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `CustomerTelNo` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `username` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `Password` varchar(12) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL
+  `CustomerID` int(11) NOT NULL,
+  `CustomerName` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `Gender` enum('M','F') COLLATE utf8_unicode_ci NOT NULL,
+  `CustomerType` enum('Member','VIP','Other') COLLATE utf8_unicode_ci NOT NULL,
+  `CustomerTelNo` varchar(100) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
@@ -46,9 +44,9 @@ CREATE TABLE `customers` (
 
 CREATE TABLE `products` (
   `ProductID` int(11) NOT NULL,
-  `ProductName` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `ProductName` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `Price` float NOT NULL,
-  `ProductDetail` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL
+  `ProductDetail` text COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
@@ -88,11 +86,11 @@ CREATE TABLE `sale_details` (
 
 CREATE TABLE `staffs` (
   `StaffID` int(11) NOT NULL,
-  `StaffCode` varchar(20) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `StaffName` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `Gender` enum('M','F') CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `StaffPassword` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `StaffLevel` enum('Staff','Manager','Admin') CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL
+  `StaffCode` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
+  `StaffName` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `Gender` enum('M','F') COLLATE utf8_unicode_ci NOT NULL,
+  `StaffPassword` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `StaffLevel` enum('Staff','Manager','Admin') COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
@@ -138,7 +136,7 @@ ALTER TABLE `staffs`
 -- AUTO_INCREMENT for table `customers`
 --
 ALTER TABLE `customers`
-  MODIFY `CustomerID` int(13) NOT NULL AUTO_INCREMENT;
+  MODIFY `CustomerID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `products`

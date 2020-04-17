@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNet.SignalR.Infrastructure;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Final_cafe.GUI;
+using MySql.Data.MySqlClient;
 
-namespace Final_cafe.GUI
+namespace Final_cafe
 {
     public partial class Register : Form
     {
+        MySqlConnection conn = new MySqlConnection("server = localhost; user id = root; password = 1234567890; persistsecurityinfo=True; database = final_cafe; allowuservariables=True");
         public Register()
         {
             InitializeComponent();
@@ -56,8 +58,7 @@ namespace Final_cafe.GUI
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {
-            /*int amu = 500;
+        { 
             Random rnd = new Random();
             int rnd1 = rnd.Next(0, 9);
             int rnd2 = rnd.Next(0, 9);
@@ -70,32 +71,48 @@ namespace Final_cafe.GUI
             int rnd9 = rnd.Next(0, 9);
             int rnd10 = rnd.Next(0, 9);
             int rnd11 = rnd.Next(0, 9);
-            int rnd12 = rnd.Next(0, 9);
-            int rnd13 = rnd.Next(0, 9);
+      
 
-            string userid = "" + rnd1 + rnd2 + rnd3 + rnd4 + rnd5 + rnd6 + rnd7 + rnd8 + rnd9 + rnd10 + rnd11 + rnd12 + rnd13;
+            string userid = "" + rnd1 + rnd2 + rnd3 + rnd4 + rnd5 + rnd6 + rnd7 + rnd8 + rnd9 + rnd10 + rnd11 ;
 
-            connection.Open();
-            MySqlCommand cmd = connection.CreateCommand();
+            conn.Open();
+            MySqlCommand cmd = conn.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "INSERT INTO bank_member(First_Name,Last_Name,ID,Password,Username) VALUES ('" + fname.Text + "','" + lname.Text + "','" + userid + "','" + pass.Text + "','" + user.Text + "')";
-            cmd.ExecuteNonQuery();
-            cmd.CommandText = "INSERT INTO bank_account(ID,Balance) VALUES ('" + userid + "','" + amu + "')";
-            cmd.ExecuteNonQuery();
-            connection.Close();
-            fname.Text = "";
-            lname.Text = "";
+            cmd.CommandText = "INSERT INTO customers(CustomerID,CustomerName,Gender,CustomerType,CustomerTelNo,Password,username) VALUES ('" + userid + "','" + flname.Text + "','" + gender.Text + "','" + type.Text + "','" + telNo.Text + "','" + pass.Text + "','" + user.Text + "')";
+            cmd.ExecuteNonQuery(); 
+            conn.Close();
+            flname.Text = "";
+            gender.Text = "";
+            type.Text = "";
+            telNo.Text = "";
             user.Text = "";
             pass.Text = "";
             MessageBox.Show("Register Complete");
-            fname.Clear();
-            lname.Clear();
+            flname.Clear();
+            gender.Clear();
+            type.Clear();
+            telNo.Clear();
             user.Clear();
-            pass.Clear();*/
+            pass.Clear();
 
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void telNo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gender_TextChanged(object sender, EventArgs e)
         {
 
         }

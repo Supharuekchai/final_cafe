@@ -97,7 +97,7 @@ namespace Final_cafe.GUI
         private void Register_button_Click(object sender, EventArgs e)
         {
             this.Hide();
-            GUI.Register register = new GUI.Register();
+            Register register = new Register();
             register.ShowDialog();
         }
 

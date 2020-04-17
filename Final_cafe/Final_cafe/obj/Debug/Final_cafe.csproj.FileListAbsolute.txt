@@ -54,10 +54,8 @@ D:\final_cafe\Final_cafe\Final_cafe\obj\Debug\Final_cafe.csproj.CoreCompileInput
 D:\final_cafe\Final_cafe\Final_cafe\obj\Debug\Final_cafe.GUI.Menu.resources
 D:\final_cafe\Final_cafe\Final_cafe\obj\Debug\Final_cafe.GUI.LOGIN.resources
 >>>>>>> 36aedb002e543cfec7865792dcf8c1be4e39daf7
-<<<<<<< HEAD
 C:\Users\AsadaYoon\Desktop\PPro\final_cafe\Final_cafe\Final_cafe\obj\Debug\Final_cafe.GUI.LOGIN.resources
 C:\Users\AsadaYoon\Desktop\PPro\final_cafe\Final_cafe\Final_cafe\obj\Debug\Final_cafe.GUI.Menu.resources
-=======
 D:\final_cafe\Final_cafe\Final_cafe\obj\Debug\Final_cafe.GUI.Register.resources
 D:\final_cafe\Final_cafe\Final_cafe\bin\Debug\Microsoft.AspNet.SignalR.Core.dll
 D:\final_cafe\Final_cafe\Final_cafe\bin\Debug\Microsoft.Owin.dll
@@ -70,3 +68,4 @@ D:\final_cafe\Final_cafe\Final_cafe\bin\Debug\Microsoft.Owin.xml
 D:\final_cafe\Final_cafe\Final_cafe\bin\Debug\Microsoft.Owin.Security.xml
 D:\final_cafe\Final_cafe\Final_cafe\bin\Debug\Newtonsoft.Json.xml
 >>>>>>> MrDeadEye
+C:\Users\AsadaYoon\Desktop\PPro\final_cafe\Final_cafe\Final_cafe\obj\Debug\Final_cafe.Register.resources
