@@ -35,7 +35,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.Pass = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.Username = new System.Windows.Forms.TextBox();
+            this.StaffCode = new System.Windows.Forms.TextBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.register = new System.Windows.Forms.Button();
@@ -77,6 +77,7 @@
             this.login.TabIndex = 24;
             this.login.Text = "Login";
             this.login.UseVisualStyleBackColor = true;
+            this.login.Click += new System.EventHandler(this.login_Click);
             // 
             // panel2
             // 
@@ -109,17 +110,17 @@
             this.panel1.TabIndex = 29;
             this.panel1.UseWaitCursor = true;
             // 
-            // Username
+            // StaffCode
             // 
-            this.Username.BackColor = System.Drawing.Color.Linen;
-            this.Username.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Username.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.Username.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.Username.Location = new System.Drawing.Point(103, 272);
-            this.Username.Name = "Username";
-            this.Username.Size = new System.Drawing.Size(178, 24);
-            this.Username.TabIndex = 28;
-            this.Username.Text = "User";
+            this.StaffCode.BackColor = System.Drawing.Color.Linen;
+            this.StaffCode.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.StaffCode.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.StaffCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.StaffCode.Location = new System.Drawing.Point(103, 272);
+            this.StaffCode.Name = "StaffCode";
+            this.StaffCode.Size = new System.Drawing.Size(178, 24);
+            this.StaffCode.TabIndex = 28;
+            this.StaffCode.Text = "StaffCode";
             // 
             // pictureBox3
             // 
@@ -163,7 +164,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.Pass);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.Username);
+            this.Controls.Add(this.StaffCode);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.login);
@@ -190,7 +191,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox Pass;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox Username;
+        private System.Windows.Forms.TextBox StaffCode;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button register;

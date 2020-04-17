@@ -46,6 +46,10 @@ namespace Final_cafe.GUI
             set { customertelno = value; }
         }
         private string point;
+        private string staffName;
+        private string staffID;
+        private string staffLevel;
+
         private string Point
         {
             get { return point; }
@@ -71,6 +75,13 @@ namespace Final_cafe.GUI
             InitializeComponent();
         }
 
+        public Menu(string staffName, string staffID, string gender, string staffLevel)
+        {
+            this.staffName = staffName;
+            this.staffID = staffID;
+            this.gender = gender;
+            this.staffLevel = staffLevel;
+        }
 
         private void X_button_Click(object sender, EventArgs e)
         {
