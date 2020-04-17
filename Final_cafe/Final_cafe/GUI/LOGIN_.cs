@@ -124,5 +124,17 @@ namespace Final_cafe.GUI
         {
 
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Staff Staff = new Staff();
+            Staff.ShowDialog();
+        }
     } 
 }   
