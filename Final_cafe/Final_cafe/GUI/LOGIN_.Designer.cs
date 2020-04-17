@@ -49,6 +49,7 @@
             this.Register_button.AutoSize = true;
             this.Register_button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Register_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.Register_button.ForeColor = System.Drawing.Color.Black;
             this.Register_button.Location = new System.Drawing.Point(188, 288);
             this.Register_button.Name = "Register_button";
             this.Register_button.Size = new System.Drawing.Size(67, 16);

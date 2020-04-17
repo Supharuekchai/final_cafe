@@ -99,6 +99,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class\Details.cs" />
+    <Compile Include="Class\Products.cs" />
     <Compile Include="GUI\LOGIN_.cs">
       <SubType>Form</SubType>
     </Compile>
