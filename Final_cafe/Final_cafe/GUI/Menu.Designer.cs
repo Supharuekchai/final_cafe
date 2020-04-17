@@ -28,21 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.X_button = new System.Windows.Forms.Label();
             this.name = new System.Windows.Forms.Label();
             this.CategoryGroupBox = new System.Windows.Forms.GroupBox();
+            this.CategoriesFlowPanel = new System.Windows.Forms.Panel();
             this.ProductsGroupBox = new System.Windows.Forms.GroupBox();
             this.ProductsFlowPanel = new System.Windows.Forms.Panel();
-            this.CategoriesFlowPanel = new System.Windows.Forms.Panel();
             this.BillGroupBox = new System.Windows.Forms.GroupBox();
             this.ProductsGridView = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
             this.ProductIDColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProductNameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProductPriceColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProductQuantityColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TotalPriceColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DeleteColumn = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.label1 = new System.Windows.Forms.Label();
             this.TotalBillBox = new System.Windows.Forms.TextBox();
             this.CheckOutButton = new System.Windows.Forms.Label();
             this.CategoryGroupBox.SuspendLayout();
@@ -90,6 +92,14 @@
             this.CategoryGroupBox.TabStop = false;
             this.CategoryGroupBox.Text = "หมวดหมู่";
             // 
+            // CategoriesFlowPanel
+            // 
+            this.CategoriesFlowPanel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.CategoriesFlowPanel.Location = new System.Drawing.Point(6, 21);
+            this.CategoriesFlowPanel.Name = "CategoriesFlowPanel";
+            this.CategoriesFlowPanel.Size = new System.Drawing.Size(633, 104);
+            this.CategoriesFlowPanel.TabIndex = 5;
+            // 
             // ProductsGroupBox
             // 
             this.ProductsGroupBox.BackColor = System.Drawing.Color.Transparent;
@@ -105,17 +115,11 @@
             // 
             // ProductsFlowPanel
             // 
+            this.ProductsFlowPanel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ProductsFlowPanel.Location = new System.Drawing.Point(6, 21);
             this.ProductsFlowPanel.Name = "ProductsFlowPanel";
             this.ProductsFlowPanel.Size = new System.Drawing.Size(633, 272);
             this.ProductsFlowPanel.TabIndex = 0;
-            // 
-            // CategoriesFlowPanel
-            // 
-            this.CategoriesFlowPanel.Location = new System.Drawing.Point(6, 21);
-            this.CategoriesFlowPanel.Name = "CategoriesFlowPanel";
-            this.CategoriesFlowPanel.Size = new System.Drawing.Size(633, 104);
-            this.CategoriesFlowPanel.TabIndex = 5;
             // 
             // BillGroupBox
             // 
@@ -140,12 +144,61 @@
             this.ProductNameColumn,
             this.ProductPriceColumn,
             this.ProductQuantityColumn,
+            this.TotalPriceColumn,
             this.DeleteColumn});
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.ProductsGridView.DefaultCellStyle = dataGridViewCellStyle1;
             this.ProductsGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ProductsGridView.Location = new System.Drawing.Point(3, 18);
             this.ProductsGridView.Name = "ProductsGridView";
             this.ProductsGridView.Size = new System.Drawing.Size(299, 420);
             this.ProductsGridView.TabIndex = 1;
+            // 
+            // ProductIDColumn
+            // 
+            this.ProductIDColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.ProductIDColumn.FillWeight = 50F;
+            this.ProductIDColumn.HeaderText = "ID";
+            this.ProductIDColumn.Name = "ProductIDColumn";
+            this.ProductIDColumn.Width = 30;
+            // 
+            // ProductNameColumn
+            // 
+            this.ProductNameColumn.FillWeight = 135.6536F;
+            this.ProductNameColumn.HeaderText = "สินค้า";
+            this.ProductNameColumn.Name = "ProductNameColumn";
+            // 
+            // ProductPriceColumn
+            // 
+            this.ProductPriceColumn.FillWeight = 70.09345F;
+            this.ProductPriceColumn.HeaderText = "ราคา";
+            this.ProductPriceColumn.Name = "ProductPriceColumn";
+            // 
+            // ProductQuantityColumn
+            // 
+            this.ProductQuantityColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.ProductQuantityColumn.HeaderText = "จำนวน";
+            this.ProductQuantityColumn.Name = "ProductQuantityColumn";
+            this.ProductQuantityColumn.Width = 30;
+            // 
+            // TotalPriceColumn
+            // 
+            this.TotalPriceColumn.FillWeight = 94.25288F;
+            this.TotalPriceColumn.HeaderText = "รวม";
+            this.TotalPriceColumn.Name = "TotalPriceColumn";
+            // 
+            // DeleteColumn
+            // 
+            this.DeleteColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.DeleteColumn.HeaderText = "ลบ";
+            this.DeleteColumn.Name = "DeleteColumn";
+            this.DeleteColumn.Width = 30;
             // 
             // label1
             // 
@@ -158,40 +211,6 @@
             this.label1.Size = new System.Drawing.Size(79, 25);
             this.label1.TabIndex = 6;
             this.label1.Text = "ราคารวม";
-            // 
-            // ProductIDColumn
-            // 
-            this.ProductIDColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.ProductIDColumn.FillWeight = 50F;
-            this.ProductIDColumn.HeaderText = "ID";
-            this.ProductIDColumn.Name = "ProductIDColumn";
-            this.ProductIDColumn.Width = 30;
-            // 
-            // ProductNameColumn
-            // 
-            this.ProductNameColumn.FillWeight = 143.9252F;
-            this.ProductNameColumn.HeaderText = "สินค้า";
-            this.ProductNameColumn.Name = "ProductNameColumn";
-            // 
-            // ProductPriceColumn
-            // 
-            this.ProductPriceColumn.FillWeight = 56.07477F;
-            this.ProductPriceColumn.HeaderText = "ราคา";
-            this.ProductPriceColumn.Name = "ProductPriceColumn";
-            // 
-            // ProductQuantityColumn
-            // 
-            this.ProductQuantityColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.ProductQuantityColumn.HeaderText = "จำนวน";
-            this.ProductQuantityColumn.Name = "ProductQuantityColumn";
-            this.ProductQuantityColumn.Width = 50;
-            // 
-            // DeleteColumn
-            // 
-            this.DeleteColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.DeleteColumn.HeaderText = "ลบ";
-            this.DeleteColumn.Name = "DeleteColumn";
-            this.DeleteColumn.Width = 30;
             // 
             // TotalBillBox
             // 
@@ -207,6 +226,7 @@
             // 
             this.CheckOutButton.AutoSize = true;
             this.CheckOutButton.BackColor = System.Drawing.Color.Transparent;
+            this.CheckOutButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.CheckOutButton.Font = new System.Drawing.Font("Monotype Corsiva", 15.75F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CheckOutButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -215,6 +235,7 @@
             this.CheckOutButton.Size = new System.Drawing.Size(53, 25);
             this.CheckOutButton.TabIndex = 8;
             this.CheckOutButton.Text = "สั่งซื้อ";
+            this.CheckOutButton.Click += new System.EventHandler(this.CheckOutButton_Click);
             // 
             // Menu
             // 
@@ -254,13 +275,14 @@
         private System.Windows.Forms.Panel ProductsFlowPanel;
         private System.Windows.Forms.GroupBox BillGroupBox;
         private System.Windows.Forms.DataGridView ProductsGridView;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox TotalBillBox;
+        private System.Windows.Forms.Label CheckOutButton;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProductIDColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProductNameColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProductPriceColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProductQuantityColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TotalPriceColumn;
         private System.Windows.Forms.DataGridViewButtonColumn DeleteColumn;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox TotalBillBox;
-        private System.Windows.Forms.Label CheckOutButton;
     }
 }
