@@ -89,7 +89,7 @@ namespace Final_cafe.GUI
                 string CustomerType = this.customertype.Trim();
                 string CustomerTelNo = this.customertelno.Trim();
                 string Point = this.point.Trim();
-                Menu manu = new Menu(CustomerName, CustomerID, CustomerType, Gender, CustomerTelNo, Point);
+                Menu manu = new Menu(CustomerName, Point);
                 manu.Show();
                 
             }

@@ -15,6 +15,7 @@ namespace Final_cafe.GUI
         public int Quantity;
         public string Category;
         public string Description;
+        public decimal Total;
 
         public int SaleID;
         public DateTime SaleTime;
