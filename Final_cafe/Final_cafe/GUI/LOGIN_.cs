@@ -65,7 +65,7 @@ namespace Final_cafe.GUI
             connection.Open();
             MySqlCommand cmd = connection.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select * from customers where UserName ='" + Username.Text + "' and Pass ='" + Pass.Text + "'";
+            cmd.CommandText = "select * from customers where UserName ='" + Username.Text + "' and Password ='" + Pass.Text + "'";
             cmd.ExecuteNonQuery();
             DataTable dt = new DataTable();
             MySqlDataAdapter da = new MySqlDataAdapter(cmd);
@@ -97,7 +97,7 @@ namespace Final_cafe.GUI
         private void Register_button_Click(object sender, EventArgs e)
         {
             this.Hide();
-            GUI.Register register = new GUI.Register();
+            Register register = new Register();
             register.ShowDialog();
         }
 

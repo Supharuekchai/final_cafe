@@ -1,4 +1,4 @@
-﻿namespace Final_cafe.GUI
+﻿namespace Final_cafe
 {
     partial class Register
     {
@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Register));
-            this.flname = new System.Windows.Forms.TextBox();
             this.user = new System.Windows.Forms.TextBox();
             this.pass = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -40,16 +39,17 @@
             this.X_button = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.gender = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.type = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.flname = new System.Windows.Forms.TextBox();
+            this.telNo = new System.Windows.Forms.TextBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -57,22 +57,6 @@
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // flname
-            // 
-            this.flname.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.flname.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.flname.Cursor = System.Windows.Forms.Cursors.Default;
-            this.flname.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.flname.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.flname.Location = new System.Drawing.Point(49, 120);
-            this.flname.Name = "flname";
-            this.flname.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.flname.Size = new System.Drawing.Size(257, 17);
-            this.flname.TabIndex = 1;
-            this.flname.Text = "ชื่อ-นามสกุล";
-            this.flname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.flname.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // user
             // 
@@ -93,10 +77,10 @@
             this.pass.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.pass.Location = new System.Drawing.Point(49, 367);
             this.pass.Name = "pass";
+            this.pass.PasswordChar = '*';
             this.pass.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.pass.Size = new System.Drawing.Size(257, 17);
             this.pass.TabIndex = 4;
-            this.pass.Text = "รหัสผ่าน";
             // 
             // pictureBox2
             // 
@@ -133,6 +117,7 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -142,11 +127,12 @@
             this.button1.Size = new System.Drawing.Size(110, 30);
             this.button1.TabIndex = 10;
             this.button1.Text = "สมัครสมาชิก";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.Color.Transparent;
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -156,7 +142,7 @@
             this.button2.Size = new System.Drawing.Size(110, 30);
             this.button2.TabIndex = 11;
             this.button2.Text = "ยกเลิก";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // X_button
@@ -188,7 +174,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.gender);
+            this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(49, 150);
             this.groupBox1.Name = "groupBox1";
@@ -197,23 +183,24 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "เพศ";
             // 
-            // gender
+            // comboBox1
             // 
-            this.gender.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.gender.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.gender.FormattingEnabled = true;
-            this.gender.Items.AddRange(new object[] {
+            this.comboBox1.BackColor = System.Drawing.SystemColors.Info;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
             "ชาย",
             "หญิง"});
-            this.gender.Location = new System.Drawing.Point(52, 21);
-            this.gender.Name = "gender";
-            this.gender.Size = new System.Drawing.Size(147, 26);
-            this.gender.TabIndex = 0;
+            this.comboBox1.Location = new System.Drawing.Point(78, 17);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(122, 26);
+            this.comboBox1.TabIndex = 0;
+            this.comboBox1.Text = "กรุณาเลือกเพศ";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox2.Controls.Add(this.type);
+            this.groupBox2.Controls.Add(this.comboBox2);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(49, 199);
             this.groupBox2.Name = "groupBox2";
@@ -222,39 +209,12 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "ระดับสมาชิก";
             // 
-            // type
-            // 
-            this.type.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.type.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.type.FormattingEnabled = true;
-            this.type.Items.AddRange(new object[] {
-            "ทั่วไป",
-            "VIP ",
-            "อื่นๆ"});
-            this.type.Location = new System.Drawing.Point(52, 23);
-            this.type.Name = "type";
-            this.type.Size = new System.Drawing.Size(147, 26);
-            this.type.TabIndex = 1;
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(49, 274);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.textBox1.Size = new System.Drawing.Size(257, 17);
-            this.textBox1.TabIndex = 17;
-            this.textBox1.Text = "เบอร์โทรศัพท์";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(137, 9);
+            this.pictureBox1.Location = new System.Drawing.Point(152, -2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(66, 65);
             this.pictureBox1.TabIndex = 18;
@@ -300,6 +260,46 @@
             this.panel5.Size = new System.Drawing.Size(255, 1);
             this.panel5.TabIndex = 22;
             // 
+            // flname
+            // 
+            this.flname.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.flname.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.flname.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.flname.Location = new System.Drawing.Point(49, 120);
+            this.flname.Name = "flname";
+            this.flname.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.flname.Size = new System.Drawing.Size(257, 17);
+            this.flname.TabIndex = 23;
+            this.flname.Text = "ชื่อ-สกุล";
+            this.flname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // telNo
+            // 
+            this.telNo.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.telNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.telNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.telNo.Location = new System.Drawing.Point(49, 274);
+            this.telNo.Name = "telNo";
+            this.telNo.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.telNo.Size = new System.Drawing.Size(257, 17);
+            this.telNo.TabIndex = 26;
+            this.telNo.Text = "เบอร์โทรศัพท์";
+            this.telNo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.telNo.TextChanged += new System.EventHandler(this.telNo_TextChanged);
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.BackColor = System.Drawing.SystemColors.Info;
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "Member",
+            "VIP"});
+            this.comboBox2.Location = new System.Drawing.Point(78, 23);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(122, 26);
+            this.comboBox2.TabIndex = 1;
+            this.comboBox2.Text = "กรุณาเลือกระดับ";
+            // 
             // Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -308,13 +308,14 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(353, 480);
+            this.Controls.Add(this.telNo);
+            this.Controls.Add(this.flname);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
@@ -326,7 +327,6 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pass);
             this.Controls.Add(this.user);
-            this.Controls.Add(this.flname);
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Register";
@@ -347,7 +347,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.TextBox flname;
         private System.Windows.Forms.TextBox user;
         private System.Windows.Forms.TextBox pass;
         private System.Windows.Forms.PictureBox pictureBox2;
@@ -359,14 +358,15 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ComboBox gender;
-        private System.Windows.Forms.ComboBox type;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.TextBox flname;
+        private System.Windows.Forms.TextBox telNo;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox2;
     }
 }
