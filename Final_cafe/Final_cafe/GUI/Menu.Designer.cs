@@ -38,15 +38,15 @@
             this.ProductsFlowPanel = new System.Windows.Forms.Panel();
             this.BillGroupBox = new System.Windows.Forms.GroupBox();
             this.ProductsGridView = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.TotalBillBox = new System.Windows.Forms.TextBox();
-            this.CheckOutButton = new System.Windows.Forms.Label();
             this.ProductIDColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProductNameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProductPriceColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProductQuantityColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TotalPriceColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DeleteColumn = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.TotalBillBox = new System.Windows.Forms.TextBox();
+            this.CheckOutButton = new System.Windows.Forms.Label();
             this.CategoryGroupBox.SuspendLayout();
             this.ProductsGroupBox.SuspendLayout();
             this.BillGroupBox.SuspendLayout();
@@ -94,6 +94,7 @@
             // 
             // CategoriesFlowPanel
             // 
+            this.CategoriesFlowPanel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.CategoriesFlowPanel.Location = new System.Drawing.Point(6, 21);
             this.CategoriesFlowPanel.Name = "CategoriesFlowPanel";
             this.CategoriesFlowPanel.Size = new System.Drawing.Size(633, 104);
@@ -159,41 +160,6 @@
             this.ProductsGridView.Size = new System.Drawing.Size(299, 420);
             this.ProductsGridView.TabIndex = 1;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Monotype Corsiva", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(716, 593);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 25);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "ราคารวม";
-            // 
-            // TotalBillBox
-            // 
-            this.TotalBillBox.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.TotalBillBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TotalBillBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.TotalBillBox.Location = new System.Drawing.Point(806, 593);
-            this.TotalBillBox.Name = "TotalBillBox";
-            this.TotalBillBox.Size = new System.Drawing.Size(151, 24);
-            this.TotalBillBox.TabIndex = 7;
-            // 
-            // CheckOutButton
-            // 
-            this.CheckOutButton.AutoSize = true;
-            this.CheckOutButton.BackColor = System.Drawing.Color.Transparent;
-            this.CheckOutButton.Font = new System.Drawing.Font("Monotype Corsiva", 15.75F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
-                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CheckOutButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.CheckOutButton.Location = new System.Drawing.Point(963, 594);
-            this.CheckOutButton.Name = "CheckOutButton";
-            this.CheckOutButton.Size = new System.Drawing.Size(53, 25);
-            this.CheckOutButton.TabIndex = 8;
-            this.CheckOutButton.Text = "สั่งซื้อ";
-            // 
             // ProductIDColumn
             // 
             this.ProductIDColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
@@ -233,6 +199,43 @@
             this.DeleteColumn.HeaderText = "ลบ";
             this.DeleteColumn.Name = "DeleteColumn";
             this.DeleteColumn.Width = 30;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Monotype Corsiva", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.Location = new System.Drawing.Point(716, 593);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(79, 25);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "ราคารวม";
+            // 
+            // TotalBillBox
+            // 
+            this.TotalBillBox.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.TotalBillBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TotalBillBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.TotalBillBox.Location = new System.Drawing.Point(806, 593);
+            this.TotalBillBox.Name = "TotalBillBox";
+            this.TotalBillBox.Size = new System.Drawing.Size(151, 24);
+            this.TotalBillBox.TabIndex = 7;
+            // 
+            // CheckOutButton
+            // 
+            this.CheckOutButton.AutoSize = true;
+            this.CheckOutButton.BackColor = System.Drawing.Color.Transparent;
+            this.CheckOutButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CheckOutButton.Font = new System.Drawing.Font("Monotype Corsiva", 15.75F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
+                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CheckOutButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.CheckOutButton.Location = new System.Drawing.Point(963, 594);
+            this.CheckOutButton.Name = "CheckOutButton";
+            this.CheckOutButton.Size = new System.Drawing.Size(53, 25);
+            this.CheckOutButton.TabIndex = 8;
+            this.CheckOutButton.Text = "สั่งซื้อ";
+            this.CheckOutButton.Click += new System.EventHandler(this.CheckOutButton_Click);
             // 
             // Menu
             // 

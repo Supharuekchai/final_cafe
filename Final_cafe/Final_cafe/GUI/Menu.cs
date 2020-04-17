@@ -27,24 +27,6 @@ namespace Final_cafe.GUI
             get { return customerID; }
             set { customerID = value; }
         }
-        private string customertype;
-        private string CustomerType
-        {
-            get { return customertype; }
-            set { customertype = value; }
-        }
-        private string gender;
-        private string Gender
-        {
-            get { return gender; }
-            set { gender = value; }
-        }
-        private string customertelno;
-        private string CustomerTelNo
-        {
-            get { return customertelno; }
-            set { customertelno = value; }
-        }
         private string point;
         private string Point
         {
@@ -58,15 +40,20 @@ namespace Final_cafe.GUI
         public int RowIndex = 0;
 
 
-        public Menu(string CustomerName, string Point)
+        public Menu(string CustomerName, string Point, int CustomerID)
         {
             InitializeComponent();
             this.name.Text = string.Format("ยินดีต้อนรับสู่ final cafe {0} จำนวน Point ของคุณคือ : {1}", CustomerName, Point);
+            SalesmanID = CustomerID;
+            DataAccess _DataAccess = new DataAccess();
+            Username = _DataAccess.ReturnUserName(CustomerID);
+
         }
 
         public Menu()
         {
             InitializeComponent();
+
         }
 
 
@@ -86,7 +73,7 @@ namespace Final_cafe.GUI
             foreach (Details Category in AllCategories)
             {
                 Button btn = new Button();
-                //btn.Text = Category.Name;
+                btn.Text = Category.Name;
                 btn.Size = new System.Drawing.Size(100, 100);
                 btn.ForeColor = Color.Black;
 
@@ -159,7 +146,7 @@ namespace Final_cafe.GUI
 
             if (CheckProductAlreadyAdded(ProductID))
             {
-                // MessageBox.Show("Product Alraedy Exists in Datagrid view at Index : " + RowIndex);
+                MessageBox.Show("Product Alraedy Exists in Datagrid view at Index : " + RowIndex);
                 int Quantity = Convert.ToInt32(ProductsGridView.Rows[RowIndex].Cells["ProductQuantityColumn"].Value);
                 decimal Price = Convert.ToInt32(ProductsGridView.Rows[RowIndex].Cells["ProductPriceColumn"].Value);
 
@@ -206,6 +193,64 @@ namespace Final_cafe.GUI
             }
 
             return TotalBill;
+        }
+
+        private void ProductsGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                if (ProductsGridView.Columns[e.ColumnIndex].Name == "DeleteColumn")
+                {
+                    if (MessageBox.Show("Are You Sure You Want to Delete this Product", "Warning", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    {
+                        decimal DeletedProductTotal = Convert.ToDecimal(ProductsGridView.Rows[e.RowIndex].Cells["TotalPriceColumn"].Value);
+
+                        decimal CurrentTotalBill = Convert.ToDecimal(TotalBillBox.Text);
+
+                        CurrentTotalBill = CurrentTotalBill - DeletedProductTotal;
+
+                        ProductsGridView.Rows.RemoveAt(e.RowIndex);
+                        TotalBillBox.Text = CurrentTotalBill.ToString();
+                    }
+                }
+            }
+        }
+
+        private void CheckOutButton_Click(object sender, EventArgs e)
+        {
+            CashForm _CashForm = new CashForm();
+
+            _CashForm.TotalBillBox.Text = TotalBillBox.Text;
+
+            if (_CashForm.ShowDialog() == DialogResult.OK)
+            {
+                ArrayList ProductsList = new ArrayList();
+
+                foreach (DataGridViewRow Row in ProductsGridView.Rows)
+                {
+                    try
+                    {
+                        string ProductName = Row.Cells["ProductNameColumn"].Value.ToString();
+                        decimal ProductPrice = Convert.ToDecimal(Row.Cells["ProductPriceColumn"].Value);
+                        int ProductQuantity = Convert.ToInt32(Row.Cells["ProductQuantityColumn"].Value);
+                        decimal ProductTotal = Convert.ToDecimal(Row.Cells["TotalPriceColumn"].Value);
+
+                        ProductsList.Add(new Details() { Name = ProductName, Price = ProductPrice, Quantity = ProductQuantity, Total = ProductTotal });
+                    }
+                    catch
+                    {
+                        string ProductName = Row.Cells["ProductNameColumn"].Value.ToString();
+                    }
+                }
+
+                DataAccess _DataAccess = new DataAccess();
+
+                if (_DataAccess.RecordASale(ProductsList, DateTime.Now, SalesmanID, Convert.ToDecimal(_CashForm.CashGivenBox.Text), Convert.ToDecimal(_CashForm.TotalBillBox.Text), Convert.ToDecimal(_CashForm.CashReturnBox.Text)))
+                {
+                    MessageBox.Show("Sale Added");
+                }
+                else MessageBox.Show("Sale Not Added");
+            }
         }
     }
 }
