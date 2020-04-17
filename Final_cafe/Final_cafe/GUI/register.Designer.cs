@@ -221,6 +221,7 @@
             this.comboBox2.Size = new System.Drawing.Size(122, 26);
             this.comboBox2.TabIndex = 1;
             this.comboBox2.Text = "กรุณาเลือกระดับ";
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // pictureBox1
             // 
