@@ -12,7 +12,7 @@ namespace Final_cafe.GUI
         public string Name;
         public byte[] Picture;
         public decimal Price;
-        public int Quantity;
+        public string Quantity;
         public string Category;
         public string Description;
         public decimal Total;

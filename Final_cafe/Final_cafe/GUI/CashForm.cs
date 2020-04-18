@@ -12,21 +12,16 @@ namespace Final_cafe.GUI
 {
     public partial class CashForm : Form
     {
-        public CashForm()
+        public CashForm(String CustomerName, String Point, String ProProductQuantity)
         {
             InitializeComponent();
-        }
+            label2.Text = CustomerName;
+            label3.Text = (Convert.ToDecimal(Point) + Convert.ToDecimal(ProProductQuantity)).ToString();
+         }
 
         private void ConfirmCheckoutButton_Click(object sender, EventArgs e)
         {
-            try
-            {
-                CashReturnBox.Text = (Convert.ToDecimal(CashGivenBox.Text) - Convert.ToDecimal(TotalBillBox.Text)).ToString();
-            }
-            catch
-            {
-                CashReturnBox.Text = string.Empty;
-            }
+            MessageBox.Show("ขอบคุณที่มาอุดหนุน ครับ");
         }
     }
 }

@@ -30,9 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CashForm));
             this.ConfirmCheckoutButton = new System.Windows.Forms.Button();
-            this.CashReturnBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.CashGivenBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.TotalBillBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -45,7 +43,7 @@
             this.ConfirmCheckoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ConfirmCheckoutButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.ConfirmCheckoutButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ConfirmCheckoutButton.Location = new System.Drawing.Point(73, 147);
+            this.ConfirmCheckoutButton.Location = new System.Drawing.Point(49, 149);
             this.ConfirmCheckoutButton.Name = "ConfirmCheckoutButton";
             this.ConfirmCheckoutButton.Size = new System.Drawing.Size(144, 23);
             this.ConfirmCheckoutButton.TabIndex = 13;
@@ -53,31 +51,17 @@
             this.ConfirmCheckoutButton.UseVisualStyleBackColor = false;
             this.ConfirmCheckoutButton.Click += new System.EventHandler(this.ConfirmCheckoutButton_Click);
             // 
-            // CashReturnBox
-            // 
-            this.CashReturnBox.Location = new System.Drawing.Point(103, 104);
-            this.CashReturnBox.Name = "CashReturnBox";
-            this.CashReturnBox.Size = new System.Drawing.Size(132, 20);
-            this.CashReturnBox.TabIndex = 12;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(23, 107);
+            this.label3.Location = new System.Drawing.Point(90, 107);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(77, 13);
             this.label3.TabIndex = 11;
             this.label3.Text = "Cash Return";
-            // 
-            // CashGivenBox
-            // 
-            this.CashGivenBox.Location = new System.Drawing.Point(103, 78);
-            this.CashGivenBox.Name = "CashGivenBox";
-            this.CashGivenBox.Size = new System.Drawing.Size(132, 20);
-            this.CashGivenBox.TabIndex = 10;
             // 
             // label2
             // 
@@ -85,7 +69,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(23, 81);
+            this.label2.Location = new System.Drawing.Point(90, 85);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(72, 13);
             this.label2.TabIndex = 9;
@@ -118,9 +102,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(388, 229);
             this.Controls.Add(this.ConfirmCheckoutButton);
-            this.Controls.Add(this.CashReturnBox);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.CashGivenBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.TotalBillBox);
             this.Controls.Add(this.label1);
@@ -135,9 +117,7 @@
         #endregion
 
         private System.Windows.Forms.Button ConfirmCheckoutButton;
-        public System.Windows.Forms.TextBox CashReturnBox;
         private System.Windows.Forms.Label label3;
-        public System.Windows.Forms.TextBox CashGivenBox;
         private System.Windows.Forms.Label label2;
         public System.Windows.Forms.TextBox TotalBillBox;
         private System.Windows.Forms.Label label1;

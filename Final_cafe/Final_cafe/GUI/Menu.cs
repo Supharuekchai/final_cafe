@@ -1,13 +1,7 @@
 ﻿using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Final_cafe.GUI
@@ -34,17 +28,16 @@ namespace Final_cafe.GUI
             set { point = value; }
         }
 
-        public int SalesmanID = 0;
-        public string Username = string.Empty;
-
+        public string StaffID;
+        public string Username;
         public int RowIndex = 0;
 
 
-        public Menu(string CustomerName, string Point, int CustomerID)
+        public Menu(string CustomerName, string Point, string CustomerID)
         {
             InitializeComponent();
             this.name.Text = string.Format("ยินดีต้อนรับสู่ final cafe {0} จำนวน Point ของคุณคือ : {1}", CustomerName, Point);
-            SalesmanID = CustomerID;
+            StaffID = CustomerID;
             DataAccess _DataAccess = new DataAccess();
             Username = _DataAccess.ReturnUserName(CustomerID);
 
@@ -218,9 +211,11 @@ namespace Final_cafe.GUI
 
         private void CheckOutButton_Click(object sender, EventArgs e)
         {
-            CashForm _CashForm = new CashForm();
+            
+            CashForm _CashForm = new CashForm(CustomerName, Point, CalculateTotalBill(ProductsGridView).ToString());
 
             _CashForm.TotalBillBox.Text = TotalBillBox.Text;
+
 
             if (_CashForm.ShowDialog() == DialogResult.OK)
             {
@@ -232,7 +227,7 @@ namespace Final_cafe.GUI
                     {
                         string ProductName = Row.Cells["ProductNameColumn"].Value.ToString();
                         decimal ProductPrice = Convert.ToDecimal(Row.Cells["ProductPriceColumn"].Value);
-                        int ProductQuantity = Convert.ToInt32(Row.Cells["ProductQuantityColumn"].Value);
+                        string ProductQuantity = Convert.ToString(Row.Cells["ProductQuantityColumn"].Value);
                         decimal ProductTotal = Convert.ToDecimal(Row.Cells["TotalPriceColumn"].Value);
 
                         ProductsList.Add(new Details() { Name = ProductName, Price = ProductPrice, Quantity = ProductQuantity, Total = ProductTotal });
@@ -244,12 +239,7 @@ namespace Final_cafe.GUI
                 }
 
                 DataAccess _DataAccess = new DataAccess();
-
-                if (_DataAccess.RecordASale(ProductsList, DateTime.Now, SalesmanID, Convert.ToDecimal(_CashForm.CashGivenBox.Text), Convert.ToDecimal(_CashForm.TotalBillBox.Text), Convert.ToDecimal(_CashForm.CashReturnBox.Text)))
-                {
-                    MessageBox.Show("Sale Added");
-                }
-                else MessageBox.Show("Sale Not Added");
+                _DataAccess.RecordASale(ProductsList, DateTime.Now, StaffID, CustomerID, Convert.ToDecimal(_CashForm.TotalBillBox.Text));
             }
         }
     }

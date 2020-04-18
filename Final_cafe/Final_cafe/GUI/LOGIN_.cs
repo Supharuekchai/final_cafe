@@ -14,7 +14,7 @@ namespace Final_cafe.GUI
     public partial class LOGIN : Form
     {
 
-        private int customerID;
+        private String customerID;
         private String customername;
         private String customertype;
         private String gender;
@@ -43,7 +43,7 @@ namespace Final_cafe.GUI
                 MySqlDataReader rdr = cmd.ExecuteReader();
                 if (rdr.Read())
                 {
-                    this.customerID = Convert.ToInt32(rdr["CustomerID"]) ;
+                    this.customerID = rdr["CustomerID"].ToString();
                     this.customername = rdr["CustomerName"].ToString();
                     this.customertype = rdr["CustomerType"].ToString();
                     this.gender = rdr["Gender"].ToString();
@@ -83,7 +83,7 @@ namespace Final_cafe.GUI
             {
                 Getdata(Username.Text);
                 this.Hide();
-                int CustomerID = this.customerID.Trim();
+                string CustomerID = this.customerID.Trim();
                 string CustomerName = this.customername.Trim();
                 string Gender = this.gender.Trim();
                 string CustomerType = this.customertype.Trim();

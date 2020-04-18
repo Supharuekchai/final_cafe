@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Final_cafe
+namespace Final_cafe.GUI
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace Final_cafe
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new GUI.LOGIN());
+            Application.Run(new LOGIN());
         }
     }
 }

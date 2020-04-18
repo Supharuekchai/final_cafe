@@ -132,6 +132,12 @@
     <Compile Include="GUI\Staff.Designer.cs">
       <DependentUpon>Staff.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Staff_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Staff_Form.Designer.cs">
+      <DependentUpon>Staff_Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GUI\CashForm.resx">
@@ -148,6 +154,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Staff.resx">
       <DependentUpon>Staff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Staff_Form.resx">
+      <DependentUpon>Staff_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

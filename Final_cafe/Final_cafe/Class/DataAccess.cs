@@ -162,7 +162,7 @@ namespace Final_cafe.GUI
                         int ProductID = reader.GetInt32(0);
                         string ProductName = reader.GetString(1);
                         decimal ProductPrice = reader.GetDecimal(2);
-                        int ProductCategoryID = reader.GetInt32(3);
+                        string ProductCategoryID = reader.GetString(3);
                         string ProductCategoryName = ReturnCategoryName(ProductCategoryID);
                         string ProductDescription = reader.GetString(4);
                         byte[] ProductPicture = (byte[])reader[5];
@@ -229,7 +229,7 @@ namespace Final_cafe.GUI
             }
         }
 
-        public string ReturnCategoryName(int CategoryID)
+        public string ReturnCategoryName(string CategoryID)
         {
             using (MySqlConnection connection = new MySqlConnection(conn))
             {
@@ -270,7 +270,7 @@ namespace Final_cafe.GUI
                     {
                         ProductDetails.Name = reader.GetString(0);
                         ProductDetails.Price = reader.GetDecimal(1);
-                        int ProductCategoryID = reader.GetInt32(2);
+                        string ProductCategoryID = reader.GetString(2);
                         ProductDetails.Category = ReturnCategoryName(ProductCategoryID);
                         ProductDetails.Picture = (byte[])reader[3];
                     }
@@ -281,7 +281,7 @@ namespace Final_cafe.GUI
             }
         }
 
-        public bool RecordASale(ArrayList ProductsList, DateTime SaleTime, int SalesmanID, decimal CashGiven, decimal TotalBill, decimal CashReturn)
+        public bool RecordASale(ArrayList ProductsList, DateTime SaleSateTime, string StaffID, string CustomerID, decimal GrandTotal)
         {
             int SaleID = ReturnSaleID();
 
@@ -299,27 +299,26 @@ namespace Final_cafe.GUI
                 try
                 {
                     // Execute separate commands.
-                    command.Parameters.AddWithValue("@SaleTime", SaleTime);
-                    command.Parameters.AddWithValue("@SalesmanID", SalesmanID);
-                    command.Parameters.AddWithValue("@CashGiven", CashGiven);
-                    command.Parameters.AddWithValue("@TotalBill", TotalBill);
-                    command.Parameters.AddWithValue("@CashReturn", CashReturn);
+                    command.Parameters.AddWithValue("@SaleTime", SaleSateTime);
+                    command.Parameters.AddWithValue("@SalesmanID", StaffID);
+                    command.Parameters.AddWithValue("@CashGiven", CustomerID);
+                    command.Parameters.AddWithValue("@TotalBill", GrandTotal);
 
                     command.CommandText =
-                       "Insert into Sales (SaleTime, SalesmanID, CashGiven, TotalBill, CashReturn) values (@SaleTime, @SalesmanID, @CashGiven, @TotalBill, @CashReturn)";
+                       "Insert into sales (SaleSateTime, StaffID, CustomerID, GrandTotal) values (@SaleTime, @SalesmanID, @CashGiven, @TotalBill)";
                     command.ExecuteNonQuery();
 
                     foreach (Details ProductDetail in ProductsList)
                     {
                         //// Execute separate commands.
-                        //command.Parameters.AddWithValue("@ProductName", ProductDetail.Name);
-                        //command.Parameters.AddWithValue("@ProductPrice", ProductDetail.Price);
-                        //command.Parameters.AddWithValue("@ProductQuantity", ProductDetail.Quantity);
-                        //command.Parameters.AddWithValue("@ProductTotal", ProductDetail.Total);
-                        //command.Parameters.AddWithValue("@SaleID", SaleID);
+                        command.Parameters.AddWithValue("@ProductName", ProductDetail.Name);
+                        command.Parameters.AddWithValue("@ProductPrice", ProductDetail.Price);
+                        command.Parameters.AddWithValue("@ProductQuantity", ProductDetail.Quantity);
+                        command.Parameters.AddWithValue("@ProductTotal", ProductDetail.Total);
+                        command.Parameters.AddWithValue("@SaleID", SaleID);
 
                         command.CommandText =
-                           "Insert into SaleItems (ProductName, ProductPrice, ProductQuantity, ProductTotal, SaleID) values ('" + ProductDetail.Name + "', '" + ProductDetail.Price + "', '" + ProductDetail.Quantity + "', '" + ProductDetail.Total + "', '" + SaleID + "')";
+                           "Insert into salesdetail (ProductName, ProductPrice, ProductQuantity, ProductTotal, SaleID) values ('" + ProductDetail.Name + "', '" + ProductDetail.Price + "', '" + ProductDetail.Quantity + "', '" + ProductDetail.Total + "', '" + SaleID + "')";
                         command.ExecuteNonQuery();
                     }
 
@@ -453,7 +452,7 @@ namespace Final_cafe.GUI
                     {
                         int SaleID = reader.GetInt32(0);
                         DateTime SaleTime = reader.GetDateTime(1);
-                        int SalesmanID = reader.GetInt32(2);
+                        string SalesmanID = reader.GetString(2);
                         string SalesmanName = ReturnUserName(SalesmanID);
                         decimal TotalBill = reader.GetDecimal(3);
 
@@ -466,7 +465,7 @@ namespace Final_cafe.GUI
             }
         }
 
-        public string ReturnUserName(int UserID)
+        public string ReturnUserName(string UserID)
         {
             using (MySqlConnection connection = new MySqlConnection(conn))
             {
