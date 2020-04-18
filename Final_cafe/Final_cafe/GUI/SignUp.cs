@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Final_cafe.GUI
 {
-    public partial class Staff_Form : Form
+    public partial class SignUp : Form
     {
-        public Staff_Form(string StaffID, string StaffName, string StaffLevel, string StaffCode)
+        public SignUp()
         {
             InitializeComponent();
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

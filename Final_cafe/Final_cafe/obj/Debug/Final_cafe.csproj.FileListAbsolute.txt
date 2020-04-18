@@ -73,4 +73,9 @@ D:\final_cafe\Final_cafe\Final_cafe\obj\Debug\Final_cafe.Register.resources
 C:\Users\AsadaYoon\Desktop\PPro\final_cafe\Final_cafe\Final_cafe\obj\Debug\Final_cafe.GUI.Staff.resources
 D:\final_cafe\Final_cafe\Final_cafe\obj\Debug\Final_cafe.GUI.Staff.resources
 D:\final_cafe\Final_cafe\Final_cafe\obj\Debug\Final_cafe.GUI.CashForm.resources
+<<<<<<< HEAD
 D:\final_cafe\Final_cafe\Final_cafe\obj\Debug\Final_cafe.GUI.Staff_Form.resources
+=======
+C:\Users\AsadaYoon\Desktop\PPro\final_cafe\Final_cafe\Final_cafe\obj\Debug\Final_cafe.GUI.CashForm.resources
+C:\Users\AsadaYoon\Desktop\PPro\final_cafe\Final_cafe\Final_cafe\obj\Debug\Final_cafe.GUI.SignUp.resources
+>>>>>>> ae6da6249d02ac340670cabb67ca1238fabddaaf

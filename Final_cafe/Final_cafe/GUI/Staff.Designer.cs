@@ -35,7 +35,11 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.Pass = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+<<<<<<< HEAD
             this.Staff_ID = new System.Windows.Forms.TextBox();
+=======
+            this.StaffCode = new System.Windows.Forms.TextBox();
+>>>>>>> ae6da6249d02ac340670cabb67ca1238fabddaaf
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.register = new System.Windows.Forms.Button();
@@ -110,6 +114,7 @@
             this.panel1.TabIndex = 29;
             this.panel1.UseWaitCursor = true;
             // 
+<<<<<<< HEAD
             // Staff_ID
             // 
             this.Staff_ID.BackColor = System.Drawing.Color.Linen;
@@ -121,6 +126,19 @@
             this.Staff_ID.Size = new System.Drawing.Size(178, 24);
             this.Staff_ID.TabIndex = 28;
             this.Staff_ID.Text = "User";
+=======
+            // StaffCode
+            // 
+            this.StaffCode.BackColor = System.Drawing.Color.Linen;
+            this.StaffCode.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.StaffCode.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.StaffCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.StaffCode.Location = new System.Drawing.Point(103, 272);
+            this.StaffCode.Name = "StaffCode";
+            this.StaffCode.Size = new System.Drawing.Size(178, 24);
+            this.StaffCode.TabIndex = 28;
+            this.StaffCode.Text = "StaffCode";
+>>>>>>> ae6da6249d02ac340670cabb67ca1238fabddaaf
             // 
             // pictureBox3
             // 
@@ -164,7 +182,11 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.Pass);
             this.Controls.Add(this.panel1);
+<<<<<<< HEAD
             this.Controls.Add(this.Staff_ID);
+=======
+            this.Controls.Add(this.StaffCode);
+>>>>>>> ae6da6249d02ac340670cabb67ca1238fabddaaf
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.login);
@@ -191,7 +213,11 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox Pass;
         private System.Windows.Forms.Panel panel1;
+<<<<<<< HEAD
         private System.Windows.Forms.TextBox Staff_ID;
+=======
+        private System.Windows.Forms.TextBox StaffCode;
+>>>>>>> ae6da6249d02ac340670cabb67ca1238fabddaaf
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button register;
