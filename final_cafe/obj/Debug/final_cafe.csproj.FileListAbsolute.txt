@@ -25,3 +25,31 @@ D:\New final_cafe\final_cafe\final_cafe\obj\Debug\final_cafe.ViewSaleItems.resou
 D:\New final_cafe\final_cafe\final_cafe\obj\Debug\final_cafe.csproj.CopyComplete
 D:\New final_cafe\final_cafe\final_cafe\obj\Debug\final_cafe.exe
 D:\New final_cafe\final_cafe\final_cafe\obj\Debug\final_cafe.pdb
+C:\Users\AsadaYoon\Desktop\Pro\final_cafe\final_cafe\bin\Debug\final_cafe.exe.config
+C:\Users\AsadaYoon\Desktop\Pro\final_cafe\final_cafe\bin\Debug\final_cafe.exe
+C:\Users\AsadaYoon\Desktop\Pro\final_cafe\final_cafe\bin\Debug\final_cafe.pdb
+C:\Users\AsadaYoon\Desktop\Pro\final_cafe\final_cafe\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\AsadaYoon\Desktop\Pro\final_cafe\final_cafe\bin\Debug\Google.Protobuf.dll
+C:\Users\AsadaYoon\Desktop\Pro\final_cafe\final_cafe\bin\Debug\MySql.Data.dll
+C:\Users\AsadaYoon\Desktop\Pro\final_cafe\final_cafe\bin\Debug\Renci.SshNet.dll
+C:\Users\AsadaYoon\Desktop\Pro\final_cafe\final_cafe\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\AsadaYoon\Desktop\Pro\final_cafe\final_cafe\bin\Debug\Google.Protobuf.xml
+C:\Users\AsadaYoon\Desktop\Pro\final_cafe\final_cafe\bin\Debug\MySql.Data.xml
+C:\Users\AsadaYoon\Desktop\Pro\final_cafe\final_cafe\bin\Debug\Renci.SshNet.xml
+C:\Users\AsadaYoon\Desktop\Pro\final_cafe\final_cafe\obj\Debug\final_cafe.csprojAssemblyReference.cache
+C:\Users\AsadaYoon\Desktop\Pro\final_cafe\final_cafe\obj\Debug\final_cafe.AddCategory.resources
+C:\Users\AsadaYoon\Desktop\Pro\final_cafe\final_cafe\obj\Debug\final_cafe.AddProduct.resources
+C:\Users\AsadaYoon\Desktop\Pro\final_cafe\final_cafe\obj\Debug\final_cafe.CashFrom.resources
+C:\Users\AsadaYoon\Desktop\Pro\final_cafe\final_cafe\obj\Debug\final_cafe.Customer_Login.resources
+C:\Users\AsadaYoon\Desktop\Pro\final_cafe\final_cafe\obj\Debug\final_cafe.Staff_Form.resources
+C:\Users\AsadaYoon\Desktop\Pro\final_cafe\final_cafe\obj\Debug\final_cafe.Staff_Login.resources
+C:\Users\AsadaYoon\Desktop\Pro\final_cafe\final_cafe\obj\Debug\final_cafe.Properties.Resources.resources
+C:\Users\AsadaYoon\Desktop\Pro\final_cafe\final_cafe\obj\Debug\final_cafe.UpdateProducts.resources
+C:\Users\AsadaYoon\Desktop\Pro\final_cafe\final_cafe\obj\Debug\final_cafe.ViewAllProucts.resources
+C:\Users\AsadaYoon\Desktop\Pro\final_cafe\final_cafe\obj\Debug\final_cafe.ViewAllSales.resources
+C:\Users\AsadaYoon\Desktop\Pro\final_cafe\final_cafe\obj\Debug\final_cafe.ViewSaleItems.resources
+C:\Users\AsadaYoon\Desktop\Pro\final_cafe\final_cafe\obj\Debug\final_cafe.csproj.GenerateResource.cache
+C:\Users\AsadaYoon\Desktop\Pro\final_cafe\final_cafe\obj\Debug\final_cafe.csproj.CoreCompileInputs.cache
+C:\Users\AsadaYoon\Desktop\Pro\final_cafe\final_cafe\obj\Debug\final_cafe.csproj.CopyComplete
+C:\Users\AsadaYoon\Desktop\Pro\final_cafe\final_cafe\obj\Debug\final_cafe.exe
+C:\Users\AsadaYoon\Desktop\Pro\final_cafe\final_cafe\obj\Debug\final_cafe.pdb

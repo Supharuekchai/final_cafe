@@ -142,6 +142,9 @@
     <EmbeddedResource Include="CashFrom.resx">
       <DependentUpon>CashFrom.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Customer_Login.resx">
+      <DependentUpon>Customer_Login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Staff_Form.resx">
       <DependentUpon>Staff_Form.cs</DependentUpon>
     </EmbeddedResource>

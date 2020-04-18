@@ -16,7 +16,7 @@ namespace final_cafe
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Staff_Login());
+            Application.Run(new Customer_Login());
         }
     }
 }
