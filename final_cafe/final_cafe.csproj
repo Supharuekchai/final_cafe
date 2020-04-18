@@ -196,5 +196,8 @@
   <ItemGroup>
     <None Include="Resources\pngtree-tea-restaurant-poster-background-material-image_172982.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-cafe-single-origin-coffee-coffee-bean-computer-ico-the-works-skin-care-organic-coffee-scrubs-5ba401825d8b08.4768069815374749463832.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
