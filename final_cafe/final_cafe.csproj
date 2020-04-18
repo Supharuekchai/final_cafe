@@ -159,6 +159,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="UpdateProducts.resx">
       <DependentUpon>UpdateProducts.cs</DependentUpon>
@@ -185,6 +186,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\334-3344297_customer-satisfaction-blue-icon-png-clipart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\334-3344297_customer-satisfaction-blue-icon-png-clipart1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngtree-tea-restaurant-poster-background-material-image_172982.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
