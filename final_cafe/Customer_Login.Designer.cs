@@ -94,6 +94,7 @@
             this.cus_login.Size = new System.Drawing.Size(54, 19);
             this.cus_login.TabIndex = 59;
             this.cus_login.Text = "Login";
+            this.cus_login.Click += new System.EventHandler(this.cus_login_Click);
             // 
             // panel2
             // 
