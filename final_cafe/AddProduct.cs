@@ -18,7 +18,7 @@ namespace final_cafe
             InitializeComponent();
         }
 
-        private void AddProduct_Load(object sender, EventArgs e)
+        private void AddProduct_Load_1(object sender, EventArgs e)
         {
             DataAccess _DataAccess = new DataAccess();
 
@@ -28,7 +28,7 @@ namespace final_cafe
             }
         }
 
-        private void UploadPictureButton_Click(object sender, EventArgs e)
+        private void UploadButton_Click(object sender, EventArgs e)
         {
             /*selecting image*/
 
@@ -70,6 +70,10 @@ namespace final_cafe
             if (_DataAccess.AddNewProductToDatabase(ProductNameBox.Text, Convert.ToDecimal(ProductPriceBox.Text), _DataAccess.ReturnCategoryID(ProductCategoryComboBox.SelectedItem.ToString()), ProductDescriptionRBox.Text, ProductPicture))
             {
                 MessageBox.Show("Product Added");
+                this.ProductNameBox.Text = "";
+                this.ProductPriceBox.Text = "";
+                this.ProductDescriptionRBox.Text = "";
+                this.ProductPictureBox.Image = null;
             }
             else MessageBox.Show("Product Not Added");
         }

@@ -21,7 +21,7 @@ namespace final_cafe
         {
         }
 
-        private void UploadPictureButton_Click(object sender, EventArgs e)
+        private void UploadButton_Click(object sender, EventArgs e)
         {
             /*selecting image*/
 

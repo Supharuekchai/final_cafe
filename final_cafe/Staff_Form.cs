@@ -24,7 +24,7 @@ namespace final_cafe
 
         public int RowIndex = 1;
 
-        private void Dashboard_Load(object sender, EventArgs e)
+        private void Staff_Form_Load(object sender, EventArgs e)
         {
             UserNameIDMenuLabel.Text = Username + " (" + SalesmanID + ")";
 
@@ -157,7 +157,7 @@ namespace final_cafe
             return TotalBill;
         }
 
-        private void addCategoryToolStripMenuItem_Click(object sender, EventArgs e)
+        private void addCategory_Click(object sender, EventArgs e)
         {
             AddCategory _AddCategory = new AddCategory();
 
@@ -191,18 +191,18 @@ namespace final_cafe
             }
         }
 
-        private void addProductToolStripMenuItem_Click(object sender, EventArgs e)
+        private void addProduct_Click(object sender, EventArgs e)
         {
             AddProduct _AddProduct = new AddProduct();
             _AddProduct.ShowDialog();
         }
 
-        private void viewAllProductsToolStripMenuItem_Click(object sender, EventArgs e)
+        private void viewAllProducts_Click(object sender, EventArgs e)
         {
             new ViewAllProucts().ShowDialog();
         }
 
-        private void viewSalesToolStripMenuItem_Click(object sender, EventArgs e)
+        private void viewSales_Click(object sender, EventArgs e)
         {
             new ViewAllSales().ShowDialog();
         }
@@ -255,7 +255,7 @@ namespace final_cafe
             {
                 if (ProductsGridView.Columns[e.ColumnIndex].Name == "DeleteColumn")
                 {
-                    if (MessageBox.Show("Are You Sure You Want to Delete this Product", "Warning", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    if (MessageBox.Show("คุณต้องการลบรายการนี้ หรือไม่?", "Warning", MessageBoxButtons.YesNo) == DialogResult.Yes)
                     {
                         decimal DeletedProductTotal = Convert.ToDecimal(ProductsGridView.Rows[e.RowIndex].Cells["TotalPriceColumn"].Value);
 
@@ -269,10 +269,12 @@ namespace final_cafe
                 }
             }
         }
-
-        private void Dashboard_FormClosing(object sender, FormClosingEventArgs e)
+        
+        private void Staff_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
         }
+
+
     }
 }

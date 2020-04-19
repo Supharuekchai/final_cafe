@@ -54,6 +54,7 @@
             this.ProductCategoryComboBox.Size = new System.Drawing.Size(499, 21);
             this.ProductCategoryComboBox.Sorted = true;
             this.ProductCategoryComboBox.TabIndex = 5;
+            this.ProductCategoryComboBox.SelectedIndexChanged += new System.EventHandler(this.ProductCategoryComboBox_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -92,6 +93,7 @@
             this.ProductsGridView.Name = "ProductsGridView";
             this.ProductsGridView.Size = new System.Drawing.Size(584, 306);
             this.ProductsGridView.TabIndex = 0;
+            this.ProductsGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ProductsGridView_CellContentClick);
             // 
             // ProductIDColumn
             // 
@@ -147,6 +149,7 @@
             this.Controls.Add(this.ProductsGroupBox);
             this.Name = "ViewAllProucts";
             this.Text = "ViewAllProucts";
+            this.Load += new System.EventHandler(this.ViewAllProucts_Load);
             this.ProductsGroupBox.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ProductsGridView)).EndInit();
             this.ResumeLayout(false);

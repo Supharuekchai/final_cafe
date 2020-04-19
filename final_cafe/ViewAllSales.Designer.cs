@@ -64,6 +64,7 @@
             this.SalesGridView.Name = "SalesGridView";
             this.SalesGridView.Size = new System.Drawing.Size(584, 329);
             this.SalesGridView.TabIndex = 0;
+            this.SalesGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SalesGridView_CellContentClick);
             // 
             // SaleIDColumn
             // 
@@ -100,6 +101,7 @@
             this.Controls.Add(this.SalesGroupBox);
             this.Name = "ViewAllSales";
             this.Text = "ViewAllSales";
+            this.Load += new System.EventHandler(this.ViewAllSales_Load);
             this.SalesGroupBox.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.SalesGridView)).EndInit();
             this.ResumeLayout(false);

@@ -17,6 +17,7 @@ namespace final_cafe
             InitializeComponent();
         }
 
+
         private void ViewAllSales_Load(object sender, EventArgs e)
         {
             DataAccess _DataAccess = new DataAccess();

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.AddCategoryButton = new System.Windows.Forms.Button();
-            this.UploadPictureButton = new System.Windows.Forms.Button();
+            this.UploadButton = new System.Windows.Forms.Button();
             this.CategoryPictureBox = new System.Windows.Forms.PictureBox();
             this.CategoryDescriptionRBox = new System.Windows.Forms.RichTextBox();
             this.CategoryNameBox = new System.Windows.Forms.TextBox();
@@ -48,15 +48,17 @@
             this.AddCategoryButton.TabIndex = 15;
             this.AddCategoryButton.Text = "Add Category";
             this.AddCategoryButton.UseVisualStyleBackColor = true;
+            this.AddCategoryButton.Click += new System.EventHandler(this.AddCategoryButton_Click);
             // 
-            // UploadPictureButton
+            // UploadButton
             // 
-            this.UploadPictureButton.Location = new System.Drawing.Point(8, 146);
-            this.UploadPictureButton.Name = "UploadPictureButton";
-            this.UploadPictureButton.Size = new System.Drawing.Size(85, 23);
-            this.UploadPictureButton.TabIndex = 14;
-            this.UploadPictureButton.Text = "Upload Picture";
-            this.UploadPictureButton.UseVisualStyleBackColor = true;
+            this.UploadButton.Location = new System.Drawing.Point(8, 146);
+            this.UploadButton.Name = "UploadButton";
+            this.UploadButton.Size = new System.Drawing.Size(85, 23);
+            this.UploadButton.TabIndex = 14;
+            this.UploadButton.Text = "Upload Picture";
+            this.UploadButton.UseVisualStyleBackColor = true;
+            this.UploadButton.Click += new System.EventHandler(this.UploadButton_Click);
             // 
             // CategoryPictureBox
             // 
@@ -115,7 +117,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(290, 278);
             this.Controls.Add(this.AddCategoryButton);
-            this.Controls.Add(this.UploadPictureButton);
+            this.Controls.Add(this.UploadButton);
             this.Controls.Add(this.CategoryPictureBox);
             this.Controls.Add(this.CategoryDescriptionRBox);
             this.Controls.Add(this.CategoryNameBox);
@@ -133,7 +135,7 @@
         #endregion
 
         private System.Windows.Forms.Button AddCategoryButton;
-        private System.Windows.Forms.Button UploadPictureButton;
+        private System.Windows.Forms.Button UploadButton;
         private System.Windows.Forms.PictureBox CategoryPictureBox;
         private System.Windows.Forms.RichTextBox CategoryDescriptionRBox;
         private System.Windows.Forms.TextBox CategoryNameBox;

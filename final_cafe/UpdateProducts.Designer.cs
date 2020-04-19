@@ -70,6 +70,7 @@
             this.CancelButton.TabIndex = 47;
             this.CancelButton.Text = "Cancel";
             this.CancelButton.UseVisualStyleBackColor = true;
+            this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
             // 
             // ProductCategoryComboBox
             // 
@@ -113,6 +114,7 @@
             this.UpdateProductButton.TabIndex = 42;
             this.UpdateProductButton.Text = "Update Product";
             this.UpdateProductButton.UseVisualStyleBackColor = true;
+            this.UpdateProductButton.Click += new System.EventHandler(this.UpdateProductButton_Click);
             // 
             // UploadPictureButton
             // 
@@ -122,6 +124,7 @@
             this.UploadPictureButton.TabIndex = 41;
             this.UploadPictureButton.Text = "Upload Picture";
             this.UploadPictureButton.UseVisualStyleBackColor = true;
+            this.UploadPictureButton.Click += new System.EventHandler(this.UploadPictureButton_Click);
             // 
             // ProductPictureBox
             // 
@@ -196,6 +199,7 @@
             this.Controls.Add(this.label1);
             this.Name = "UpdateProducts";
             this.Text = "UpdateProducts";
+            this.Load += new System.EventHandler(this.UpdateProducts_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ProductPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

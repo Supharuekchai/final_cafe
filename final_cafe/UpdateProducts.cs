@@ -30,7 +30,7 @@ namespace final_cafe
             ProductPicture = GivenProductPicture;
         }
 
-        private void UpdateProucts_Load(object sender, EventArgs e)
+        private void UpdateProducts_Load(object sender, EventArgs e)
         {
             ProductIDBox.Text = ProductID.ToString();
             ProductNameBox.Text = ProductName;
@@ -66,14 +66,9 @@ namespace final_cafe
             }
         }
 
-        private void CancelButton_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void UpdateProductButton_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Are You Sure You Want to Update this Product?", "Warning", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show("คุณต้องการที่จะแก้ไขสินค้า ใช่หรือไม่?", "Warning", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 DataAccess _DataAccess = new DataAccess();
 
@@ -105,8 +100,14 @@ namespace final_cafe
                 {
                     this.Close();
                 }
-                else MessageBox.Show("Poduct Not Updated", "Error", MessageBoxButtons.OK);
+                else MessageBox.Show("แก้ไขไม่สำเร็จ", "Error", MessageBoxButtons.OK);
             }
+        }
+
+
+        private void CancelButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

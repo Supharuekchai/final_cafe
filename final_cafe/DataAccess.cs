@@ -54,7 +54,7 @@ namespace final_cafe
                     command.Parameters.AddWithValue("@CategoryPicture", CategoryPicture);
 
                     command.CommandText =
-                       "Insert into Categories (CategoryName, CategoryDescription, CategoryPicture) values (@CategoryName, @CategoryDescription, @CategoryPicture)";
+                       "Insert into categories (CategoryName, CategoryDescription, CategoryPicture) values (@CategoryName, @CategoryDescription, @CategoryPicture)";
                     command.ExecuteNonQuery();
 
                     // Commit the transaction.
@@ -78,7 +78,7 @@ namespace final_cafe
 
             using (MySqlConnection connection = new MySqlConnection(ConnectionString))
             {
-                MySqlCommand command = new MySqlCommand("SELECT CategoryID, CategoryName, CategoryDeTail FROM categories;", connection);
+                MySqlCommand command = new MySqlCommand("SELECT CategoryID, CategoryName, CategoryPicture FROM categories;", connection);
                 connection.Open();
 
                 MySqlDataReader reader = command.ExecuteReader();
@@ -123,7 +123,7 @@ namespace final_cafe
                     command.Parameters.AddWithValue("@ProductImage", ProductPicture);
 
                     command.CommandText =
-                       "Insert into products (ProductName, ProductPrice, ProductCategoryID, ProductDetail, ProductImage) values (@ProductName, @ProductPrice, @ProductCategoryID, @ProductDescription, @ProductImage)";
+                       "Insert into products (ProductName, ProductPrice, ProductCategoryID, ProductDescription, ProductImage) values (@ProductName, @ProductPrice, @ProductCategoryID, @ProductDescription, @ProductImage)";
                     command.ExecuteNonQuery();
 
                     // Commit the transaction.
@@ -207,7 +207,7 @@ namespace final_cafe
         {
             using (MySqlConnection connection = new MySqlConnection(ConnectionString))
             {
-                MySqlCommand command = new MySqlCommand("SELECT CategoryID FROM categoriess where CategoryName = '" + CategoryName + "';", connection);
+                MySqlCommand command = new MySqlCommand("SELECT CategoryID FROM categories where CategoryName = '" + CategoryName + "';", connection);
                 connection.Open();
 
                 MySqlDataReader reader = command.ExecuteReader();
@@ -441,7 +441,7 @@ namespace final_cafe
 
             using (MySqlConnection connection = new MySqlConnection(ConnectionString))
             {
-                MySqlCommand command = new MySqlCommand("SELECT SalesID, SaleDateTime, StaffID, GrandToal FROM sales;", connection);
+                MySqlCommand command = new MySqlCommand("SELECT SaleID, SaleDateTime, StaffID, GrandTotal FROM sales;", connection);
                 connection.Open();
 
                 MySqlDataReader reader = command.ExecuteReader();
@@ -486,6 +486,30 @@ namespace final_cafe
                 reader.Close();
 
                 return UserName;
+            }
+        }
+
+        public string ReturnProductName(string ProductID)
+        {
+            using (MySqlConnection connection = new MySqlConnection(ConnectionString))
+            {
+                MySqlCommand command = new MySqlCommand("SELECT ProductName FROM products where ProductID = '" + ProductID + "';", connection);
+                connection.Open();
+
+                MySqlDataReader reader = command.ExecuteReader();
+
+                string ProductName = string.Empty;
+
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        ProductName = reader.GetString(0);
+                    }
+                }
+                reader.Close();
+
+                return ProductName;
             }
         }
 
@@ -566,7 +590,7 @@ namespace final_cafe
 
             using (MySqlConnection connection = new MySqlConnection(ConnectionString))
             {
-                MySqlCommand command = new MySqlCommand("SELECT ProductID, ProductPrice, ProductQuantity, ProductTotal FROM sale_detail where SaleID = '" + SaleID + "';", connection);
+                MySqlCommand command = new MySqlCommand("SELECT ProductID, ProductPrice, ProductQuantity, ProductTotal FROM sale_details where SaleID = '" + SaleID + "';", connection);
                 connection.Open();
 
                 MySqlDataReader reader = command.ExecuteReader();
@@ -575,10 +599,12 @@ namespace final_cafe
                 {
                     while (reader.Read())
                     {
-                        string ProductName = reader.GetString(0);
+                        string ProductID = reader.GetString(0);
                         decimal ProductPrice = reader.GetDecimal(1);
                         int ProductQuantity = reader.GetInt32(2);
                         decimal ProductTotal = reader.GetDecimal(3);
+
+                        string ProductName = this.ReturnProductName(ProductID);
 
                         ProductsList.Add(new Details() { Name = ProductName, Price = ProductPrice, Quantity = ProductQuantity, Total = ProductTotal });
                     }

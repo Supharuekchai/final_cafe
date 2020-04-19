@@ -45,10 +45,10 @@
             this.CategoryGroupBox = new System.Windows.Forms.GroupBox();
             this.CategoriesFlowPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.MainMenuStrip = new System.Windows.Forms.MenuStrip();
-            this.addCategoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addProductToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewAllProductsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewSalesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addCategory = new System.Windows.Forms.ToolStripMenuItem();
+            this.addProduct = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewAllProducts = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewSales = new System.Windows.Forms.ToolStripMenuItem();
             this.UserNameIDMenuLabel = new System.Windows.Forms.ToolStripMenuItem();
             this.BillGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProductsGridView)).BeginInit();
@@ -108,6 +108,7 @@
             this.ProductsGridView.Name = "ProductsGridView";
             this.ProductsGridView.Size = new System.Drawing.Size(364, 450);
             this.ProductsGridView.TabIndex = 0;
+            this.ProductsGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ProductsGridView_CellContentClick);
             // 
             // ProductIDColumn
             // 
@@ -188,10 +189,10 @@
             // MainMenuStrip
             // 
             this.MainMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addCategoryToolStripMenuItem,
-            this.addProductToolStripMenuItem,
-            this.viewAllProductsToolStripMenuItem,
-            this.viewSalesToolStripMenuItem,
+            this.addCategory,
+            this.addProduct,
+            this.viewAllProducts,
+            this.viewSales,
             this.UserNameIDMenuLabel});
             this.MainMenuStrip.Location = new System.Drawing.Point(0, 0);
             this.MainMenuStrip.Name = "MainMenuStrip";
@@ -199,29 +200,33 @@
             this.MainMenuStrip.TabIndex = 7;
             this.MainMenuStrip.Text = "menuStrip1";
             // 
-            // addCategoryToolStripMenuItem
+            // addCategory
             // 
-            this.addCategoryToolStripMenuItem.Name = "addCategoryToolStripMenuItem";
-            this.addCategoryToolStripMenuItem.Size = new System.Drawing.Size(92, 20);
-            this.addCategoryToolStripMenuItem.Text = "Add Category";
+            this.addCategory.Name = "addCategory";
+            this.addCategory.Size = new System.Drawing.Size(92, 20);
+            this.addCategory.Text = "Add Category";
+            this.addCategory.Click += new System.EventHandler(this.addCategory_Click);
             // 
-            // addProductToolStripMenuItem
+            // addProduct
             // 
-            this.addProductToolStripMenuItem.Name = "addProductToolStripMenuItem";
-            this.addProductToolStripMenuItem.Size = new System.Drawing.Size(86, 20);
-            this.addProductToolStripMenuItem.Text = "Add Product";
+            this.addProduct.Name = "addProduct";
+            this.addProduct.Size = new System.Drawing.Size(86, 20);
+            this.addProduct.Text = "Add Product";
+            this.addProduct.Click += new System.EventHandler(this.addProduct_Click);
             // 
-            // viewAllProductsToolStripMenuItem
+            // viewAllProducts
             // 
-            this.viewAllProductsToolStripMenuItem.Name = "viewAllProductsToolStripMenuItem";
-            this.viewAllProductsToolStripMenuItem.Size = new System.Drawing.Size(111, 20);
-            this.viewAllProductsToolStripMenuItem.Text = "View All Products";
+            this.viewAllProducts.Name = "viewAllProducts";
+            this.viewAllProducts.Size = new System.Drawing.Size(111, 20);
+            this.viewAllProducts.Text = "View All Products";
+            this.viewAllProducts.Click += new System.EventHandler(this.viewAllProducts_Click);
             // 
-            // viewSalesToolStripMenuItem
+            // viewSales
             // 
-            this.viewSalesToolStripMenuItem.Name = "viewSalesToolStripMenuItem";
-            this.viewSalesToolStripMenuItem.Size = new System.Drawing.Size(73, 20);
-            this.viewSalesToolStripMenuItem.Text = "View Sales";
+            this.viewSales.Name = "viewSales";
+            this.viewSales.Size = new System.Drawing.Size(73, 20);
+            this.viewSales.Text = "View Sales";
+            this.viewSales.Click += new System.EventHandler(this.viewSales_Click);
             // 
             // UserNameIDMenuLabel
             // 
@@ -249,6 +254,7 @@
             this.Controls.Add(this.MainMenuStrip);
             this.Name = "Staff_Form";
             this.Text = "Staff_Form";
+            this.Load += new System.EventHandler(this.Staff_Form_Load);
             this.BillGroupBox.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ProductsGridView)).EndInit();
             this.ProductsGroupBox.ResumeLayout(false);
@@ -278,10 +284,10 @@
         private System.Windows.Forms.GroupBox CategoryGroupBox;
         private System.Windows.Forms.FlowLayoutPanel CategoriesFlowPanel;
         private System.Windows.Forms.MenuStrip MainMenuStrip;
-        private System.Windows.Forms.ToolStripMenuItem addCategoryToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem addProductToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem viewAllProductsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem viewSalesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addCategory;
+        private System.Windows.Forms.ToolStripMenuItem addProduct;
+        private System.Windows.Forms.ToolStripMenuItem viewAllProducts;
+        private System.Windows.Forms.ToolStripMenuItem viewSales;
         private System.Windows.Forms.ToolStripMenuItem UserNameIDMenuLabel;
     }
 }

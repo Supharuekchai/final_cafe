@@ -92,6 +92,7 @@
             this.Controls.Add(this.SalesGroupBox);
             this.Name = "ViewSaleItems";
             this.Text = "ViewSaleItems";
+            this.Load += new System.EventHandler(this.ViewSaleItems_Load);
             this.SalesGroupBox.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.SaleItemsGridView)).EndInit();
             this.ResumeLayout(false);

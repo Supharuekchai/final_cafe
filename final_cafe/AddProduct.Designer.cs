@@ -33,7 +33,7 @@
             this.ProductPriceBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.AddProductButton = new System.Windows.Forms.Button();
-            this.UploadPictureButton = new System.Windows.Forms.Button();
+            this.UploadButton = new System.Windows.Forms.Button();
             this.ProductPictureBox = new System.Windows.Forms.PictureBox();
             this.ProductDescriptionRBox = new System.Windows.Forms.RichTextBox();
             this.ProductNameBox = new System.Windows.Forms.TextBox();
@@ -84,15 +84,17 @@
             this.AddProductButton.TabIndex = 27;
             this.AddProductButton.Text = "Add Product";
             this.AddProductButton.UseVisualStyleBackColor = true;
+            this.AddProductButton.Click += new System.EventHandler(this.AddProductButton_Click);
             // 
-            // UploadPictureButton
+            // UploadButton
             // 
-            this.UploadPictureButton.Location = new System.Drawing.Point(12, 207);
-            this.UploadPictureButton.Name = "UploadPictureButton";
-            this.UploadPictureButton.Size = new System.Drawing.Size(85, 23);
-            this.UploadPictureButton.TabIndex = 26;
-            this.UploadPictureButton.Text = "Upload Picture";
-            this.UploadPictureButton.UseVisualStyleBackColor = true;
+            this.UploadButton.Location = new System.Drawing.Point(12, 207);
+            this.UploadButton.Name = "UploadButton";
+            this.UploadButton.Size = new System.Drawing.Size(85, 23);
+            this.UploadButton.TabIndex = 26;
+            this.UploadButton.Text = "Upload Picture";
+            this.UploadButton.UseVisualStyleBackColor = true;
+            this.UploadButton.Click += new System.EventHandler(this.UploadButton_Click);
             // 
             // ProductPictureBox
             // 
@@ -155,7 +157,7 @@
             this.Controls.Add(this.ProductPriceBox);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.AddProductButton);
-            this.Controls.Add(this.UploadPictureButton);
+            this.Controls.Add(this.UploadButton);
             this.Controls.Add(this.ProductPictureBox);
             this.Controls.Add(this.ProductDescriptionRBox);
             this.Controls.Add(this.ProductNameBox);
@@ -164,6 +166,7 @@
             this.Controls.Add(this.label1);
             this.Name = "AddProduct";
             this.Text = "AddProduct";
+            this.Load += new System.EventHandler(this.AddProduct_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.ProductPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -177,7 +180,7 @@
         private System.Windows.Forms.TextBox ProductPriceBox;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button AddProductButton;
-        private System.Windows.Forms.Button UploadPictureButton;
+        private System.Windows.Forms.Button UploadButton;
         private System.Windows.Forms.PictureBox ProductPictureBox;
         private System.Windows.Forms.RichTextBox ProductDescriptionRBox;
         private System.Windows.Forms.TextBox ProductNameBox;

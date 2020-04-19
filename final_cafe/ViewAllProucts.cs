@@ -17,7 +17,7 @@ namespace final_cafe
             InitializeComponent();
         }
 
-        private void ViewAllProducts_Load(object sender, EventArgs e)
+        private void ViewAllProucts_Load(object sender, EventArgs e)
         {
             DataAccess _DataAccess = new DataAccess();
 
@@ -65,7 +65,7 @@ namespace final_cafe
             {
                 if (ProductsGridView.Columns[e.ColumnIndex].Name == "DeleteProductColumn")
                 {
-                    if (MessageBox.Show("Are You Sure You Want to Delete this Product\nfrom Database", "Warning", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    if (MessageBox.Show("คุณต้องการลบรายการนี้\nออกจาก ฐานข้อมูล หรือไม่?", "Warning", MessageBoxButtons.YesNo) == DialogResult.Yes)
                     {
                         int ProductID = Convert.ToInt32(ProductsGridView.Rows[e.RowIndex].Cells["ProductIDColumn"].Value);
 
@@ -77,7 +77,7 @@ namespace final_cafe
                         }
                         else if (!_DataAccess.DeleteProduct(ProductID))
                         {
-                            MessageBox.Show("Product Not Deleted");
+                            MessageBox.Show("ไม่สามารถลบข้อมูลได้");
                         }
                     }
                 }
@@ -112,5 +112,6 @@ namespace final_cafe
                 }
             }
         }
+
     }
 }
