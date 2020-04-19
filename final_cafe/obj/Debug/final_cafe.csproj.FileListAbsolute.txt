@@ -53,3 +53,4 @@ C:\Users\AsadaYoon\Desktop\Pro\final_cafe\final_cafe\obj\Debug\final_cafe.csproj
 C:\Users\AsadaYoon\Desktop\Pro\final_cafe\final_cafe\obj\Debug\final_cafe.csproj.CopyComplete
 C:\Users\AsadaYoon\Desktop\Pro\final_cafe\final_cafe\obj\Debug\final_cafe.exe
 C:\Users\AsadaYoon\Desktop\Pro\final_cafe\final_cafe\obj\Debug\final_cafe.pdb
+C:\Users\AsadaYoon\Desktop\Pro\final_cafe\final_cafe\obj\Debug\final_cafe.Customer_Signup.resources

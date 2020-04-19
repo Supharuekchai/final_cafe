@@ -118,6 +118,7 @@
             this.back.Size = new System.Drawing.Size(49, 46);
             this.back.TabIndex = 34;
             this.back.TabStop = false;
+            this.back.Click += new System.EventHandler(this.back_Click);
             // 
             // pictureBox4
             // 
