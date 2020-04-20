@@ -82,6 +82,8 @@
             this.cus_signup.TabIndex = 60;
             this.cus_signup.Text = "SignUp";
             this.cus_signup.Click += new System.EventHandler(this.cus_signup_Click);
+            this.cus_signup.MouseEnter += new System.EventHandler(this.cus_signup_MouseEnter);
+            this.cus_signup.MouseLeave += new System.EventHandler(this.cus_signup_MouseLeave);
             // 
             // cus_login
             // 
@@ -96,6 +98,8 @@
             this.cus_login.TabIndex = 59;
             this.cus_login.Text = "Login";
             this.cus_login.Click += new System.EventHandler(this.cus_login_Click);
+            this.cus_login.MouseEnter += new System.EventHandler(this.cus_login_MouseEnter);
+            this.cus_login.MouseLeave += new System.EventHandler(this.cus_login_MouseLeave);
             // 
             // panel2
             // 
@@ -108,15 +112,17 @@
             // 
             // Customer_Password
             // 
-            this.Customer_Password.BackColor = System.Drawing.Color.Linen;
+            this.Customer_Password.BackColor = System.Drawing.Color.White;
             this.Customer_Password.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Customer_Password.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.Customer_Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.Customer_Password.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.Customer_Password.Location = new System.Drawing.Point(97, 256);
             this.Customer_Password.Name = "Customer_Password";
             this.Customer_Password.PasswordChar = '*';
             this.Customer_Password.Size = new System.Drawing.Size(181, 23);
             this.Customer_Password.TabIndex = 53;
+            this.Customer_Password.Text = "******************";
             // 
             // panel1
             // 
@@ -129,10 +135,11 @@
             // 
             // Customer_ID
             // 
-            this.Customer_ID.BackColor = System.Drawing.Color.Linen;
+            this.Customer_ID.BackColor = System.Drawing.Color.White;
             this.Customer_ID.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Customer_ID.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.Customer_ID.Font = new System.Drawing.Font("Lucida Bright", 15F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Customer_ID.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.Customer_ID.Location = new System.Drawing.Point(99, 214);
             this.Customer_ID.Name = "Customer_ID";
             this.Customer_ID.Size = new System.Drawing.Size(178, 24);
