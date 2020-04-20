@@ -117,7 +117,7 @@
             this.Customer_Password.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.Customer_Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.Customer_Password.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Customer_Password.Location = new System.Drawing.Point(96, 257);
+            this.Customer_Password.Location = new System.Drawing.Point(96, 254);
             this.Customer_Password.Name = "Customer_Password";
             this.Customer_Password.PasswordChar = '*';
             this.Customer_Password.Size = new System.Drawing.Size(178, 23);

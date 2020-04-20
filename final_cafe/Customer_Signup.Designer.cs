@@ -121,6 +121,7 @@
             this.cus_user.Name = "cus_user";
             this.cus_user.Size = new System.Drawing.Size(195, 23);
             this.cus_user.TabIndex = 9;
+            this.cus_user.UseSystemPasswordChar = true;
             // 
             // label3
             // 
