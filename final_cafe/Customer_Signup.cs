@@ -50,6 +50,9 @@ namespace final_cafe
                     if (command.ExecuteNonQuery() == 1)
                     {
                         MessageBox.Show("Your Account Has Been Created","Account",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                        this.Hide();
+                        Customer_Login cus_log = new Customer_Login();
+                        cus_log.Show();
                     }
                     else
                     {
