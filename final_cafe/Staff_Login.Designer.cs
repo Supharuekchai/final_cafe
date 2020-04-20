@@ -47,7 +47,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel2.Location = new System.Drawing.Point(119, 300);
+            this.panel2.Location = new System.Drawing.Point(108, 300);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(179, 1);
             this.panel2.TabIndex = 40;
@@ -55,20 +55,19 @@
             // 
             // Staff_Password
             // 
-            this.Staff_Password.BackColor = System.Drawing.Color.Linen;
-            this.Staff_Password.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Staff_Password.BackColor = System.Drawing.Color.White;
             this.Staff_Password.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.Staff_Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.Staff_Password.Location = new System.Drawing.Point(117, 277);
+            this.Staff_Password.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Staff_Password.Location = new System.Drawing.Point(108, 275);
             this.Staff_Password.Name = "Staff_Password";
             this.Staff_Password.PasswordChar = '*';
-            this.Staff_Password.Size = new System.Drawing.Size(178, 24);
+            this.Staff_Password.Size = new System.Drawing.Size(178, 25);
             this.Staff_Password.TabIndex = 36;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel1.Location = new System.Drawing.Point(119, 261);
+            this.panel1.Location = new System.Drawing.Point(108, 261);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(179, 1);
             this.panel1.TabIndex = 39;
@@ -76,21 +75,20 @@
             // 
             // Staff_Code
             // 
-            this.Staff_Code.BackColor = System.Drawing.Color.Linen;
-            this.Staff_Code.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Staff_Code.BackColor = System.Drawing.Color.White;
+            this.Staff_Code.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Staff_Code.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.Staff_Code.Font = new System.Drawing.Font("Monotype Corsiva", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Staff_Code.Location = new System.Drawing.Point(119, 235);
+            this.Staff_Code.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Staff_Code.Location = new System.Drawing.Point(108, 237);
             this.Staff_Code.Name = "Staff_Code";
-            this.Staff_Code.Size = new System.Drawing.Size(178, 24);
+            this.Staff_Code.Size = new System.Drawing.Size(178, 25);
             this.Staff_Code.TabIndex = 38;
-            this.Staff_Code.Text = "Staff Code";
             // 
             // pictureBox3
             // 
             this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(79, 270);
+            this.pictureBox3.Location = new System.Drawing.Point(68, 270);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(34, 31);
             this.pictureBox3.TabIndex = 41;
@@ -101,7 +99,7 @@
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(79, 231);
+            this.pictureBox2.Location = new System.Drawing.Point(68, 231);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(34, 31);
             this.pictureBox2.TabIndex = 37;
