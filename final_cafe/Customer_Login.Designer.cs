@@ -34,12 +34,12 @@
             this.cus_signup = new System.Windows.Forms.Label();
             this.cus_login = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.Customer_Password = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.Customer_ID = new System.Windows.Forms.TextBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.close = new System.Windows.Forms.Label();
+            this.Customer_Password = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -110,19 +110,6 @@
             this.panel2.TabIndex = 57;
             this.panel2.UseWaitCursor = true;
             // 
-            // Customer_Password
-            // 
-            this.Customer_Password.BackColor = System.Drawing.Color.White;
-            this.Customer_Password.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Customer_Password.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.Customer_Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.Customer_Password.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Customer_Password.Location = new System.Drawing.Point(96, 254);
-            this.Customer_Password.Name = "Customer_Password";
-            this.Customer_Password.PasswordChar = '*';
-            this.Customer_Password.Size = new System.Drawing.Size(178, 23);
-            this.Customer_Password.TabIndex = 53;
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -183,6 +170,18 @@
             this.close.MouseEnter += new System.EventHandler(this.close_MouseEnter);
             this.close.MouseLeave += new System.EventHandler(this.close_MouseLeave);
             // 
+            // Customer_Password
+            // 
+            this.Customer_Password.BackColor = System.Drawing.Color.White;
+            this.Customer_Password.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Customer_Password.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Customer_Password.Font = new System.Drawing.Font("Lucida Bright", 15F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Customer_Password.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Customer_Password.Location = new System.Drawing.Point(96, 253);
+            this.Customer_Password.Name = "Customer_Password";
+            this.Customer_Password.Size = new System.Drawing.Size(178, 24);
+            this.Customer_Password.TabIndex = 64;
+            // 
             // Customer_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -190,13 +189,13 @@
             this.BackgroundImage = global::final_cafe.Properties.Resources.pngtree_tea_restaurant_poster_background_material_image_172982;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(353, 480);
+            this.Controls.Add(this.Customer_Password);
             this.Controls.Add(this.close);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.cus_signup);
             this.Controls.Add(this.cus_login);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.Customer_Password);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.Customer_ID);
             this.Controls.Add(this.pictureBox3);
@@ -205,6 +204,7 @@
             this.Name = "Customer_Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Customer_Login";
+            this.Load += new System.EventHandler(this.Customer_Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -221,11 +221,11 @@
         private System.Windows.Forms.Label cus_signup;
         private System.Windows.Forms.Label cus_login;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox Customer_Password;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox Customer_ID;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label close;
+        private System.Windows.Forms.TextBox Customer_Password;
     }
 }

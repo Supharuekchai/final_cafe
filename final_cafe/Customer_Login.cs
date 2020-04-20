@@ -17,10 +17,6 @@ namespace final_cafe
         public Customer_Login()
         {
             InitializeComponent();
-
-            this.Customer_Password.AutoSize = false;
-            this.Customer_Password.Size = new Size(this.Customer_Password.Size.Width, 50);
-
         }
 
         private void cus_signup_Click(object sender, EventArgs e)
@@ -133,6 +129,11 @@ namespace final_cafe
         private void cus_signup_MouseEnter(object sender, EventArgs e)
         {
             cus_signup.ForeColor = Color.White;
+        }
+
+        private void Customer_Login_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
