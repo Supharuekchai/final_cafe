@@ -120,6 +120,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(195, 23);
             this.textBox2.TabIndex = 9;
+            this.textBox2.Text = "********************";
             // 
             // label3
             // 
@@ -139,6 +140,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(195, 23);
             this.textBox1.TabIndex = 7;
+            this.textBox1.Text = "user id";
             // 
             // label2
             // 
@@ -158,6 +160,7 @@
             this.cus_telno.Name = "cus_telno";
             this.cus_telno.Size = new System.Drawing.Size(223, 23);
             this.cus_telno.TabIndex = 73;
+            this.cus_telno.Text = "=============================";
             // 
             // groupBox2
             // 
@@ -228,6 +231,7 @@
             this.cus_name.Name = "cus_name";
             this.cus_name.Size = new System.Drawing.Size(223, 23);
             this.cus_name.TabIndex = 69;
+            this.cus_name.Text = "your name\r\n";
             // 
             // pictureBox1
             // 
