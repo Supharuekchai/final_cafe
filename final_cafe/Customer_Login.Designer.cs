@@ -116,13 +116,13 @@
             this.Customer_Password.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Customer_Password.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.Customer_Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.Customer_Password.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.Customer_Password.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Customer_Password.Location = new System.Drawing.Point(97, 256);
+            this.Customer_Password.Multiline = true;
             this.Customer_Password.Name = "Customer_Password";
             this.Customer_Password.PasswordChar = '*';
-            this.Customer_Password.Size = new System.Drawing.Size(181, 23);
+            this.Customer_Password.Size = new System.Drawing.Size(181, 20);
             this.Customer_Password.TabIndex = 53;
-            this.Customer_Password.Text = "******************";
             // 
             // panel1
             // 
@@ -139,12 +139,12 @@
             this.Customer_ID.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Customer_ID.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.Customer_ID.Font = new System.Drawing.Font("Lucida Bright", 15F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Customer_ID.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.Customer_ID.Location = new System.Drawing.Point(99, 214);
+            this.Customer_ID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Customer_ID.Location = new System.Drawing.Point(96, 218);
+            this.Customer_ID.Multiline = true;
             this.Customer_ID.Name = "Customer_ID";
-            this.Customer_ID.Size = new System.Drawing.Size(178, 24);
+            this.Customer_ID.Size = new System.Drawing.Size(178, 20);
             this.Customer_ID.TabIndex = 55;
-            this.Customer_ID.Text = "USER ID";
             // 
             // pictureBox3
             // 
