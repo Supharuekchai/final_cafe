@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
+
 
 namespace final_cafe
 {
@@ -15,6 +17,10 @@ namespace final_cafe
         public Customer_Login()
         {
             InitializeComponent();
+
+            this.Customer_Password.AutoSize = false;
+            this.Customer_Password.Size = new Size(this.Customer_Password.Size.Width, 50);
+
         }
 
         private void cus_signup_Click(object sender, EventArgs e)
@@ -33,31 +39,28 @@ namespace final_cafe
 
         private void cus_login_Click(object sender, EventArgs e)
         {
-            string UserName = Customer_ID.Text;
+            DB db = new DB();
 
-            if (ConfirmUser(UserName))
+            String username = Customer_ID.Text;
+            String password = Customer_Password.Text;
+
+            DataTable table = new DataTable();
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
+
+            MySqlCommand command = new MySqlCommand("SELECT * FROM `customers` WHERE `UserName` = @usn and `Password` = @pass", db.getConnection());
+            command.Parameters.Add("@usn", MySqlDbType.VarChar).Value = username;
+            command.Parameters.Add("@pass", MySqlDbType.VarChar).Value = password;
+
+            adapter.SelectCommand = command;
+            adapter.Fill(table);
+            if (table.Rows.Count > 0)
             {
-                string Password = Customer_Password.Text;
-
-                if (ConfirmPassword(Password))
-                {
-                    DataAccess _DataAccess = new DataAccess();
-
-                    if (_DataAccess.ConfirmUser(UserName, Password))
-                    {
-                        int UserID = Convert.ToInt32(_DataAccess.ReturnUserID(UserName));
-
-                        Staff_Form _Dashboard = new Staff_Form(UserID);
-
-                        this.Hide();
-
-                        _Dashboard.Show();
-                    }
-                    else MessageBox.Show("Incorrect Password. Please try again.");
-                }
-                else MessageBox.Show("Please Enter Password");
+                MessageBox.Show("YES");
             }
-            else MessageBox.Show("Please Enter Correct Email");
+            else
+            {
+                MessageBox.Show("NO");
+            }
         }
 
 

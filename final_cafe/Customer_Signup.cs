@@ -47,7 +47,11 @@ namespace final_cafe
                 MessageBox.Show("ERROR");
             }
             db.closeConnection();
+        }
 
+        public Boolean checkUsername()
+        {
+            return false;
         }
     }
 }
