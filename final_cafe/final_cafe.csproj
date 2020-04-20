@@ -99,6 +99,7 @@
       <DependentUpon>Customer_Signup.cs</DependentUpon>
     </Compile>
     <Compile Include="DataAccess.cs" />
+    <Compile Include="DB.cs" />
     <Compile Include="Detail.cs" />
     <Compile Include="Staff_Form.cs">
       <SubType>Form</SubType>
