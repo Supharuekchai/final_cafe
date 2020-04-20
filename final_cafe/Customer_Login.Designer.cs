@@ -118,10 +118,9 @@
             this.Customer_Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.Customer_Password.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Customer_Password.Location = new System.Drawing.Point(96, 257);
-            this.Customer_Password.Multiline = true;
             this.Customer_Password.Name = "Customer_Password";
             this.Customer_Password.PasswordChar = '*';
-            this.Customer_Password.Size = new System.Drawing.Size(178, 20);
+            this.Customer_Password.Size = new System.Drawing.Size(178, 23);
             this.Customer_Password.TabIndex = 53;
             // 
             // panel1
@@ -140,10 +139,9 @@
             this.Customer_ID.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.Customer_ID.Font = new System.Drawing.Font("Lucida Bright", 15F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Customer_ID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Customer_ID.Location = new System.Drawing.Point(96, 218);
-            this.Customer_ID.Multiline = true;
+            this.Customer_ID.Location = new System.Drawing.Point(96, 217);
             this.Customer_ID.Name = "Customer_ID";
-            this.Customer_ID.Size = new System.Drawing.Size(178, 20);
+            this.Customer_ID.Size = new System.Drawing.Size(178, 24);
             this.Customer_ID.TabIndex = 55;
             // 
             // pictureBox3

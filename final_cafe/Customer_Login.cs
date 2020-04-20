@@ -55,11 +55,25 @@ namespace final_cafe
             adapter.Fill(table);
             if (table.Rows.Count > 0)
             {
-                MessageBox.Show("YES");
+                this.Hide();
+                Customer_Form cus_form = new Customer_Form();
+                cus_form.Show();
             }
             else
             {
-                MessageBox.Show("NO");
+                if (username.Trim().Equals(""))
+                {
+                    MessageBox.Show("Enter Your Username To Login", "Empty Username", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                else if (username.Trim().Equals(""))
+                {
+                    MessageBox.Show("Enter Your Password To Login", "Empty Password", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MessageBox.Show("Wrong Uername Or Password", "Worng Data", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 

@@ -38,20 +38,74 @@ namespace final_cafe
             command.Parameters.Add("@usn", MySqlDbType.VarChar).Value = cus_user.Text;
 
             db.openConnection();
-            if (command.ExecuteNonQuery() == 1)
+
+            if (!checkTextBoxesValues())
             {
-                MessageBox.Show("ACCOUNT CREATED");
+                if (checkUsername())
+                {
+                    MessageBox.Show("This Username Already Exists, Select A Different One","Duplicate Username",MessageBoxButtons.OKCancel,MessageBoxIcon.Error);
+                }
+                else
+                {
+                    if (command.ExecuteNonQuery() == 1)
+                    {
+                        MessageBox.Show("Your Account Has Been Created","Account",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("ERROR");
+                    }
+                }
             }
-            else 
+            else
             {
-                MessageBox.Show("ERROR");
+                MessageBox.Show("Enter Your Inormations First","Empty Data",MessageBoxButtons.OKCancel,MessageBoxIcon.Error);
             }
+
+           
             db.closeConnection();
         }
 
         public Boolean checkUsername()
         {
-            return false;
+            DB db = new DB();
+            String username = cus_user.Text;
+
+            DataTable table = new DataTable();
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
+
+            MySqlCommand command = new MySqlCommand("SELECT * FROM `customers` WHERE `UserName` = @usn", db.getConnection());
+            command.Parameters.Add("@usn", MySqlDbType.VarChar).Value = username;
+
+            adapter.SelectCommand = command;
+            adapter.Fill(table);
+            if (table.Rows.Count > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public Boolean checkTextBoxesValues()
+        {
+            String name = cus_name.Text;
+            String gender = cus_gender.SelectedItem.ToString();
+            String type = cus_type.SelectedItem.ToString();
+            String telno = cus_telno.Text;
+            String user = cus_user.Text;
+            String pass = cus_pass.Text;
+
+            if (name.Equals("Your Name") || gender.Equals("Your Gender") || type.Equals("Your Type")
+                || telno.Equals("Your telephone number ") || user.Equals("Your User") || pass.Equals("Youer Password"))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }
