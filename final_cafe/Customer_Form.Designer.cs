@@ -51,7 +51,7 @@
             // 
             // CheckOutButton
             // 
-            this.CheckOutButton.Location = new System.Drawing.Point(740, 446);
+            this.CheckOutButton.Location = new System.Drawing.Point(737, 455);
             this.CheckOutButton.Name = "CheckOutButton";
             this.CheckOutButton.Size = new System.Drawing.Size(75, 23);
             this.CheckOutButton.TabIndex = 20;
@@ -60,7 +60,7 @@
             // 
             // TotalBillBox
             // 
-            this.TotalBillBox.Location = new System.Drawing.Point(549, 495);
+            this.TotalBillBox.Location = new System.Drawing.Point(546, 504);
             this.TotalBillBox.Name = "TotalBillBox";
             this.TotalBillBox.Size = new System.Drawing.Size(210, 20);
             this.TotalBillBox.TabIndex = 19;
@@ -68,7 +68,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(496, 498);
+            this.label1.Location = new System.Drawing.Point(493, 507);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(47, 13);
             this.label1.TabIndex = 18;
@@ -77,7 +77,7 @@
             // BillGroupBox
             // 
             this.BillGroupBox.Controls.Add(this.ProductsGridView);
-            this.BillGroupBox.Location = new System.Drawing.Point(486, 12);
+            this.BillGroupBox.Location = new System.Drawing.Point(483, 21);
             this.BillGroupBox.Name = "BillGroupBox";
             this.BillGroupBox.Size = new System.Drawing.Size(370, 469);
             this.BillGroupBox.TabIndex = 17;
@@ -141,7 +141,7 @@
             // ProductsGroupBox
             // 
             this.ProductsGroupBox.Controls.Add(this.ProductsFlowPanel);
-            this.ProductsGroupBox.Location = new System.Drawing.Point(18, 225);
+            this.ProductsGroupBox.Location = new System.Drawing.Point(15, 234);
             this.ProductsGroupBox.Name = "ProductsGroupBox";
             this.ProductsGroupBox.Size = new System.Drawing.Size(459, 300);
             this.ProductsGroupBox.TabIndex = 16;
@@ -160,7 +160,7 @@
             // CategoryGroupBox
             // 
             this.CategoryGroupBox.Controls.Add(this.CategoriesFlowPanel);
-            this.CategoryGroupBox.Location = new System.Drawing.Point(18, 12);
+            this.CategoryGroupBox.Location = new System.Drawing.Point(15, 21);
             this.CategoryGroupBox.Name = "CategoryGroupBox";
             this.CategoryGroupBox.Size = new System.Drawing.Size(462, 207);
             this.CategoryGroupBox.TabIndex = 15;
@@ -181,13 +181,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(868, 546);
+            this.ClientSize = new System.Drawing.Size(879, 546);
             this.Controls.Add(this.CheckOutButton);
             this.Controls.Add(this.TotalBillBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.BillGroupBox);
             this.Controls.Add(this.ProductsGroupBox);
             this.Controls.Add(this.CategoryGroupBox);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Customer_Form";
             this.Text = "Customer_Form";
             this.BillGroupBox.ResumeLayout(false);

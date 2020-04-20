@@ -42,7 +42,7 @@
             // AddCategoryButton
             // 
             this.AddCategoryButton.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.AddCategoryButton.Location = new System.Drawing.Point(67, 233);
+            this.AddCategoryButton.Location = new System.Drawing.Point(68, 247);
             this.AddCategoryButton.Name = "AddCategoryButton";
             this.AddCategoryButton.Size = new System.Drawing.Size(130, 23);
             this.AddCategoryButton.TabIndex = 15;
@@ -52,7 +52,7 @@
             // 
             // UploadButton
             // 
-            this.UploadButton.Location = new System.Drawing.Point(8, 146);
+            this.UploadButton.Location = new System.Drawing.Point(9, 160);
             this.UploadButton.Name = "UploadButton";
             this.UploadButton.Size = new System.Drawing.Size(85, 23);
             this.UploadButton.TabIndex = 14;
@@ -62,7 +62,7 @@
             // 
             // CategoryPictureBox
             // 
-            this.CategoryPictureBox.Location = new System.Drawing.Point(122, 117);
+            this.CategoryPictureBox.Location = new System.Drawing.Point(123, 131);
             this.CategoryPictureBox.Name = "CategoryPictureBox";
             this.CategoryPictureBox.Size = new System.Drawing.Size(146, 102);
             this.CategoryPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -71,7 +71,7 @@
             // 
             // CategoryDescriptionRBox
             // 
-            this.CategoryDescriptionRBox.Location = new System.Drawing.Point(122, 38);
+            this.CategoryDescriptionRBox.Location = new System.Drawing.Point(123, 52);
             this.CategoryDescriptionRBox.Name = "CategoryDescriptionRBox";
             this.CategoryDescriptionRBox.Size = new System.Drawing.Size(146, 73);
             this.CategoryDescriptionRBox.TabIndex = 12;
@@ -79,7 +79,7 @@
             // 
             // CategoryNameBox
             // 
-            this.CategoryNameBox.Location = new System.Drawing.Point(122, 12);
+            this.CategoryNameBox.Location = new System.Drawing.Point(123, 26);
             this.CategoryNameBox.Name = "CategoryNameBox";
             this.CategoryNameBox.Size = new System.Drawing.Size(146, 20);
             this.CategoryNameBox.TabIndex = 11;
@@ -87,7 +87,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(8, 128);
+            this.label3.Location = new System.Drawing.Point(9, 142);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(85, 13);
             this.label3.TabIndex = 10;
@@ -96,7 +96,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(8, 53);
+            this.label2.Location = new System.Drawing.Point(9, 67);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(105, 13);
             this.label2.TabIndex = 9;
@@ -105,7 +105,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 15);
+            this.label1.Location = new System.Drawing.Point(9, 29);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(80, 13);
             this.label1.TabIndex = 8;
@@ -124,6 +124,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AddCategory";
             this.Text = "AddCategory";
             ((System.ComponentModel.ISupportInitialize)(this.CategoryPictureBox)).EndInit();

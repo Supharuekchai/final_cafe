@@ -40,7 +40,7 @@
             // ConfirmCheckoutButton
             // 
             this.ConfirmCheckoutButton.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.ConfirmCheckoutButton.Location = new System.Drawing.Point(49, 100);
+            this.ConfirmCheckoutButton.Location = new System.Drawing.Point(49, 113);
             this.ConfirmCheckoutButton.Name = "ConfirmCheckoutButton";
             this.ConfirmCheckoutButton.Size = new System.Drawing.Size(144, 23);
             this.ConfirmCheckoutButton.TabIndex = 13;
@@ -49,7 +49,7 @@
             // 
             // CashReturnBox
             // 
-            this.CashReturnBox.Location = new System.Drawing.Point(88, 64);
+            this.CashReturnBox.Location = new System.Drawing.Point(88, 77);
             this.CashReturnBox.Name = "CashReturnBox";
             this.CashReturnBox.Size = new System.Drawing.Size(132, 20);
             this.CashReturnBox.TabIndex = 12;
@@ -57,7 +57,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(8, 67);
+            this.label3.Location = new System.Drawing.Point(8, 80);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(66, 13);
             this.label3.TabIndex = 11;
@@ -65,7 +65,7 @@
             // 
             // CashGivenBox
             // 
-            this.CashGivenBox.Location = new System.Drawing.Point(88, 38);
+            this.CashGivenBox.Location = new System.Drawing.Point(88, 51);
             this.CashGivenBox.Name = "CashGivenBox";
             this.CashGivenBox.Size = new System.Drawing.Size(132, 20);
             this.CashGivenBox.TabIndex = 10;
@@ -73,7 +73,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(8, 41);
+            this.label2.Location = new System.Drawing.Point(8, 54);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(62, 13);
             this.label2.TabIndex = 9;
@@ -81,7 +81,7 @@
             // 
             // TotalBillBox
             // 
-            this.TotalBillBox.Location = new System.Drawing.Point(88, 12);
+            this.TotalBillBox.Location = new System.Drawing.Point(88, 25);
             this.TotalBillBox.Name = "TotalBillBox";
             this.TotalBillBox.Size = new System.Drawing.Size(132, 20);
             this.TotalBillBox.TabIndex = 8;
@@ -89,7 +89,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 15);
+            this.label1.Location = new System.Drawing.Point(8, 28);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(47, 13);
             this.label1.TabIndex = 7;
@@ -99,7 +99,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(231, 138);
+            this.ClientSize = new System.Drawing.Size(241, 150);
             this.Controls.Add(this.ConfirmCheckoutButton);
             this.Controls.Add(this.CashReturnBox);
             this.Controls.Add(this.label3);
@@ -107,6 +107,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.TotalBillBox);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CashFrom";
             this.Text = "CashFrom";
             this.ResumeLayout(false);

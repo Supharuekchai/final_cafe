@@ -46,7 +46,7 @@
             // ProductCategoryComboBox
             // 
             this.ProductCategoryComboBox.FormattingEnabled = true;
-            this.ProductCategoryComboBox.Location = new System.Drawing.Point(126, 58);
+            this.ProductCategoryComboBox.Location = new System.Drawing.Point(123, 75);
             this.ProductCategoryComboBox.Name = "ProductCategoryComboBox";
             this.ProductCategoryComboBox.Size = new System.Drawing.Size(146, 21);
             this.ProductCategoryComboBox.TabIndex = 31;
@@ -54,7 +54,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 61);
+            this.label5.Location = new System.Drawing.Point(9, 78);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(89, 13);
             this.label5.TabIndex = 30;
@@ -62,7 +62,7 @@
             // 
             // ProductPriceBox
             // 
-            this.ProductPriceBox.Location = new System.Drawing.Point(126, 32);
+            this.ProductPriceBox.Location = new System.Drawing.Point(123, 49);
             this.ProductPriceBox.Name = "ProductPriceBox";
             this.ProductPriceBox.Size = new System.Drawing.Size(146, 20);
             this.ProductPriceBox.TabIndex = 29;
@@ -70,7 +70,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 35);
+            this.label4.Location = new System.Drawing.Point(9, 52);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(71, 13);
             this.label4.TabIndex = 28;
@@ -78,7 +78,7 @@
             // 
             // AddProductButton
             // 
-            this.AddProductButton.Location = new System.Drawing.Point(71, 280);
+            this.AddProductButton.Location = new System.Drawing.Point(68, 297);
             this.AddProductButton.Name = "AddProductButton";
             this.AddProductButton.Size = new System.Drawing.Size(130, 23);
             this.AddProductButton.TabIndex = 27;
@@ -88,7 +88,7 @@
             // 
             // UploadButton
             // 
-            this.UploadButton.Location = new System.Drawing.Point(12, 207);
+            this.UploadButton.Location = new System.Drawing.Point(9, 224);
             this.UploadButton.Name = "UploadButton";
             this.UploadButton.Size = new System.Drawing.Size(85, 23);
             this.UploadButton.TabIndex = 26;
@@ -98,7 +98,7 @@
             // 
             // ProductPictureBox
             // 
-            this.ProductPictureBox.Location = new System.Drawing.Point(126, 165);
+            this.ProductPictureBox.Location = new System.Drawing.Point(123, 182);
             this.ProductPictureBox.Name = "ProductPictureBox";
             this.ProductPictureBox.Size = new System.Drawing.Size(146, 102);
             this.ProductPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -107,7 +107,7 @@
             // 
             // ProductDescriptionRBox
             // 
-            this.ProductDescriptionRBox.Location = new System.Drawing.Point(126, 85);
+            this.ProductDescriptionRBox.Location = new System.Drawing.Point(123, 102);
             this.ProductDescriptionRBox.Name = "ProductDescriptionRBox";
             this.ProductDescriptionRBox.Size = new System.Drawing.Size(146, 73);
             this.ProductDescriptionRBox.TabIndex = 24;
@@ -115,7 +115,7 @@
             // 
             // ProductNameBox
             // 
-            this.ProductNameBox.Location = new System.Drawing.Point(126, 6);
+            this.ProductNameBox.Location = new System.Drawing.Point(123, 23);
             this.ProductNameBox.Name = "ProductNameBox";
             this.ProductNameBox.Size = new System.Drawing.Size(146, 20);
             this.ProductNameBox.TabIndex = 23;
@@ -123,7 +123,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 189);
+            this.label3.Location = new System.Drawing.Point(9, 206);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(80, 13);
             this.label3.TabIndex = 22;
@@ -132,7 +132,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 99);
+            this.label2.Location = new System.Drawing.Point(9, 116);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(100, 13);
             this.label2.TabIndex = 21;
@@ -141,7 +141,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(9, 26);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(75, 13);
             this.label1.TabIndex = 20;
@@ -151,7 +151,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(288, 322);
+            this.ClientSize = new System.Drawing.Size(290, 334);
             this.Controls.Add(this.ProductCategoryComboBox);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.ProductPriceBox);
@@ -164,6 +164,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AddProduct";
             this.Text = "AddProduct";
             this.Load += new System.EventHandler(this.AddProduct_Load_1);

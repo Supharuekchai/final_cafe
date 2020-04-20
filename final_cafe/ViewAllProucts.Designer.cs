@@ -143,10 +143,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(620, 367);
+            this.ClientSize = new System.Drawing.Size(631, 367);
             this.Controls.Add(this.ProductCategoryComboBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ProductsGroupBox);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ViewAllProucts";
             this.Text = "ViewAllProucts";
             this.Load += new System.EventHandler(this.ViewAllProucts_Load);

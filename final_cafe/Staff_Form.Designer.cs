@@ -196,7 +196,7 @@
             this.UserNameIDMenuLabel});
             this.MainMenuStrip.Location = new System.Drawing.Point(0, 0);
             this.MainMenuStrip.Name = "MainMenuStrip";
-            this.MainMenuStrip.Size = new System.Drawing.Size(868, 24);
+            this.MainMenuStrip.Size = new System.Drawing.Size(880, 24);
             this.MainMenuStrip.TabIndex = 7;
             this.MainMenuStrip.Text = "menuStrip1";
             // 
@@ -244,7 +244,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(868, 546);
+            this.ClientSize = new System.Drawing.Size(880, 551);
             this.Controls.Add(this.CheckOutButton);
             this.Controls.Add(this.TotalBillBox);
             this.Controls.Add(this.label1);
@@ -252,6 +252,7 @@
             this.Controls.Add(this.ProductsGroupBox);
             this.Controls.Add(this.CategoryGroupBox);
             this.Controls.Add(this.MainMenuStrip);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Staff_Form";
             this.Text = "Staff_Form";
             this.Load += new System.EventHandler(this.Staff_Form_Load);

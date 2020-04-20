@@ -97,8 +97,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(618, 372);
+            this.ClientSize = new System.Drawing.Size(628, 372);
             this.Controls.Add(this.SalesGroupBox);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ViewAllSales";
             this.Text = "ViewAllSales";
             this.Load += new System.EventHandler(this.ViewAllSales_Load);
