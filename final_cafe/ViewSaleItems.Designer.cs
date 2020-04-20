@@ -34,6 +34,7 @@
             this.ProductPriceColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProductQuantityColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProductTotalColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.close = new System.Windows.Forms.Label();
             this.SalesGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SaleItemsGridView)).BeginInit();
             this.SuspendLayout();
@@ -84,11 +85,29 @@
             this.ProductTotalColumn.Name = "ProductTotalColumn";
             this.ProductTotalColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
+            // close
+            // 
+            this.close.AutoSize = true;
+            this.close.BackColor = System.Drawing.Color.Transparent;
+            this.close.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.close.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.close.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.close.Location = new System.Drawing.Point(599, 3);
+            this.close.Name = "close";
+            this.close.Size = new System.Drawing.Size(23, 22);
+            this.close.TabIndex = 65;
+            this.close.Tag = "";
+            this.close.Text = "X";
+            this.close.Click += new System.EventHandler(this.close_Click);
+            this.close.MouseEnter += new System.EventHandler(this.close_MouseEnter);
+            this.close.MouseLeave += new System.EventHandler(this.close_MouseLeave);
+            // 
             // ViewSaleItems
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(625, 370);
+            this.Controls.Add(this.close);
             this.Controls.Add(this.SalesGroupBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ViewSaleItems";
@@ -97,6 +116,7 @@
             this.SalesGroupBox.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.SaleItemsGridView)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -108,5 +128,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ProductPriceColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProductQuantityColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProductTotalColumn;
+        private System.Windows.Forms.Label close;
     }
 }

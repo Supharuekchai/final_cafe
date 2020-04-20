@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace final_cafe
@@ -20,6 +21,21 @@ namespace final_cafe
             {
                 CashReturnBox.Text = string.Empty;
             }
+        }
+
+        private void close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void close_MouseEnter(object sender, EventArgs e)
+        {
+            close.ForeColor = Color.Black;
+        }
+
+        private void close_MouseLeave(object sender, EventArgs e)
+        {
+            close.ForeColor = Color.White;
         }
     }
 }

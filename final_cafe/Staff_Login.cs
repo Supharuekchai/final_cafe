@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
@@ -69,6 +70,16 @@ namespace final_cafe
             this.Hide();
             Customer_Login op_cuslogin = new Customer_Login();
             op_cuslogin.ShowDialog();
+        }
+
+        private void label1_MouseEnter(object sender, EventArgs e)
+        {
+            label1.ForeColor = Color.White;
+        }
+
+        private void label1_MouseLeave(object sender, EventArgs e)
+        {
+            label1.ForeColor = Color.Black;
         }
     }
 }

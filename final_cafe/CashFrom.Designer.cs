@@ -35,6 +35,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.TotalBillBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.close = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // ConfirmCheckoutButton
@@ -95,11 +96,29 @@
             this.label1.TabIndex = 7;
             this.label1.Text = "Total Bill";
             // 
+            // close
+            // 
+            this.close.AutoSize = true;
+            this.close.BackColor = System.Drawing.Color.Transparent;
+            this.close.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.close.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.close.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.close.Location = new System.Drawing.Point(218, 2);
+            this.close.Name = "close";
+            this.close.Size = new System.Drawing.Size(21, 20);
+            this.close.TabIndex = 65;
+            this.close.Tag = "";
+            this.close.Text = "X";
+            this.close.Click += new System.EventHandler(this.close_Click);
+            this.close.MouseEnter += new System.EventHandler(this.close_MouseEnter);
+            this.close.MouseLeave += new System.EventHandler(this.close_MouseLeave);
+            // 
             // CashFrom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(241, 150);
+            this.Controls.Add(this.close);
             this.Controls.Add(this.ConfirmCheckoutButton);
             this.Controls.Add(this.CashReturnBox);
             this.Controls.Add(this.label3);
@@ -124,5 +143,6 @@
         private System.Windows.Forms.Label label2;
         public System.Windows.Forms.TextBox TotalBillBox;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label close;
     }
 }

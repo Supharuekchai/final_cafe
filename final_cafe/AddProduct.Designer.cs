@@ -40,6 +40,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.close = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ProductPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -147,11 +148,29 @@
             this.label1.TabIndex = 20;
             this.label1.Text = "Product Name";
             // 
+            // close
+            // 
+            this.close.AutoSize = true;
+            this.close.BackColor = System.Drawing.Color.Transparent;
+            this.close.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.close.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.close.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.close.Location = new System.Drawing.Point(271, 0);
+            this.close.Name = "close";
+            this.close.Size = new System.Drawing.Size(21, 20);
+            this.close.TabIndex = 65;
+            this.close.Tag = "";
+            this.close.Text = "X";
+            this.close.Click += new System.EventHandler(this.close_Click);
+            this.close.MouseEnter += new System.EventHandler(this.close_MouseEnter);
+            this.close.MouseLeave += new System.EventHandler(this.close_MouseLeave);
+            // 
             // AddProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(290, 334);
+            this.ClientSize = new System.Drawing.Size(293, 334);
+            this.Controls.Add(this.close);
             this.Controls.Add(this.ProductCategoryComboBox);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.ProductPriceBox);
@@ -188,5 +207,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label close;
     }
 }

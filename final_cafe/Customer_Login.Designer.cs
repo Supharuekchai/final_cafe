@@ -179,6 +179,7 @@
             this.Customer_Password.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Customer_Password.Location = new System.Drawing.Point(96, 253);
             this.Customer_Password.Name = "Customer_Password";
+            this.Customer_Password.PasswordChar = '*';
             this.Customer_Password.Size = new System.Drawing.Size(178, 24);
             this.Customer_Password.TabIndex = 64;
             // 

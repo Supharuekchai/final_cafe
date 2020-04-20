@@ -66,6 +66,21 @@ namespace final_cafe
             }
         }
 
+        private void close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void close_MouseEnter(object sender, EventArgs e)
+        {
+            close.ForeColor = Color.Black;
+        }
+
+        private void close_MouseLeave(object sender, EventArgs e)
+        {
+            close.ForeColor = Color.White;
+        }
+
         private void UpdateProductButton_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("คุณต้องการที่จะแก้ไขสินค้า ใช่หรือไม่?", "Warning", MessageBoxButtons.YesNo) == DialogResult.Yes)

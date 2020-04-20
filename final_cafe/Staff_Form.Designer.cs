@@ -50,6 +50,7 @@
             this.viewAllProducts = new System.Windows.Forms.ToolStripMenuItem();
             this.viewSales = new System.Windows.Forms.ToolStripMenuItem();
             this.UserNameIDMenuLabel = new System.Windows.Forms.ToolStripMenuItem();
+            this.Close = new System.Windows.Forms.Button();
             this.BillGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProductsGridView)).BeginInit();
             this.ProductsGroupBox.SuspendLayout();
@@ -240,11 +241,22 @@
             this.UserNameIDMenuLabel.Size = new System.Drawing.Size(22, 20);
             this.UserNameIDMenuLabel.Text = " ";
             // 
+            // Close
+            // 
+            this.Close.Location = new System.Drawing.Point(759, 533);
+            this.Close.Name = "Close";
+            this.Close.Size = new System.Drawing.Size(75, 23);
+            this.Close.TabIndex = 14;
+            this.Close.Text = "Close";
+            this.Close.UseVisualStyleBackColor = true;
+            this.Close.Click += new System.EventHandler(this.Close_Click);
+            // 
             // Staff_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(880, 551);
+            this.ClientSize = new System.Drawing.Size(880, 560);
+            this.Controls.Add(this.Close);
             this.Controls.Add(this.CheckOutButton);
             this.Controls.Add(this.TotalBillBox);
             this.Controls.Add(this.label1);
@@ -290,5 +302,6 @@
         private System.Windows.Forms.ToolStripMenuItem viewAllProducts;
         private System.Windows.Forms.ToolStripMenuItem viewSales;
         private System.Windows.Forms.ToolStripMenuItem UserNameIDMenuLabel;
+        private System.Windows.Forms.Button Close;
     }
 }

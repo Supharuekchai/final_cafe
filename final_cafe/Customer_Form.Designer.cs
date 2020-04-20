@@ -43,6 +43,7 @@
             this.ProductsFlowPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.CategoryGroupBox = new System.Windows.Forms.GroupBox();
             this.CategoriesFlowPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.close = new System.Windows.Forms.Label();
             this.BillGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProductsGridView)).BeginInit();
             this.ProductsGroupBox.SuspendLayout();
@@ -177,11 +178,29 @@
             this.CategoriesFlowPanel.Size = new System.Drawing.Size(456, 188);
             this.CategoriesFlowPanel.TabIndex = 0;
             // 
+            // close
+            // 
+            this.close.AutoSize = true;
+            this.close.BackColor = System.Drawing.Color.Transparent;
+            this.close.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.close.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.close.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.close.Location = new System.Drawing.Point(859, 0);
+            this.close.Name = "close";
+            this.close.Size = new System.Drawing.Size(25, 24);
+            this.close.TabIndex = 65;
+            this.close.Tag = "";
+            this.close.Text = "X";
+            this.close.Click += new System.EventHandler(this.close_Click);
+            this.close.MouseEnter += new System.EventHandler(this.close_MouseEnter);
+            this.close.MouseLeave += new System.EventHandler(this.close_MouseLeave);
+            // 
             // Customer_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(879, 546);
+            this.ClientSize = new System.Drawing.Size(883, 546);
+            this.Controls.Add(this.close);
             this.Controls.Add(this.CheckOutButton);
             this.Controls.Add(this.TotalBillBox);
             this.Controls.Add(this.label1);
@@ -217,5 +236,6 @@
         private System.Windows.Forms.FlowLayoutPanel ProductsFlowPanel;
         private System.Windows.Forms.GroupBox CategoryGroupBox;
         private System.Windows.Forms.FlowLayoutPanel CategoriesFlowPanel;
+        private System.Windows.Forms.Label close;
     }
 }

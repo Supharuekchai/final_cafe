@@ -30,5 +30,20 @@ namespace final_cafe
                 SaleItemsGridView.Rows.Add(SaleItemsDetails.Name, SaleItemsDetails.Price, SaleItemsDetails.Quantity, SaleItemsDetails.Total);
             }
         }
+
+        private void close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void close_MouseEnter(object sender, EventArgs e)
+        {
+            close.ForeColor = Color.Black;
+        }
+
+        private void close_MouseLeave(object sender, EventArgs e)
+        {
+            close.ForeColor = Color.White;
+        }
     }
 }
