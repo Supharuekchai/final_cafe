@@ -263,6 +263,7 @@
             this.Name = "Customer_Signup";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Customer_Signup";
+            this.Load += new System.EventHandler(this.Customer_Signup_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();

@@ -52,7 +52,7 @@ namespace final_cafe
             if (table.Rows.Count > 0)
             {
                 this.Hide();
-                Customer_Form cus_form = new Customer_Form();
+                Customer_Form cus_form = new Customer_Form(username);
                 cus_form.Show();
             }
             else

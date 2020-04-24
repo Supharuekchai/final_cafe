@@ -52,12 +52,13 @@
             // 
             // CheckOutButton
             // 
-            this.CheckOutButton.Location = new System.Drawing.Point(737, 455);
+            this.CheckOutButton.Location = new System.Drawing.Point(762, 501);
             this.CheckOutButton.Name = "CheckOutButton";
             this.CheckOutButton.Size = new System.Drawing.Size(75, 23);
             this.CheckOutButton.TabIndex = 20;
             this.CheckOutButton.Text = "Check Out";
             this.CheckOutButton.UseVisualStyleBackColor = true;
+            this.CheckOutButton.Click += new System.EventHandler(this.CheckOutButton_Click);
             // 
             // TotalBillBox
             // 
@@ -210,6 +211,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Customer_Form";
             this.Text = "Customer_Form";
+            this.Load += new System.EventHandler(this.Customer_Form_Load);
             this.BillGroupBox.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ProductsGridView)).EndInit();
             this.ProductsGroupBox.ResumeLayout(false);
