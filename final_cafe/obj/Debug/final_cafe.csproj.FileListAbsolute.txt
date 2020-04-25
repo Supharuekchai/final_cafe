@@ -95,7 +95,6 @@ C:\Users\AsadaYoon\Desktop\Pro\final_cafe\final_cafe\bin\Debug\Renci.SshNet.xml
 C:\Users\AsadaYoon\Desktop\Pro\final_cafe\final_cafe\obj\Debug\final_cafe.csprojAssemblyReference.cache
 C:\Users\AsadaYoon\Desktop\Pro\final_cafe\final_cafe\obj\Debug\final_cafe.AddCategory.resources
 C:\Users\AsadaYoon\Desktop\Pro\final_cafe\final_cafe\obj\Debug\final_cafe.AddProduct.resources
-C:\Users\AsadaYoon\Desktop\Pro\final_cafe\final_cafe\obj\Debug\final_cafe.CashFrom.resources
 C:\Users\AsadaYoon\Desktop\Pro\final_cafe\final_cafe\obj\Debug\final_cafe.Customer_Login.resources
 C:\Users\AsadaYoon\Desktop\Pro\final_cafe\final_cafe\obj\Debug\final_cafe.Customer_Signup.resources
 C:\Users\AsadaYoon\Desktop\Pro\final_cafe\final_cafe\obj\Debug\final_cafe.Staff_Form.resources

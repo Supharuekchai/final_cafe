@@ -167,59 +167,34 @@ namespace final_cafe
         private void CheckOutButton_Click(object sender, EventArgs e)
         {
 
-            CashFrom _CashForm = new CashFrom();
+            decimal Totail = 0;
+            ArrayList ProductsList = new ArrayList();
 
-            _CashForm.TotalBillBox.Text = TotalBillBox.Text;
-
-            if (_CashForm.ShowDialog() == DialogResult.OK)
+            foreach (DataGridViewRow Row in ProductsGridView.Rows)
             {
-                ArrayList ProductsList = new ArrayList();
-
-                foreach (DataGridViewRow Row in ProductsGridView.Rows)
+                try
                 {
-                    try
-                    {
-                        string ProductName = Row.Cells["ProductNameColumn"].Value.ToString();
-                        decimal ProductPrice = Convert.ToDecimal(Row.Cells["ProductPriceColumn"].Value);
-                        int ProductQuantity = Convert.ToInt32(Row.Cells["ProductQuantityColumn"].Value);
-                        decimal ProductTotal = Convert.ToDecimal(Row.Cells["TotalPriceColumn"].Value);
-
-                        ProductsList.Add(new Details() { Name = ProductName, Price = ProductPrice, Quantity = ProductQuantity, Total = ProductTotal });
-                    }
-                    catch
-                    {
-                        //means Rows are ended
-                    }
+                    string ProductName = Row.Cells["ProductNameColumn"].Value.ToString();
+                    decimal ProductPrice = Convert.ToDecimal(Row.Cells["ProductPriceColumn"].Value);
+                    int ProductQuantity = Convert.ToInt32(Row.Cells["ProductQuantityColumn"].Value);
+                    decimal ProductTotal = Convert.ToDecimal(Row.Cells["TotalPriceColumn"].Value);
+                    ProductsList.Add(new Details() { Name = ProductName, Price = ProductPrice, Quantity = ProductQuantity, Total = ProductTotal });
+                }
+                catch
+                {
+                    //means Rows are ended
                 }
 
-                DataAccess _DataAccess = new DataAccess();
-
-                if (_DataAccess.RecordASale(ProductsList, DateTime.Now, SalesmanID, Convert.ToDecimal(_CashForm.CashGivenBox.Text), Convert.ToDecimal(_CashForm.TotalBillBox.Text), Convert.ToDecimal(_CashForm.CashReturnBox.Text)))
-                {
-                    MessageBox.Show("Sale Added");
-                }
-                else MessageBox.Show("Sale Not Added");
             }
-        }
-        private void ProductsGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0)
+            DataAccess _DataAccess = new DataAccess();
+            int StaffID = _DataAccess.ReturnStaffIDRandom();
+            int CustomerID = 0;
+            Totail = Convert.ToDecimal(TotalBillBox.Text);
+            if (_DataAccess.RecordASale(ProductsList, DateTime.Now, StaffID, Totail, CustomerID))
             {
-                if (ProductsGridView.Columns[e.ColumnIndex].Name == "DeleteColumn")
-                {
-                    if (MessageBox.Show("คุณต้องการลบรายการนี้ หรือไม่?", "Warning", MessageBoxButtons.YesNo) == DialogResult.Yes)
-                    {
-                        decimal DeletedProductTotal = Convert.ToDecimal(ProductsGridView.Rows[e.RowIndex].Cells["TotalPriceColumn"].Value);
-
-                        decimal CurrentTotalBill = Convert.ToDecimal(TotalBillBox.Text);
-
-                        CurrentTotalBill = CurrentTotalBill - DeletedProductTotal;
-
-                        ProductsGridView.Rows.RemoveAt(e.RowIndex);
-                        TotalBillBox.Text = CurrentTotalBill.ToString();
-                    }
-                }
+                MessageBox.Show("ขอบคุณที่ใช้บริการ ครับ");
             }
+            else MessageBox.Show("เกิดข้อผิดพลาด ขออภัยในความไม่สะดวก");
         }
     }
 }
