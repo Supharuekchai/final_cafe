@@ -160,16 +160,41 @@ namespace final_cafe
                         string ProductName = reader.GetString(1);
                         decimal ProductPrice = reader.GetDecimal(2);
                         int ProductCategoryID = reader.GetInt32(3);
-                        string ProductCategoryName = ReturnCategoryName(ProductCategoryID);
                         string ProductDescription = reader.GetString(4);
                         byte[] ProductPicture = (byte[])reader[5];
 
-                        ProductsList.Add(new Details() { Name = ProductName, Price = ProductPrice, Category = ProductCategoryName, Description = ProductDescription, Picture = ProductPicture, ID = ProductID });
+                        ProductsList.Add(new Details() { Name = ProductName, Price = ProductPrice, Description = ProductDescription, Picture = ProductPicture, ID = ProductID });
                     }
                 }
                 reader.Close();
 
                 return ProductsList;
+            }
+        }
+
+        public ArrayList RetreiveAllSaleDetail(int SaleID)
+        {
+            ArrayList SaleDetail = new ArrayList();
+            using (MySqlConnection connection = new MySqlConnection(ConnectionString))
+            {
+                MySqlCommand command = new MySqlCommand("SELECT SaleDateTime, StaffID, GrandTotal FROM sales where SaleID = '" + SaleID + "';", connection);
+                connection.Open();
+                MySqlDataReader reader = command.ExecuteReader();
+
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        DateTime SaleTime = reader.GetDateTime(0);
+                        int SalesmanID = reader.GetInt32(1);
+                        string SalesmanName = ReturnUserName(SalesmanID);
+                        decimal TotalBill = reader.GetDecimal(2);
+
+                        SaleDetail.Add(new Details() { SaleID = SaleID, SaleTime = SaleTime, Name = SalesmanName, Total = TotalBill });
+                    }
+                }
+                reader.Close();
+                return SaleDetail;
             }
         }
 
@@ -200,6 +225,52 @@ namespace final_cafe
                 reader.Close();
 
                 return ProductsList;
+            }
+        }
+
+        public ArrayList ReturnDateTime()
+        {
+            using (MySqlConnection connection = new MySqlConnection(ConnectionString))
+            {
+                MySqlCommand command = new MySqlCommand("SELECT SaleDateTime FROM sales", connection);
+                connection.Open();
+                MySqlDataReader reader = command.ExecuteReader();
+
+                ArrayList DateTime = new ArrayList();
+
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        DateTime dateTime = reader.GetDateTime(0);
+                        DateTime.Add(new Details() { SaleTime = dateTime });
+                    }
+                }
+                reader.Close();
+
+                return DateTime;
+            }
+
+        }
+
+        public int ReturnSaleID(DateTime dateTime)
+        {
+            using (MySqlConnection connection = new MySqlConnection(ConnectionString))
+            {
+                MySqlCommand command = new MySqlCommand("SELECT SaleID FROM sales where SaleDateTime = @DateTime;", connection);
+                connection.Open();
+                command.Parameters.Add("@DateTime", MySqlDbType.DateTime).Value = dateTime;
+                MySqlDataReader reader = command.ExecuteReader();
+                int SaleID = 0;
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        SaleID = reader.GetInt32(0);
+                    }
+                }
+                reader.Close();
+                return SaleID;
             }
         }
 
@@ -280,9 +351,10 @@ namespace final_cafe
             }
         }
 
-        public bool RecordASale(ArrayList ProductsList, DateTime SaleTime, int SalesmanID, decimal CashGiven, decimal TotalBill, decimal CashReturn)
+        public bool RecordASale(ArrayList ProductsList, DateTime SaleTime, int StaffID, decimal TotalBill, int CustomerID)
         {
             int SaleID = ReturnSaleID();
+
 
             using (MySqlConnection connection = new MySqlConnection(ConnectionString))
             {
@@ -299,17 +371,17 @@ namespace final_cafe
                 {
                     // Execute separate commands.
                     command.Parameters.AddWithValue("@SaleTime", SaleTime);
-                    command.Parameters.AddWithValue("@SalesmanID", SalesmanID);
-                    command.Parameters.AddWithValue("@CashGiven", CashGiven);
+                    command.Parameters.AddWithValue("@StaffID", StaffID);
+                    command.Parameters.AddWithValue("@CustomerID", CustomerID);
                     command.Parameters.AddWithValue("@TotalBill", TotalBill);
-                    command.Parameters.AddWithValue("@CashReturn", CashReturn);
 
                     command.CommandText =
-                       "Insert into Sales (SaleTime, SalesmanID, CashGiven, TotalBill, CashReturn) values (@SaleTime, @SalesmanID, @CashGiven, @TotalBill, @CashReturn)";
+                       "Insert into sales (SaleDateTime, StaffID, GrandTotal, CustomerID) values (@SaleTime, @StaffID, @TotalBill, @CustomerID)";
                     command.ExecuteNonQuery();
 
                     foreach (Details ProductDetail in ProductsList)
                     {
+                        int ProductID = ReturnProductID(ProductDetail.Name);
                         //// Execute separate commands.
                         //command.Parameters.AddWithValue("@ProductName", ProductDetail.Name);
                         //command.Parameters.AddWithValue("@ProductPrice", ProductDetail.Price);
@@ -318,7 +390,7 @@ namespace final_cafe
                         //command.Parameters.AddWithValue("@SaleID", SaleID);
 
                         command.CommandText =
-                           "Insert into SaleItems (ProductName, ProductPrice, ProductQuantity, ProductTotal, SaleID) values ('" + ProductDetail.Name + "', '" + ProductDetail.Price + "', '" + ProductDetail.Quantity + "', '" + ProductDetail.Total + "', '" + SaleID + "')";
+                           "Insert into sale_details (ProductID, ProductPrice, ProductQuantity, ProductTotal, SaleID) values ('" + ProductID + "', '" + ProductDetail.Price + "', '" + ProductDetail.Quantity + "', '" + ProductDetail.Total + "', '" + SaleID + "')";
                         command.ExecuteNonQuery();
                     }
 
@@ -337,15 +409,44 @@ namespace final_cafe
             }
         }
 
-        public int ReturnSaleID()
+        public int ReturnProductID(string ProductName)
         {
-            int SaleID = 1;
+            int ProductID = 0;
             try
             {
 
                 using (MySqlConnection connection = new MySqlConnection(ConnectionString))
                 {
-                    MySqlCommand command = new MySqlCommand("SELECT MAX(ID) FROM Sales;", connection);
+                    MySqlCommand command = new MySqlCommand("SELECT ProductID FROM products WHERE ProductName = '" + ProductName + "';", connection);
+                    connection.Open();
+
+                    MySqlDataReader reader = command.ExecuteReader();
+
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            ProductID = reader.GetInt32(0);
+                        }
+                    }
+                    reader.Close();
+                    return ProductID;
+                }
+            }
+            catch (Exception)
+            {
+                return ProductID;
+            }
+        }
+        public int ReturnSaleID()
+        {
+            int SaleID = 0;
+            try
+            {
+
+                using (MySqlConnection connection = new MySqlConnection(ConnectionString))
+                {
+                    MySqlCommand command = new MySqlCommand("SELECT SaleID FROM sales;", connection);
                     connection.Open();
 
                     MySqlDataReader reader = command.ExecuteReader();
@@ -356,11 +457,9 @@ namespace final_cafe
                         {
                             SaleID = reader.GetInt32(0);
                         }
+                        SaleID++;
                     }
                     reader.Close();
-
-                    SaleID = SaleID + 1;
-
                     return SaleID;
                 }
             }
@@ -584,6 +683,26 @@ namespace final_cafe
             }
         }
 
+        public int ReturnStaffIDRandom()
+        {
+            using (MySqlConnection connection = new MySqlConnection(ConnectionString))
+            {
+                MySqlCommand command = new MySqlCommand("SELECT StaffID FROM sales", connection);
+                connection.Open();
+                MySqlDataReader reader = command.ExecuteReader();
+                int num = 0;
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        num = reader.GetInt32(0);
+                    }
+                }
+                reader.Close();
+                Random random = new Random();
+                return random.Next(1, num);
+            }
+        }
         public ArrayList RetreiveSaleItems(int SaleID)
         {
             ArrayList ProductsList = new ArrayList();

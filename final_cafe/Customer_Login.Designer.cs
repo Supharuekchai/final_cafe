@@ -159,7 +159,7 @@
             this.close.BackColor = System.Drawing.Color.Transparent;
             this.close.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.close.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.close.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.close.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.close.Location = new System.Drawing.Point(314, 9);
             this.close.Name = "close";
             this.close.Size = new System.Drawing.Size(29, 27);

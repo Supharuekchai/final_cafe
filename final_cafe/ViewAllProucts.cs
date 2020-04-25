@@ -41,7 +41,7 @@ namespace final_cafe
 
                 foreach (Details ProductDetail in _DataAccess.RetreiveAllProducts())
                 {
-                    ProductsGridView.Rows.Add(ProductDetail.ID, ProductDetail.Name, ProductDetail.Price, ProductDetail.Category, ProductDetail.Description, ProductDetail.Picture);
+                    ProductsGridView.Rows.Add(ProductDetail.ID, ProductDetail.Name, ProductDetail.Price, ProductDetail.Category, ProductDetail.Description, ProductDetail.Picture, "แก้ไข","ลบ");
                 }
             }
             else if (ProductCategoryComboBox.SelectedIndex > 0)
@@ -54,7 +54,7 @@ namespace final_cafe
 
                 foreach (Details ProductDetail in _DataAccess.RetreiveProductsFromCategory(CategoryID))
                 {
-                    ProductsGridView.Rows.Add(ProductDetail.ID, ProductDetail.Name, ProductDetail.Price, CategoryName, ProductDetail.Description, ProductDetail.Picture);
+                    ProductsGridView.Rows.Add(ProductDetail.ID, ProductDetail.Name, ProductDetail.Price, CategoryName, ProductDetail.Description, ProductDetail.Picture, "แก้ไข", "ลบ");
                 }
             }
         }

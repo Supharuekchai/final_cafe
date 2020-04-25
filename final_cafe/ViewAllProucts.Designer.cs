@@ -32,6 +32,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.ProductsGroupBox = new System.Windows.Forms.GroupBox();
             this.ProductsGridView = new System.Windows.Forms.DataGridView();
+            this.close = new System.Windows.Forms.Label();
             this.ProductIDColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProductNameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProductPriceColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -40,7 +41,6 @@
             this.ProductImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
             this.EditProductColumn = new System.Windows.Forms.DataGridViewButtonColumn();
             this.DeleteProductColumn = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.close = new System.Windows.Forms.Label();
             this.ProductsGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProductsGridView)).BeginInit();
             this.SuspendLayout();
@@ -71,13 +71,14 @@
             this.ProductsGroupBox.Controls.Add(this.ProductsGridView);
             this.ProductsGroupBox.Location = new System.Drawing.Point(12, 34);
             this.ProductsGroupBox.Name = "ProductsGroupBox";
-            this.ProductsGroupBox.Size = new System.Drawing.Size(590, 325);
+            this.ProductsGroupBox.Size = new System.Drawing.Size(612, 325);
             this.ProductsGroupBox.TabIndex = 3;
             this.ProductsGroupBox.TabStop = false;
             this.ProductsGroupBox.Text = "Products";
             // 
             // ProductsGridView
             // 
+            this.ProductsGridView.AllowUserToAddRows = false;
             this.ProductsGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.ProductsGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ProductsGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -92,9 +93,26 @@
             this.ProductsGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ProductsGridView.Location = new System.Drawing.Point(3, 16);
             this.ProductsGridView.Name = "ProductsGridView";
-            this.ProductsGridView.Size = new System.Drawing.Size(584, 306);
+            this.ProductsGridView.Size = new System.Drawing.Size(606, 306);
             this.ProductsGridView.TabIndex = 0;
             this.ProductsGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ProductsGridView_CellContentClick);
+            // 
+            // close
+            // 
+            this.close.AutoSize = true;
+            this.close.BackColor = System.Drawing.Color.Transparent;
+            this.close.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.close.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.close.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.close.Location = new System.Drawing.Point(605, 6);
+            this.close.Name = "close";
+            this.close.Size = new System.Drawing.Size(19, 18);
+            this.close.TabIndex = 65;
+            this.close.Tag = "";
+            this.close.Text = "X";
+            this.close.Click += new System.EventHandler(this.close_Click);
+            this.close.MouseEnter += new System.EventHandler(this.close_MouseEnter);
+            this.close.MouseLeave += new System.EventHandler(this.close_MouseLeave);
             // 
             // ProductIDColumn
             // 
@@ -124,6 +142,7 @@
             // ProductImageColumn
             // 
             this.ProductImageColumn.HeaderText = "Image";
+            this.ProductImageColumn.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
             this.ProductImageColumn.Name = "ProductImageColumn";
             this.ProductImageColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.ProductImageColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
@@ -139,23 +158,6 @@
             // 
             this.DeleteProductColumn.HeaderText = "Delete";
             this.DeleteProductColumn.Name = "DeleteProductColumn";
-            // 
-            // close
-            // 
-            this.close.AutoSize = true;
-            this.close.BackColor = System.Drawing.Color.Transparent;
-            this.close.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.close.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.close.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.close.Location = new System.Drawing.Point(605, 6);
-            this.close.Name = "close";
-            this.close.Size = new System.Drawing.Size(21, 20);
-            this.close.TabIndex = 65;
-            this.close.Tag = "";
-            this.close.Text = "X";
-            this.close.Click += new System.EventHandler(this.close_Click);
-            this.close.MouseEnter += new System.EventHandler(this.close_MouseEnter);
-            this.close.MouseLeave += new System.EventHandler(this.close_MouseLeave);
             // 
             // ViewAllProucts
             // 
@@ -183,6 +185,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox ProductsGroupBox;
         private System.Windows.Forms.DataGridView ProductsGridView;
+        private System.Windows.Forms.Label close;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProductIDColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProductNameColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProductPriceColumn;
@@ -191,6 +194,5 @@
         private System.Windows.Forms.DataGridViewImageColumn ProductImageColumn;
         private System.Windows.Forms.DataGridViewButtonColumn EditProductColumn;
         private System.Windows.Forms.DataGridViewButtonColumn DeleteProductColumn;
-        private System.Windows.Forms.Label close;
     }
 }

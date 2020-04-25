@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 19, 2020 at 12:28 PM
+-- Generation Time: Apr 24, 2020 at 03:07 PM
 -- Server version: 8.0.17
 -- PHP Version: 7.3.10
 
@@ -114,7 +114,8 @@ CREATE TABLE `sales` (
 
 INSERT INTO `sales` (`SaleID`, `SaleDateTime`, `CustomerID`, `StaffID`, `GrandTotal`) VALUES
 (1, '2020-04-19 16:26:26', 1, 1, 1000),
-(2, '2020-04-19 22:35:41', 1, 1, 500);
+(2, '2020-04-19 22:35:41', 1, 1, 500),
+(3, '2020-04-24 22:06:27', 25, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -136,7 +137,8 @@ CREATE TABLE `sale_details` (
 --
 
 INSERT INTO `sale_details` (`SaleDetailID`, `SaleID`, `ProductID`, `ProductPrice`, `ProductQuantity`, `ProductTotal`) VALUES
-(1, 1, 1, 100, 1, 2);
+(1, 1, 1, 100, 1, 2),
+(2, 1, 0, 25, 1, 25);
 
 -- --------------------------------------------------------
 
@@ -221,19 +223,19 @@ ALTER TABLE `customers`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `ProductID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `ProductID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `sales`
 --
 ALTER TABLE `sales`
-  MODIFY `SaleID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `SaleID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `sale_details`
 --
 ALTER TABLE `sale_details`
-  MODIFY `SaleDetailID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `SaleDetailID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `staffs`

@@ -22,10 +22,15 @@ namespace final_cafe
         {
             DataAccess _DataAccess = new DataAccess();
 
-            foreach (Details SaleDetails in _DataAccess.RetreiveAllSales())
+            DateTimecomboBox.Items.Add("=====วันที่=====");
+
+            foreach (Details DateTime in _DataAccess.ReturnDateTime())
             {
-                SalesGridView.Rows.Add(SaleDetails.SaleID, SaleDetails.SaleTime, SaleDetails.Name, SaleDetails.Total, "View Products");
+                DateTimecomboBox.Items.Add(DateTime.SaleTime);
             }
+
+            DateTimecomboBox.SelectedIndex = 0;
+
         }
 
         private void SalesGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -56,6 +61,34 @@ namespace final_cafe
         private void close_MouseLeave(object sender, EventArgs e)
         {
             close.ForeColor = Color.White;
+        }
+
+        private void DateTimecomboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SalesGridView.Rows.Clear();
+
+            if (DateTimecomboBox.SelectedIndex == 0)
+            {
+                DataAccess _DataAccess = new DataAccess();
+
+                foreach (Details SaleDetails in _DataAccess.RetreiveAllSales())
+                {
+                    SalesGridView.Rows.Add(SaleDetails.SaleID, SaleDetails.SaleTime, SaleDetails.Name, SaleDetails.Total, "View Products");
+                }
+            }
+            else if (DateTimecomboBox.SelectedIndex > 0)
+            {
+                DateTime dateTime = Convert.ToDateTime(DateTimecomboBox.SelectedItem);
+
+                DataAccess _DataAccess = new DataAccess();
+
+                int SaleID = _DataAccess.ReturnSaleID(dateTime);
+
+                foreach (Details SaleDetails in _DataAccess.RetreiveAllSaleDetail(SaleID))
+                {
+                    SalesGridView.Rows.Add(SaleDetails.SaleID, SaleDetails.SaleTime, SaleDetails.Name, SaleDetails.Total, "View Products");
+                }
+            }
         }
     }
 }
