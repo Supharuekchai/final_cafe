@@ -31,8 +31,8 @@ namespace final_cafe
             MySqlCommand command = new MySqlCommand("INSERT INTO `customers`(`CustomerName`, `Gender`, `CustomerType`, `CustomerTelNo`, `Password`, `UserName`) VALUES (@cn, @cgd, @ct, @ctn, @pass, @usn)", db.getConnection());
 
             command.Parameters.Add("@cn", MySqlDbType.VarChar).Value = cus_name.Text;
-            command.Parameters.Add("@cgd", MySqlDbType.VarChar).Value = cus_gender.SelectedItem.ToString();
-            command.Parameters.Add("@ct", MySqlDbType.VarChar).Value = cus_type.SelectedItem.ToString();
+            command.Parameters.Add("@cgd", MySqlDbType.VarChar).Value = cus_gender.Text;
+            command.Parameters.Add("@ct", MySqlDbType.VarChar).Value = cus_type.Text;
             command.Parameters.Add("@ctn", MySqlDbType.VarChar).Value = cus_telno.Text;
             command.Parameters.Add("@pass", MySqlDbType.VarChar).Value = cus_pass.Text;
             command.Parameters.Add("@usn", MySqlDbType.VarChar).Value = cus_user.Text;
@@ -94,14 +94,14 @@ namespace final_cafe
         public Boolean checkTextBoxesValues()
         {
             String name = cus_name.Text;
-            String gender = cus_gender.SelectedItem.ToString();
-            String type = cus_type.SelectedItem.ToString();
+            String gender = cus_gender.Text;
+            String type = cus_type.Text;
             String telno = cus_telno.Text;
             String user = cus_user.Text;
             String pass = cus_pass.Text;
 
-            if (name.Equals("Your Name") || gender.Equals("Your Gender") || type.Equals("Your Type")
-                || telno.Equals("Your telephone number ") || user.Equals("Your User") || pass.Equals("Youer Password"))
+            if (name.Equals("") || gender.Equals("") || type.Equals("")
+                || telno.Equals("") || user.Equals("") || pass.Equals(""))
             {
                 return true;
             }

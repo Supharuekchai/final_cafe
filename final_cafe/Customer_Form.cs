@@ -69,7 +69,7 @@ namespace final_cafe
             {
                 Button btn = new Button();
                 btn.Text = Category.Name;
-                btn.Size = new System.Drawing.Size(100, 100);
+                btn.Size = new System.Drawing.Size(130, 130);
                 btn.ForeColor = Color.White;
 
                 MemoryStream ms = new MemoryStream(Category.Picture);
@@ -99,7 +99,7 @@ namespace final_cafe
             {
                 Button ProductButton = new Button();
                 ProductButton.Text = Product.Name;
-                ProductButton.Size = new System.Drawing.Size(100, 100);
+                ProductButton.Size = new System.Drawing.Size(130, 130);
                 ProductButton.ForeColor = Color.White;
 
                 MemoryStream ms = new MemoryStream(Product.Picture);
