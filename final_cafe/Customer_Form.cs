@@ -217,5 +217,26 @@ namespace final_cafe
             Customer_Login customer_Login = new Customer_Login();
             customer_Login.Show();
         }
+
+        private void ProductsGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                if (ProductsGridView.Columns[e.ColumnIndex].Name == "DeleteColumn")
+                {
+                    if (MessageBox.Show("คุณต้องการลบรายการนี้ หรือไม่?", "Warning", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    {
+                        decimal DeletedProductTotal = Convert.ToDecimal(ProductsGridView.Rows[e.RowIndex].Cells["TotalPriceColumn"].Value);
+
+                        decimal CurrentTotalBill = Convert.ToDecimal(TotalBillBox.Text);
+
+                        CurrentTotalBill = CurrentTotalBill - DeletedProductTotal;
+
+                        ProductsGridView.Rows.RemoveAt(e.RowIndex);
+                        TotalBillBox.Text = CurrentTotalBill.ToString();
+                    }
+                }
+            }
+        }
     }
 }

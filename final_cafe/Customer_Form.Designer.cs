@@ -33,17 +33,17 @@
             this.label1 = new System.Windows.Forms.Label();
             this.BillGroupBox = new System.Windows.Forms.GroupBox();
             this.ProductsGridView = new System.Windows.Forms.DataGridView();
-            this.ProductsGroupBox = new System.Windows.Forms.GroupBox();
-            this.ProductsFlowPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.CategoryGroupBox = new System.Windows.Forms.GroupBox();
-            this.CategoriesFlowPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.close = new System.Windows.Forms.Label();
             this.ProductIDColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProductNameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProductPriceColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProductQuantityColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TotalPriceColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DeleteColumn = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.ProductsGroupBox = new System.Windows.Forms.GroupBox();
+            this.ProductsFlowPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.CategoryGroupBox = new System.Windows.Forms.GroupBox();
+            this.CategoriesFlowPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.close = new System.Windows.Forms.Label();
             this.UserName = new System.Windows.Forms.Label();
             this.LogoutButton = new System.Windows.Forms.Button();
             this.BillGroupBox.SuspendLayout();
@@ -105,6 +105,49 @@
             this.ProductsGridView.Name = "ProductsGridView";
             this.ProductsGridView.Size = new System.Drawing.Size(454, 462);
             this.ProductsGridView.TabIndex = 0;
+            this.ProductsGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ProductsGridView_CellContentClick);
+            // 
+            // ProductIDColumn
+            // 
+            this.ProductIDColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.ProductIDColumn.FillWeight = 50F;
+            this.ProductIDColumn.HeaderText = "ID";
+            this.ProductIDColumn.Name = "ProductIDColumn";
+            this.ProductIDColumn.Width = 43;
+            // 
+            // ProductNameColumn
+            // 
+            this.ProductNameColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.ProductNameColumn.HeaderText = "Product Name";
+            this.ProductNameColumn.Name = "ProductNameColumn";
+            // 
+            // ProductPriceColumn
+            // 
+            this.ProductPriceColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.ProductPriceColumn.HeaderText = "Price";
+            this.ProductPriceColumn.Name = "ProductPriceColumn";
+            this.ProductPriceColumn.Width = 56;
+            // 
+            // ProductQuantityColumn
+            // 
+            this.ProductQuantityColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.ProductQuantityColumn.HeaderText = "Quantity";
+            this.ProductQuantityColumn.Name = "ProductQuantityColumn";
+            this.ProductQuantityColumn.Width = 71;
+            // 
+            // TotalPriceColumn
+            // 
+            this.TotalPriceColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.TotalPriceColumn.HeaderText = "Product Total";
+            this.TotalPriceColumn.Name = "TotalPriceColumn";
+            this.TotalPriceColumn.Width = 96;
+            // 
+            // DeleteColumn
+            // 
+            this.DeleteColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.DeleteColumn.HeaderText = "Delete";
+            this.DeleteColumn.Name = "DeleteColumn";
+            this.DeleteColumn.Width = 44;
             // 
             // ProductsGroupBox
             // 
@@ -160,48 +203,6 @@
             this.close.Click += new System.EventHandler(this.close_Click);
             this.close.MouseEnter += new System.EventHandler(this.close_MouseEnter);
             this.close.MouseLeave += new System.EventHandler(this.close_MouseLeave);
-            // 
-            // ProductIDColumn
-            // 
-            this.ProductIDColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.ProductIDColumn.FillWeight = 50F;
-            this.ProductIDColumn.HeaderText = "ID";
-            this.ProductIDColumn.Name = "ProductIDColumn";
-            this.ProductIDColumn.Width = 43;
-            // 
-            // ProductNameColumn
-            // 
-            this.ProductNameColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.ProductNameColumn.HeaderText = "Product Name";
-            this.ProductNameColumn.Name = "ProductNameColumn";
-            // 
-            // ProductPriceColumn
-            // 
-            this.ProductPriceColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.ProductPriceColumn.HeaderText = "Price";
-            this.ProductPriceColumn.Name = "ProductPriceColumn";
-            this.ProductPriceColumn.Width = 56;
-            // 
-            // ProductQuantityColumn
-            // 
-            this.ProductQuantityColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.ProductQuantityColumn.HeaderText = "Quantity";
-            this.ProductQuantityColumn.Name = "ProductQuantityColumn";
-            this.ProductQuantityColumn.Width = 71;
-            // 
-            // TotalPriceColumn
-            // 
-            this.TotalPriceColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.TotalPriceColumn.HeaderText = "Product Total";
-            this.TotalPriceColumn.Name = "TotalPriceColumn";
-            this.TotalPriceColumn.Width = 96;
-            // 
-            // DeleteColumn
-            // 
-            this.DeleteColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.DeleteColumn.HeaderText = "Delete";
-            this.DeleteColumn.Name = "DeleteColumn";
-            this.DeleteColumn.Width = 44;
             // 
             // UserName
             // 
