@@ -46,7 +46,7 @@
             // 
             this.SalesGroupBox.BackColor = System.Drawing.Color.SaddleBrown;
             this.SalesGroupBox.Controls.Add(this.SalesGridView);
-            this.SalesGroupBox.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.SalesGroupBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.SalesGroupBox.Location = new System.Drawing.Point(12, 50);
             this.SalesGroupBox.Name = "SalesGroupBox";
             this.SalesGroupBox.Size = new System.Drawing.Size(604, 337);

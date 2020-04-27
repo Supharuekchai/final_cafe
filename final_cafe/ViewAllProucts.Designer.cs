@@ -71,7 +71,7 @@
             // ProductsGroupBox
             // 
             this.ProductsGroupBox.Controls.Add(this.ProductsGridView);
-            this.ProductsGroupBox.ForeColor = System.Drawing.Color.White;
+            this.ProductsGroupBox.ForeColor = System.Drawing.Color.Black;
             this.ProductsGroupBox.Location = new System.Drawing.Point(12, 34);
             this.ProductsGroupBox.Name = "ProductsGroupBox";
             this.ProductsGroupBox.Size = new System.Drawing.Size(612, 325);
@@ -84,6 +84,7 @@
             this.ProductsGridView.AllowUserToAddRows = false;
             this.ProductsGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.ProductsGridView.BackgroundColor = System.Drawing.Color.Chocolate;
+            this.ProductsGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.ProductsGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ProductsGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ProductIDColumn,

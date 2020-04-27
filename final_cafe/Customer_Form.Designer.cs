@@ -96,7 +96,7 @@
             this.BillGroupBox.Controls.Add(this.ProductsGridView);
             this.BillGroupBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BillGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BillGroupBox.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BillGroupBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.BillGroupBox.Location = new System.Drawing.Point(483, 21);
             this.BillGroupBox.Name = "BillGroupBox";
             this.BillGroupBox.Size = new System.Drawing.Size(460, 481);
@@ -109,6 +109,7 @@
             this.ProductsGridView.AllowUserToAddRows = false;
             this.ProductsGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.ProductsGridView.BackgroundColor = System.Drawing.Color.PeachPuff;
+            this.ProductsGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.ProductsGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ProductsGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ProductIDColumn,
@@ -172,7 +173,7 @@
             this.ProductsGroupBox.Controls.Add(this.ProductsFlowPanel);
             this.ProductsGroupBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ProductsGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ProductsGroupBox.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.ProductsGroupBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ProductsGroupBox.Location = new System.Drawing.Point(15, 234);
             this.ProductsGroupBox.Name = "ProductsGroupBox";
             this.ProductsGroupBox.Size = new System.Drawing.Size(459, 268);
@@ -184,6 +185,7 @@
             // 
             this.ProductsFlowPanel.AutoScroll = true;
             this.ProductsFlowPanel.BackColor = System.Drawing.Color.PeachPuff;
+            this.ProductsFlowPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.ProductsFlowPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ProductsFlowPanel.Location = new System.Drawing.Point(3, 19);
             this.ProductsFlowPanel.Name = "ProductsFlowPanel";
@@ -196,7 +198,7 @@
             this.CategoryGroupBox.Controls.Add(this.CategoriesFlowPanel);
             this.CategoryGroupBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.CategoryGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CategoryGroupBox.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.CategoryGroupBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.CategoryGroupBox.Location = new System.Drawing.Point(15, 21);
             this.CategoryGroupBox.Name = "CategoryGroupBox";
             this.CategoryGroupBox.Size = new System.Drawing.Size(462, 207);
@@ -208,6 +210,7 @@
             // 
             this.CategoriesFlowPanel.AutoScroll = true;
             this.CategoriesFlowPanel.BackColor = System.Drawing.Color.PeachPuff;
+            this.CategoriesFlowPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.CategoriesFlowPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.CategoriesFlowPanel.Location = new System.Drawing.Point(3, 19);
             this.CategoriesFlowPanel.Name = "CategoriesFlowPanel";

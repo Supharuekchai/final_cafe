@@ -55,6 +55,7 @@
             this.SaleItemsGridView.AllowUserToAddRows = false;
             this.SaleItemsGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.SaleItemsGridView.BackgroundColor = System.Drawing.Color.Chocolate;
+            this.SaleItemsGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.SaleItemsGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.SaleItemsGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ProductNameColumn,
