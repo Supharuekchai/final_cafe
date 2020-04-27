@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Staff_Form));
             this.CheckOutButton = new System.Windows.Forms.Button();
             this.TotalBillBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -259,7 +258,6 @@
             // UserNameIDMenuLabel
             // 
             this.UserNameIDMenuLabel.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.UserNameIDMenuLabel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("UserNameIDMenuLabel.BackgroundImage")));
             this.UserNameIDMenuLabel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.UserNameIDMenuLabel.Enabled = false;
             this.UserNameIDMenuLabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

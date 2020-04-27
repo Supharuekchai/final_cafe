@@ -27,15 +27,17 @@ namespace final_cafe
 
         private void bt_sign_Click(object sender, EventArgs e)
         {
+            int Point = 10;
             DB db = new DB();
-            MySqlCommand command = new MySqlCommand("INSERT INTO `customers`(`CustomerName`, `Gender`, `CustomerType`, `CustomerTelNo`, `Password`, `UserName`) VALUES (@cn, @cgd, @ct, @ctn, @pass, @usn)", db.getConnection());
+            MySqlCommand command = new MySqlCommand("INSERT INTO `customers`(`CustomerName`, `Gender`, `CustomerType`, `CustomerTelNo`, `Password`, `UserName`, Point) VALUES (@cn, @cgd, @ct, @ctn, @pass, @usn, @Point)", db.getConnection());
 
             command.Parameters.Add("@cn", MySqlDbType.VarChar).Value = cus_name.Text;
             command.Parameters.Add("@cgd", MySqlDbType.VarChar).Value = cus_gender.Text;
             command.Parameters.Add("@ct", MySqlDbType.VarChar).Value = cus_type.Text;
             command.Parameters.Add("@ctn", MySqlDbType.VarChar).Value = cus_telno.Text;
             command.Parameters.Add("@pass", MySqlDbType.VarChar).Value = cus_pass.Text;
-            command.Parameters.Add("@usn", MySqlDbType.VarChar).Value = cus_user.Text;
+            command.Parameters.Add("@usn", MySqlDbType.VarChar).Value = cus_username.Text;
+            command.Parameters.Add("@Point", MySqlDbType.VarChar).Value = Point;
 
             db.openConnection();
 
@@ -72,7 +74,7 @@ namespace final_cafe
         public Boolean checkUsername()
         {
             DB db = new DB();
-            String username = cus_user.Text;
+            String username = cus_pass.Text;
 
             DataTable table = new DataTable();
             MySqlDataAdapter adapter = new MySqlDataAdapter();
@@ -97,8 +99,8 @@ namespace final_cafe
             String gender = cus_gender.Text;
             String type = cus_type.Text;
             String telno = cus_telno.Text;
-            String user = cus_user.Text;
-            String pass = cus_pass.Text;
+            String user = cus_pass.Text;
+            String pass = cus_username.Text;
 
             if (name.Equals("") || gender.Equals("") || type.Equals("")
                 || telno.Equals("") || user.Equals("") || pass.Equals(""))

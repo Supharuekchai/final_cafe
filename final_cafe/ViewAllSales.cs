@@ -73,7 +73,7 @@ namespace final_cafe
 
                 foreach (Details SaleDetails in _DataAccess.RetreiveAllSales())
                 {
-                    SalesGridView.Rows.Add(SaleDetails.SaleID, SaleDetails.SaleTime, SaleDetails.Name, SaleDetails.Total, "View Products");
+                    SalesGridView.Rows.Add(SaleDetails.SaleID, SaleDetails.SaleTime, SaleDetails.Name, SaleDetails.CostomerName, SaleDetails.Total, "View Products");
                 }
             }
             else if (DateTimecomboBox.SelectedIndex > 0)

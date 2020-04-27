@@ -32,9 +32,9 @@
             this.bt_sign = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.cus_user = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.cus_pass = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cus_username = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.cus_telno = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -89,9 +89,9 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.label4);
-            this.groupBox3.Controls.Add(this.cus_user);
-            this.groupBox3.Controls.Add(this.label3);
             this.groupBox3.Controls.Add(this.cus_pass);
+            this.groupBox3.Controls.Add(this.label3);
+            this.groupBox3.Controls.Add(this.cus_username);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.groupBox3.Location = new System.Drawing.Point(17, 211);
             this.groupBox3.Name = "groupBox3";
@@ -111,15 +111,15 @@
             this.label4.TabIndex = 10;
             this.label4.Text = "Password";
             // 
-            // cus_user
+            // cus_pass
             // 
-            this.cus_user.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.cus_user.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.cus_user.Location = new System.Drawing.Point(89, 57);
-            this.cus_user.Name = "cus_user";
-            this.cus_user.Size = new System.Drawing.Size(190, 23);
-            this.cus_user.TabIndex = 9;
-            this.cus_user.UseSystemPasswordChar = true;
+            this.cus_pass.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.cus_pass.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.cus_pass.Location = new System.Drawing.Point(89, 57);
+            this.cus_pass.Name = "cus_pass";
+            this.cus_pass.Size = new System.Drawing.Size(190, 23);
+            this.cus_pass.TabIndex = 9;
+            this.cus_pass.UseSystemPasswordChar = true;
             // 
             // label3
             // 
@@ -132,14 +132,14 @@
             this.label3.TabIndex = 8;
             this.label3.Text = "Username";
             // 
-            // cus_pass
+            // cus_username
             // 
-            this.cus_pass.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.cus_pass.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.cus_pass.Location = new System.Drawing.Point(89, 28);
-            this.cus_pass.Name = "cus_pass";
-            this.cus_pass.Size = new System.Drawing.Size(190, 23);
-            this.cus_pass.TabIndex = 7;
+            this.cus_username.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.cus_username.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.cus_username.Location = new System.Drawing.Point(89, 28);
+            this.cus_username.Name = "cus_username";
+            this.cus_username.Size = new System.Drawing.Size(190, 23);
+            this.cus_username.TabIndex = 7;
             // 
             // label2
             // 
@@ -296,9 +296,9 @@
         private System.Windows.Forms.Button bt_sign;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox cus_user;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox cus_pass;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox cus_username;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox cus_telno;
         private System.Windows.Forms.GroupBox groupBox2;

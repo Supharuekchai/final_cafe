@@ -61,7 +61,7 @@
             this.CheckOutButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.CheckOutButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CheckOutButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.CheckOutButton.Location = new System.Drawing.Point(689, 7);
+            this.CheckOutButton.Location = new System.Drawing.Point(716, 7);
             this.CheckOutButton.Name = "CheckOutButton";
             this.CheckOutButton.Size = new System.Drawing.Size(106, 37);
             this.CheckOutButton.TabIndex = 20;
@@ -74,9 +74,9 @@
             // TotalBillBox
             // 
             this.TotalBillBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TotalBillBox.Location = new System.Drawing.Point(443, 14);
+            this.TotalBillBox.Location = new System.Drawing.Point(573, 14);
             this.TotalBillBox.Name = "TotalBillBox";
-            this.TotalBillBox.Size = new System.Drawing.Size(229, 27);
+            this.TotalBillBox.Size = new System.Drawing.Size(137, 27);
             this.TotalBillBox.TabIndex = 19;
             // 
             // label1
@@ -84,7 +84,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(345, 17);
+            this.label1.Location = new System.Drawing.Point(486, 18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(81, 22);
             this.label1.TabIndex = 18;
@@ -97,7 +97,7 @@
             this.BillGroupBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BillGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BillGroupBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.BillGroupBox.Location = new System.Drawing.Point(483, 21);
+            this.BillGroupBox.Location = new System.Drawing.Point(493, 21);
             this.BillGroupBox.Name = "BillGroupBox";
             this.BillGroupBox.Size = new System.Drawing.Size(460, 481);
             this.BillGroupBox.TabIndex = 17;
@@ -174,7 +174,7 @@
             this.ProductsGroupBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ProductsGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ProductsGroupBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ProductsGroupBox.Location = new System.Drawing.Point(15, 234);
+            this.ProductsGroupBox.Location = new System.Drawing.Point(25, 234);
             this.ProductsGroupBox.Name = "ProductsGroupBox";
             this.ProductsGroupBox.Size = new System.Drawing.Size(459, 268);
             this.ProductsGroupBox.TabIndex = 16;
@@ -199,7 +199,7 @@
             this.CategoryGroupBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.CategoryGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CategoryGroupBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.CategoryGroupBox.Location = new System.Drawing.Point(15, 21);
+            this.CategoryGroupBox.Location = new System.Drawing.Point(25, 21);
             this.CategoryGroupBox.Name = "CategoryGroupBox";
             this.CategoryGroupBox.Size = new System.Drawing.Size(462, 207);
             this.CategoryGroupBox.TabIndex = 15;
@@ -223,7 +223,7 @@
             this.close.BackColor = System.Drawing.Color.Transparent;
             this.close.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.close.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.close.Location = new System.Drawing.Point(939, -4);
+            this.close.Location = new System.Drawing.Point(949, -4);
             this.close.Name = "close";
             this.close.Size = new System.Drawing.Size(23, 22);
             this.close.TabIndex = 65;
@@ -240,7 +240,7 @@
             this.LogoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.LogoutButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LogoutButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.LogoutButton.Location = new System.Drawing.Point(812, 7);
+            this.LogoutButton.Location = new System.Drawing.Point(828, 7);
             this.LogoutButton.Name = "LogoutButton";
             this.LogoutButton.Size = new System.Drawing.Size(100, 37);
             this.LogoutButton.TabIndex = 67;
@@ -270,9 +270,9 @@
             this.groupBox1.Controls.Add(this.CheckOutButton);
             this.groupBox1.Controls.Add(this.TotalBillBox);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(15, 508);
+            this.groupBox1.Location = new System.Drawing.Point(15, 524);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(928, 50);
+            this.groupBox1.Size = new System.Drawing.Size(947, 51);
             this.groupBox1.TabIndex = 68;
             this.groupBox1.TabStop = false;
             // 
@@ -281,7 +281,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::final_cafe.Properties.Resources.coffee_pattern5901;
-            this.ClientSize = new System.Drawing.Size(951, 562);
+            this.ClientSize = new System.Drawing.Size(973, 587);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.close);
             this.Controls.Add(this.BillGroupBox);

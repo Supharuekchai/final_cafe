@@ -498,6 +498,35 @@ namespace final_cafe
                 return CustomerName;
             }
         }
+        public string ReturnCustomerNameFromID(string CustomerID)
+        {
+            string CustomerName = string.Empty;
+            try
+            {
+
+                using (MySqlConnection connection = new MySqlConnection(ConnectionString))
+                {
+                    MySqlCommand command = new MySqlCommand("SELECT CustomerName FROM customers WHERE CustomerID = '" + CustomerID + "';", connection);
+                    connection.Open();
+
+                    MySqlDataReader reader = command.ExecuteReader();
+
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            CustomerName = reader.GetString(0);
+                        }
+                    }
+                    reader.Close();
+                    return CustomerName;
+                }
+            }
+            catch (Exception)
+            {
+                return CustomerName;
+            }
+        }
 
         public string UpdatePoint(int CustomerID, ArrayList ProductsList, string PointD)
         {
@@ -642,7 +671,7 @@ namespace final_cafe
 
             using (MySqlConnection connection = new MySqlConnection(ConnectionString))
             {
-                MySqlCommand command = new MySqlCommand("SELECT SaleID, SaleDateTime, StaffID, GrandTotal FROM sales;", connection);
+                MySqlCommand command = new MySqlCommand("SELECT SaleID, SaleDateTime, StaffID, CustomerID, GrandTotal FROM sales;", connection);
                 connection.Open();
 
                 MySqlDataReader reader = command.ExecuteReader();
@@ -655,9 +684,12 @@ namespace final_cafe
                         DateTime SaleTime = reader.GetDateTime(1);
                         int SalesmanID = reader.GetInt32(2);
                         string SalesmanName = ReturnUserName(SalesmanID);
-                        decimal TotalBill = reader.GetDecimal(3);
+                        string CustomerID = reader.GetString(3);
+                        string CustomerName = ReturnCustomerNameFromID(CustomerID);
+                        decimal TotalBill = reader.GetDecimal(4);
 
-                        SalesList.Add(new Details() { SaleID = SaleID, SaleTime = SaleTime, Name = SalesmanName, Total = TotalBill });
+
+                        SalesList.Add(new Details() { SaleID = SaleID, SaleTime = SaleTime, Name = SalesmanName, CostomerName = CustomerName, Total = TotalBill});
                     }
                 }
                 reader.Close();

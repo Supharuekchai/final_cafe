@@ -15,5 +15,6 @@ namespace final_cafe
         public int SaleID;
         public DateTime SaleTime;
         public int SalesmanID;
+        public string CostomerName;
     }
 }
