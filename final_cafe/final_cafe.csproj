@@ -200,5 +200,23 @@
   <ItemGroup>
     <None Include="Resources\pngtree-tea-restaurant-poster-background-material-image_172982.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0b926ae748eab1a8c77bdb9cee6eb8c1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coffee pattern590.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\รูปภาพ3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coffee pattern5901.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coffee pattern5902.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coffee pattern5903.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

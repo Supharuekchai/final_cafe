@@ -81,6 +81,36 @@ namespace final_cafe
             close.ForeColor = Color.White;
         }
 
+        private void UploadPictureButton_MouseEnter(object sender, EventArgs e)
+        {
+            UploadPictureButton.ForeColor = Color.White;
+        }
+
+        private void UploadPictureButton_MouseLeave(object sender, EventArgs e)
+        {
+            UploadPictureButton.ForeColor = Color.Black;
+        }
+
+        private void CancelButton_MouseEnter(object sender, EventArgs e)
+        {
+            CancelButton.ForeColor = Color.White;
+        }
+
+        private void CancelButton_MouseLeave(object sender, EventArgs e)
+        {
+            CancelButton.ForeColor = Color.Black;
+        }
+
+        private void UpdateProductButton_MouseLeave(object sender, EventArgs e)
+        {
+            UploadPictureButton.ForeColor = Color.Black;
+        }
+
+        private void UpdateProductButton_MouseEnter(object sender, EventArgs e)
+        {
+            UploadPictureButton.ForeColor = Color.White;
+        }
+
         private void UpdateProductButton_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("คุณต้องการที่จะแก้ไขสินค้า ใช่หรือไม่?", "Warning", MessageBoxButtons.YesNo) == DialogResult.Yes)

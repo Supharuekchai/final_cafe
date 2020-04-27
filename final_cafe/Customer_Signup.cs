@@ -110,5 +110,35 @@ namespace final_cafe
                 return false;
             }
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bt_sign_MouseEnter(object sender, EventArgs e)
+        {
+            bt_sign.ForeColor = Color.White;
+        }
+
+        private void bt_sign_MouseLeave(object sender, EventArgs e)
+        {
+            bt_sign.ForeColor = Color.Black;
+        }
+
+        private void bt_cancer_MouseEnter(object sender, EventArgs e)
+        {
+            bt_cancer.ForeColor = Color.White;
+        }
+
+        private void bt_cancer_MouseLeave(object sender, EventArgs e)
+        {
+            bt_cancer.ForeColor = Color.Black;
+        }
     }
 }

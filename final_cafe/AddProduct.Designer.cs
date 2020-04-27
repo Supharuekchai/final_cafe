@@ -46,6 +46,8 @@
             // 
             // ProductCategoryComboBox
             // 
+            this.ProductCategoryComboBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ProductCategoryComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.ProductCategoryComboBox.FormattingEnabled = true;
             this.ProductCategoryComboBox.Location = new System.Drawing.Point(123, 75);
             this.ProductCategoryComboBox.Name = "ProductCategoryComboBox";
@@ -79,26 +81,37 @@
             // 
             // AddProductButton
             // 
+            this.AddProductButton.BackColor = System.Drawing.Color.LightSalmon;
+            this.AddProductButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AddProductButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.AddProductButton.Location = new System.Drawing.Point(68, 297);
             this.AddProductButton.Name = "AddProductButton";
             this.AddProductButton.Size = new System.Drawing.Size(130, 23);
             this.AddProductButton.TabIndex = 27;
             this.AddProductButton.Text = "Add Product";
-            this.AddProductButton.UseVisualStyleBackColor = true;
+            this.AddProductButton.UseVisualStyleBackColor = false;
             this.AddProductButton.Click += new System.EventHandler(this.AddProductButton_Click);
+            this.AddProductButton.MouseEnter += new System.EventHandler(this.AddProductButton_MouseEnter);
+            this.AddProductButton.MouseLeave += new System.EventHandler(this.AddProductButton_MouseLeave);
             // 
             // UploadButton
             // 
+            this.UploadButton.BackColor = System.Drawing.Color.LightSalmon;
+            this.UploadButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.UploadButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.UploadButton.Location = new System.Drawing.Point(9, 224);
             this.UploadButton.Name = "UploadButton";
             this.UploadButton.Size = new System.Drawing.Size(85, 23);
             this.UploadButton.TabIndex = 26;
             this.UploadButton.Text = "Upload Picture";
-            this.UploadButton.UseVisualStyleBackColor = true;
+            this.UploadButton.UseVisualStyleBackColor = false;
             this.UploadButton.Click += new System.EventHandler(this.UploadButton_Click);
+            this.UploadButton.MouseEnter += new System.EventHandler(this.UploadButton_MouseEnter);
+            this.UploadButton.MouseLeave += new System.EventHandler(this.UploadButton_MouseLeave);
             // 
             // ProductPictureBox
             // 
+            this.ProductPictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ProductPictureBox.Location = new System.Drawing.Point(123, 182);
             this.ProductPictureBox.Name = "ProductPictureBox";
             this.ProductPictureBox.Size = new System.Drawing.Size(146, 102);
@@ -169,6 +182,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.PeachPuff;
             this.ClientSize = new System.Drawing.Size(293, 334);
             this.Controls.Add(this.close);
             this.Controls.Add(this.ProductCategoryComboBox);

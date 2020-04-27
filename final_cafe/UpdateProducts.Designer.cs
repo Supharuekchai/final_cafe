@@ -65,16 +65,22 @@
             // 
             // CancelButton
             // 
+            this.CancelButton.BackColor = System.Drawing.Color.Sienna;
+            this.CancelButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.CancelButton.Location = new System.Drawing.Point(17, 319);
             this.CancelButton.Name = "CancelButton";
             this.CancelButton.Size = new System.Drawing.Size(130, 23);
             this.CancelButton.TabIndex = 47;
             this.CancelButton.Text = "Cancel";
-            this.CancelButton.UseVisualStyleBackColor = true;
+            this.CancelButton.UseVisualStyleBackColor = false;
             this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
+            this.CancelButton.MouseEnter += new System.EventHandler(this.CancelButton_MouseEnter);
+            this.CancelButton.MouseLeave += new System.EventHandler(this.CancelButton_MouseLeave);
             // 
             // ProductCategoryComboBox
             // 
+            this.ProductCategoryComboBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ProductCategoryComboBox.FormattingEnabled = true;
             this.ProductCategoryComboBox.Location = new System.Drawing.Point(137, 100);
             this.ProductCategoryComboBox.Name = "ProductCategoryComboBox";
@@ -108,27 +114,38 @@
             // 
             // UpdateProductButton
             // 
+            this.UpdateProductButton.BackColor = System.Drawing.Color.Sienna;
+            this.UpdateProductButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.UpdateProductButton.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.UpdateProductButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.UpdateProductButton.Location = new System.Drawing.Point(153, 319);
             this.UpdateProductButton.Name = "UpdateProductButton";
             this.UpdateProductButton.Size = new System.Drawing.Size(130, 23);
             this.UpdateProductButton.TabIndex = 42;
             this.UpdateProductButton.Text = "Update Product";
-            this.UpdateProductButton.UseVisualStyleBackColor = true;
+            this.UpdateProductButton.UseVisualStyleBackColor = false;
             this.UpdateProductButton.Click += new System.EventHandler(this.UpdateProductButton_Click);
+            this.UpdateProductButton.MouseEnter += new System.EventHandler(this.UpdateProductButton_MouseEnter);
+            this.UpdateProductButton.MouseLeave += new System.EventHandler(this.UpdateProductButton_MouseLeave);
             // 
             // UploadPictureButton
             // 
-            this.UploadPictureButton.Location = new System.Drawing.Point(23, 249);
+            this.UploadPictureButton.BackColor = System.Drawing.Color.Sienna;
+            this.UploadPictureButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.UploadPictureButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.UploadPictureButton.Location = new System.Drawing.Point(26, 258);
             this.UploadPictureButton.Name = "UploadPictureButton";
             this.UploadPictureButton.Size = new System.Drawing.Size(85, 23);
             this.UploadPictureButton.TabIndex = 41;
             this.UploadPictureButton.Text = "Upload Picture";
-            this.UploadPictureButton.UseVisualStyleBackColor = true;
+            this.UploadPictureButton.UseVisualStyleBackColor = false;
             this.UploadPictureButton.Click += new System.EventHandler(this.UploadPictureButton_Click);
+            this.UploadPictureButton.MouseEnter += new System.EventHandler(this.UploadPictureButton_MouseEnter);
+            this.UploadPictureButton.MouseLeave += new System.EventHandler(this.UploadPictureButton_MouseLeave);
             // 
             // ProductPictureBox
             // 
+            this.ProductPictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ProductPictureBox.Location = new System.Drawing.Point(137, 207);
             this.ProductPictureBox.Name = "ProductPictureBox";
             this.ProductPictureBox.Size = new System.Drawing.Size(146, 102);
@@ -199,6 +216,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.PeachPuff;
             this.ClientSize = new System.Drawing.Size(307, 352);
             this.Controls.Add(this.close);
             this.Controls.Add(this.ProductIDBox);

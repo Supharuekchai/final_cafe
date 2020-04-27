@@ -44,7 +44,9 @@
             // 
             // SalesGroupBox
             // 
+            this.SalesGroupBox.BackColor = System.Drawing.Color.SaddleBrown;
             this.SalesGroupBox.Controls.Add(this.SalesGridView);
+            this.SalesGroupBox.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.SalesGroupBox.Location = new System.Drawing.Point(12, 50);
             this.SalesGroupBox.Name = "SalesGroupBox";
             this.SalesGroupBox.Size = new System.Drawing.Size(604, 337);
@@ -56,6 +58,7 @@
             // 
             this.SalesGridView.AllowUserToAddRows = false;
             this.SalesGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.SalesGridView.BackgroundColor = System.Drawing.Color.Chocolate;
             this.SalesGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.SalesGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.SaleIDColumn,
@@ -63,6 +66,7 @@
             this.SalesmanColumn,
             this.TotalBillColumn,
             this.ProductsColumn});
+            this.SalesGridView.Cursor = System.Windows.Forms.Cursors.Hand;
             this.SalesGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.SalesGridView.Location = new System.Drawing.Point(3, 16);
             this.SalesGridView.Name = "SalesGridView";
@@ -102,7 +106,7 @@
             this.close.AutoSize = true;
             this.close.BackColor = System.Drawing.Color.Transparent;
             this.close.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.close.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.close.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.close.Location = new System.Drawing.Point(608, 0);
             this.close.Name = "close";
             this.close.Size = new System.Drawing.Size(21, 20);
@@ -115,6 +119,7 @@
             // 
             // DateTimecomboBox
             // 
+            this.DateTimecomboBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DateTimecomboBox.FormattingEnabled = true;
             this.DateTimecomboBox.Location = new System.Drawing.Point(405, 23);
             this.DateTimecomboBox.Name = "DateTimecomboBox";
@@ -125,6 +130,8 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.SaddleBrown;
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.Location = new System.Drawing.Point(371, 31);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(28, 13);
@@ -135,6 +142,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SaddleBrown;
             this.ClientSize = new System.Drawing.Size(628, 399);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.DateTimecomboBox);

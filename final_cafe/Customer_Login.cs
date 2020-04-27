@@ -98,7 +98,7 @@ namespace final_cafe
 
         private void close_MouseEnter(object sender, EventArgs e)
         {
-            close.ForeColor = Color.Black;
+            close.ForeColor = Color.SandyBrown;
         }
 
         private void close_MouseLeave(object sender, EventArgs e)
@@ -113,22 +113,22 @@ namespace final_cafe
 
         private void cus_login_MouseEnter(object sender, EventArgs e)
         {
-            cus_login.ForeColor = Color.White;
+            cus_login.ForeColor = Color.SandyBrown;
         }
 
         private void cus_login_MouseLeave(object sender, EventArgs e)
         {
-            cus_login.ForeColor = Color.Black;
+            cus_login.ForeColor = Color.White;
         }
 
         private void cus_signup_MouseLeave(object sender, EventArgs e)
         {
-            cus_signup.ForeColor = Color.Black;
+            cus_signup.ForeColor = Color.White;
         }
 
         private void cus_signup_MouseEnter(object sender, EventArgs e)
         {
-            cus_signup.ForeColor = Color.White;
+            cus_signup.ForeColor = Color.SandyBrown;
         }
 
         private void Customer_Login_Load(object sender, EventArgs e)

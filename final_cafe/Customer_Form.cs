@@ -238,5 +238,35 @@ namespace final_cafe
                 }
             }
         }
+
+        private void UserName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UserName_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CheckOutButton_MouseEnter(object sender, EventArgs e)
+        {
+            CheckOutButton.ForeColor = Color.Black;
+        }
+
+        private void CheckOutButton_MouseLeave(object sender, EventArgs e)
+        {
+            CheckOutButton.ForeColor = Color.White;
+        }
+
+        private void LogoutButton_MouseLeave(object sender, EventArgs e)
+        {
+            LogoutButton.ForeColor = Color.White;
+        }
+
+        private void LogoutButton_MouseEnter(object sender, EventArgs e)
+        {
+            LogoutButton.ForeColor = Color.Black;
+        }
     }
 }

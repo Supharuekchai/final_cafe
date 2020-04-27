@@ -42,27 +42,38 @@
             // 
             // AddCategoryButton
             // 
+            this.AddCategoryButton.BackColor = System.Drawing.Color.PeachPuff;
+            this.AddCategoryButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.AddCategoryButton.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.AddCategoryButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.AddCategoryButton.Location = new System.Drawing.Point(68, 247);
             this.AddCategoryButton.Name = "AddCategoryButton";
             this.AddCategoryButton.Size = new System.Drawing.Size(130, 23);
             this.AddCategoryButton.TabIndex = 15;
             this.AddCategoryButton.Text = "Add Category";
-            this.AddCategoryButton.UseVisualStyleBackColor = true;
+            this.AddCategoryButton.UseVisualStyleBackColor = false;
             this.AddCategoryButton.Click += new System.EventHandler(this.AddCategoryButton_Click);
+            this.AddCategoryButton.MouseEnter += new System.EventHandler(this.AddCategoryButton_MouseEnter);
+            this.AddCategoryButton.MouseLeave += new System.EventHandler(this.AddCategoryButton_MouseLeave);
             // 
             // UploadButton
             // 
+            this.UploadButton.BackColor = System.Drawing.Color.PeachPuff;
+            this.UploadButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.UploadButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.UploadButton.Location = new System.Drawing.Point(9, 160);
             this.UploadButton.Name = "UploadButton";
             this.UploadButton.Size = new System.Drawing.Size(85, 23);
             this.UploadButton.TabIndex = 14;
             this.UploadButton.Text = "Upload Picture";
-            this.UploadButton.UseVisualStyleBackColor = true;
+            this.UploadButton.UseVisualStyleBackColor = false;
             this.UploadButton.Click += new System.EventHandler(this.UploadButton_Click);
+            this.UploadButton.MouseEnter += new System.EventHandler(this.UploadButton_MouseEnter);
+            this.UploadButton.MouseLeave += new System.EventHandler(this.UploadButton_MouseLeave);
             // 
             // CategoryPictureBox
             // 
+            this.CategoryPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.CategoryPictureBox.Location = new System.Drawing.Point(123, 131);
             this.CategoryPictureBox.Name = "CategoryPictureBox";
             this.CategoryPictureBox.Size = new System.Drawing.Size(146, 102);
@@ -133,6 +144,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.PapayaWhip;
             this.ClientSize = new System.Drawing.Size(290, 278);
             this.Controls.Add(this.close);
             this.Controls.Add(this.AddCategoryButton);

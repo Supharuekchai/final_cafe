@@ -66,5 +66,25 @@ namespace final_cafe
         {
             close.ForeColor = Color.White;
         }
+
+        private void UploadButton_MouseEnter(object sender, EventArgs e)
+        {
+            UploadButton.ForeColor = Color.White;
+        }
+
+        private void UploadButton_MouseLeave(object sender, EventArgs e)
+        {
+            UploadButton.ForeColor = Color.Black;
+        }
+
+        private void AddCategoryButton_MouseEnter(object sender, EventArgs e)
+        {
+            AddCategoryButton.ForeColor = Color.White;
+        }
+
+        private void AddCategoryButton_MouseLeave(object sender, EventArgs e)
+        {
+            AddCategoryButton.ForeColor = Color.Black;
+        }
     }
 }

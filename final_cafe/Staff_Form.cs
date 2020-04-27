@@ -279,5 +279,25 @@ namespace final_cafe
             }
             else MessageBox.Show("เกิดข้อผิดพลาด ขออภัยในความไม่สะดวก");
         }
+
+        private void CheckOutButton_MouseLeave(object sender, EventArgs e)
+        {
+            CheckOutButton.ForeColor = Color.Black;
+        }
+
+        private void CheckOutButton_MouseEnter(object sender, EventArgs e)
+        {
+            CheckOutButton.ForeColor = Color.White;
+        }
+
+        private void Close_MouseEnter(object sender, EventArgs e)
+        {
+            Close.ForeColor = Color.White;
+        }
+
+        private void Close_MouseLeave(object sender, EventArgs e)
+        {
+            Close.ForeColor = Color.Black;
+        }
     }
 }

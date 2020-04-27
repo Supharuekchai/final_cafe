@@ -63,9 +63,69 @@ namespace final_cafe.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _0b926ae748eab1a8c77bdb9cee6eb8c1 {
+            get {
+                object obj = ResourceManager.GetObject("0b926ae748eab1a8c77bdb9cee6eb8c1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap coffee_pattern590 {
+            get {
+                object obj = ResourceManager.GetObject("coffee pattern590", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap coffee_pattern5901 {
+            get {
+                object obj = ResourceManager.GetObject("coffee pattern5901", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap coffee_pattern5902 {
+            get {
+                object obj = ResourceManager.GetObject("coffee pattern5902", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap coffee_pattern5903 {
+            get {
+                object obj = ResourceManager.GetObject("coffee pattern5903", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pngtree_tea_restaurant_poster_background_material_image_172982 {
             get {
                 object obj = ResourceManager.GetObject("pngtree-tea-restaurant-poster-background-material-image_172982", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap รูปภาพ3 {
+            get {
+                object obj = ResourceManager.GetObject("รูปภาพ3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

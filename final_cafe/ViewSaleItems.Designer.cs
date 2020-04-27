@@ -41,6 +41,7 @@
             // 
             // SalesGroupBox
             // 
+            this.SalesGroupBox.BackColor = System.Drawing.Color.Bisque;
             this.SalesGroupBox.Controls.Add(this.SaleItemsGridView);
             this.SalesGroupBox.Location = new System.Drawing.Point(12, 12);
             this.SalesGroupBox.Name = "SalesGroupBox";
@@ -53,12 +54,14 @@
             // 
             this.SaleItemsGridView.AllowUserToAddRows = false;
             this.SaleItemsGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.SaleItemsGridView.BackgroundColor = System.Drawing.Color.Chocolate;
             this.SaleItemsGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.SaleItemsGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ProductNameColumn,
             this.ProductPriceColumn,
             this.ProductQuantityColumn,
             this.ProductTotalColumn});
+            this.SaleItemsGridView.Cursor = System.Windows.Forms.Cursors.Hand;
             this.SaleItemsGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.SaleItemsGridView.Location = new System.Drawing.Point(3, 16);
             this.SaleItemsGridView.Name = "SaleItemsGridView";
@@ -91,7 +94,7 @@
             this.close.AutoSize = true;
             this.close.BackColor = System.Drawing.Color.Transparent;
             this.close.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.close.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.close.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.close.Location = new System.Drawing.Point(599, 3);
             this.close.Name = "close";
             this.close.Size = new System.Drawing.Size(21, 20);
@@ -106,6 +109,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::final_cafe.Properties.Resources.coffee_pattern5903;
             this.ClientSize = new System.Drawing.Size(625, 370);
             this.Controls.Add(this.close);
             this.Controls.Add(this.SalesGroupBox);

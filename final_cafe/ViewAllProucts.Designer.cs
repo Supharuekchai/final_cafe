@@ -32,7 +32,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.ProductsGroupBox = new System.Windows.Forms.GroupBox();
             this.ProductsGridView = new System.Windows.Forms.DataGridView();
-            this.close = new System.Windows.Forms.Label();
             this.ProductIDColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProductNameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProductPriceColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,6 +40,7 @@
             this.ProductImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
             this.EditProductColumn = new System.Windows.Forms.DataGridViewButtonColumn();
             this.DeleteProductColumn = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.close = new System.Windows.Forms.Label();
             this.ProductsGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProductsGridView)).BeginInit();
             this.SuspendLayout();
@@ -49,6 +49,7 @@
             // 
             this.ProductCategoryComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.ProductCategoryComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.ProductCategoryComboBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ProductCategoryComboBox.FormattingEnabled = true;
             this.ProductCategoryComboBox.Location = new System.Drawing.Point(100, 10);
             this.ProductCategoryComboBox.Name = "ProductCategoryComboBox";
@@ -60,6 +61,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(12, 13);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(82, 13);
@@ -69,6 +71,7 @@
             // ProductsGroupBox
             // 
             this.ProductsGroupBox.Controls.Add(this.ProductsGridView);
+            this.ProductsGroupBox.ForeColor = System.Drawing.Color.White;
             this.ProductsGroupBox.Location = new System.Drawing.Point(12, 34);
             this.ProductsGroupBox.Name = "ProductsGroupBox";
             this.ProductsGroupBox.Size = new System.Drawing.Size(612, 325);
@@ -80,6 +83,7 @@
             // 
             this.ProductsGridView.AllowUserToAddRows = false;
             this.ProductsGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.ProductsGridView.BackgroundColor = System.Drawing.Color.Chocolate;
             this.ProductsGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ProductsGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ProductIDColumn,
@@ -90,29 +94,13 @@
             this.ProductImageColumn,
             this.EditProductColumn,
             this.DeleteProductColumn});
+            this.ProductsGridView.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ProductsGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ProductsGridView.Location = new System.Drawing.Point(3, 16);
             this.ProductsGridView.Name = "ProductsGridView";
             this.ProductsGridView.Size = new System.Drawing.Size(606, 306);
             this.ProductsGridView.TabIndex = 0;
             this.ProductsGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ProductsGridView_CellContentClick);
-            // 
-            // close
-            // 
-            this.close.AutoSize = true;
-            this.close.BackColor = System.Drawing.Color.Transparent;
-            this.close.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.close.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.close.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.close.Location = new System.Drawing.Point(605, 6);
-            this.close.Name = "close";
-            this.close.Size = new System.Drawing.Size(19, 18);
-            this.close.TabIndex = 65;
-            this.close.Tag = "";
-            this.close.Text = "X";
-            this.close.Click += new System.EventHandler(this.close_Click);
-            this.close.MouseEnter += new System.EventHandler(this.close_MouseEnter);
-            this.close.MouseLeave += new System.EventHandler(this.close_MouseLeave);
             // 
             // ProductIDColumn
             // 
@@ -159,10 +147,28 @@
             this.DeleteProductColumn.HeaderText = "Delete";
             this.DeleteProductColumn.Name = "DeleteProductColumn";
             // 
+            // close
+            // 
+            this.close.AutoSize = true;
+            this.close.BackColor = System.Drawing.Color.Transparent;
+            this.close.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.close.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.close.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.close.Location = new System.Drawing.Point(605, 6);
+            this.close.Name = "close";
+            this.close.Size = new System.Drawing.Size(19, 18);
+            this.close.TabIndex = 65;
+            this.close.Tag = "";
+            this.close.Text = "X";
+            this.close.Click += new System.EventHandler(this.close_Click);
+            this.close.MouseEnter += new System.EventHandler(this.close_MouseEnter);
+            this.close.MouseLeave += new System.EventHandler(this.close_MouseLeave);
+            // 
             // ViewAllProucts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SaddleBrown;
             this.ClientSize = new System.Drawing.Size(631, 367);
             this.Controls.Add(this.close);
             this.Controls.Add(this.ProductCategoryComboBox);

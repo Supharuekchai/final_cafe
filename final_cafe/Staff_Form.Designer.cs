@@ -51,26 +51,33 @@
             this.viewSales = new System.Windows.Forms.ToolStripMenuItem();
             this.UserNameIDMenuLabel = new System.Windows.Forms.ToolStripMenuItem();
             this.Close = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.BillGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProductsGridView)).BeginInit();
             this.ProductsGroupBox.SuspendLayout();
             this.CategoryGroupBox.SuspendLayout();
             this.MainMenuStrip.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // CheckOutButton
             // 
-            this.CheckOutButton.Location = new System.Drawing.Point(777, 504);
+            this.CheckOutButton.BackColor = System.Drawing.Color.SaddleBrown;
+            this.CheckOutButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CheckOutButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.CheckOutButton.Location = new System.Drawing.Point(284, 11);
             this.CheckOutButton.Name = "CheckOutButton";
             this.CheckOutButton.Size = new System.Drawing.Size(75, 23);
             this.CheckOutButton.TabIndex = 13;
             this.CheckOutButton.Text = "สั่งซื้อ";
-            this.CheckOutButton.UseVisualStyleBackColor = true;
+            this.CheckOutButton.UseVisualStyleBackColor = false;
             this.CheckOutButton.Click += new System.EventHandler(this.CheckOutButton_Click);
+            this.CheckOutButton.MouseEnter += new System.EventHandler(this.CheckOutButton_MouseEnter);
+            this.CheckOutButton.MouseLeave += new System.EventHandler(this.CheckOutButton_MouseLeave);
             // 
             // TotalBillBox
             // 
-            this.TotalBillBox.Location = new System.Drawing.Point(561, 506);
+            this.TotalBillBox.Location = new System.Drawing.Point(68, 13);
             this.TotalBillBox.Name = "TotalBillBox";
             this.TotalBillBox.Size = new System.Drawing.Size(210, 20);
             this.TotalBillBox.TabIndex = 12;
@@ -78,7 +85,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(508, 509);
+            this.label1.Location = new System.Drawing.Point(6, 16);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(49, 13);
             this.label1.TabIndex = 11;
@@ -86,7 +93,9 @@
             // 
             // BillGroupBox
             // 
+            this.BillGroupBox.BackColor = System.Drawing.Color.SaddleBrown;
             this.BillGroupBox.Controls.Add(this.ProductsGridView);
+            this.BillGroupBox.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.BillGroupBox.Location = new System.Drawing.Point(480, 23);
             this.BillGroupBox.Name = "BillGroupBox";
             this.BillGroupBox.Size = new System.Drawing.Size(453, 469);
@@ -98,6 +107,7 @@
             // 
             this.ProductsGridView.AllowUserToAddRows = false;
             this.ProductsGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.ProductsGridView.BackgroundColor = System.Drawing.Color.PeachPuff;
             this.ProductsGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ProductsGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ProductIDColumn,
@@ -157,7 +167,9 @@
             // 
             // ProductsGroupBox
             // 
+            this.ProductsGroupBox.BackColor = System.Drawing.Color.SaddleBrown;
             this.ProductsGroupBox.Controls.Add(this.ProductsFlowPanel);
+            this.ProductsGroupBox.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.ProductsGroupBox.Location = new System.Drawing.Point(12, 236);
             this.ProductsGroupBox.Name = "ProductsGroupBox";
             this.ProductsGroupBox.Size = new System.Drawing.Size(459, 300);
@@ -168,6 +180,7 @@
             // ProductsFlowPanel
             // 
             this.ProductsFlowPanel.AutoScroll = true;
+            this.ProductsFlowPanel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ProductsFlowPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ProductsFlowPanel.Location = new System.Drawing.Point(3, 16);
             this.ProductsFlowPanel.Name = "ProductsFlowPanel";
@@ -176,7 +189,9 @@
             // 
             // CategoryGroupBox
             // 
+            this.CategoryGroupBox.BackColor = System.Drawing.Color.SaddleBrown;
             this.CategoryGroupBox.Controls.Add(this.CategoriesFlowPanel);
+            this.CategoryGroupBox.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.CategoryGroupBox.Location = new System.Drawing.Point(12, 23);
             this.CategoryGroupBox.Name = "CategoryGroupBox";
             this.CategoryGroupBox.Size = new System.Drawing.Size(462, 207);
@@ -187,7 +202,8 @@
             // CategoriesFlowPanel
             // 
             this.CategoriesFlowPanel.AutoScroll = true;
-            this.CategoriesFlowPanel.BackColor = System.Drawing.SystemColors.Control;
+            this.CategoriesFlowPanel.BackColor = System.Drawing.Color.SaddleBrown;
+            this.CategoriesFlowPanel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.CategoriesFlowPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.CategoriesFlowPanel.Location = new System.Drawing.Point(3, 16);
             this.CategoriesFlowPanel.Name = "CategoriesFlowPanel";
@@ -196,6 +212,7 @@
             // 
             // MainMenuStrip
             // 
+            this.MainMenuStrip.BackColor = System.Drawing.Color.PeachPuff;
             this.MainMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addCategory,
             this.addProduct,
@@ -250,23 +267,39 @@
             // 
             // Close
             // 
-            this.Close.Location = new System.Drawing.Point(858, 503);
+            this.Close.BackColor = System.Drawing.Color.SaddleBrown;
+            this.Close.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Close.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Close.Location = new System.Drawing.Point(365, 10);
             this.Close.Name = "Close";
             this.Close.Size = new System.Drawing.Size(75, 23);
             this.Close.TabIndex = 14;
             this.Close.Text = "Logout";
-            this.Close.UseVisualStyleBackColor = true;
+            this.Close.UseVisualStyleBackColor = false;
             this.Close.Click += new System.EventHandler(this.Close_Click);
+            this.Close.MouseEnter += new System.EventHandler(this.Close_MouseEnter);
+            this.Close.MouseLeave += new System.EventHandler(this.Close_MouseLeave);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.PeachPuff;
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.Close);
+            this.groupBox1.Controls.Add(this.TotalBillBox);
+            this.groupBox1.Controls.Add(this.CheckOutButton);
+            this.groupBox1.Location = new System.Drawing.Point(483, 498);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(449, 38);
+            this.groupBox1.TabIndex = 15;
+            this.groupBox1.TabStop = false;
             // 
             // Staff_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::final_cafe.Properties.Resources.coffee_pattern5902;
             this.ClientSize = new System.Drawing.Size(945, 548);
-            this.Controls.Add(this.Close);
-            this.Controls.Add(this.CheckOutButton);
-            this.Controls.Add(this.TotalBillBox);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.BillGroupBox);
             this.Controls.Add(this.ProductsGroupBox);
             this.Controls.Add(this.CategoryGroupBox);
@@ -281,6 +314,8 @@
             this.CategoryGroupBox.ResumeLayout(false);
             this.MainMenuStrip.ResumeLayout(false);
             this.MainMenuStrip.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -310,5 +345,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ProductQuantityColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn TotalPriceColumn;
         private System.Windows.Forms.DataGridViewButtonColumn DeleteColumn;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
