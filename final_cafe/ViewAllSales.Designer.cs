@@ -28,17 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewAllSales));
             this.SalesGroupBox = new System.Windows.Forms.GroupBox();
             this.SalesGridView = new System.Windows.Forms.DataGridView();
-            this.close = new System.Windows.Forms.Label();
-            this.DateTimecomboBox = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.SaleIDColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TimeColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SalesmanColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Customer = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TotalBillColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProductsColumn = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.close = new System.Windows.Forms.Label();
+            this.DateTimecomboBox = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SalesGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SalesGridView)).BeginInit();
             this.SuspendLayout();
@@ -75,6 +76,40 @@
             this.SalesGridView.Size = new System.Drawing.Size(598, 318);
             this.SalesGridView.TabIndex = 0;
             this.SalesGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SalesGridView_CellContentClick);
+            // 
+            // SaleIDColumn
+            // 
+            this.SaleIDColumn.HeaderText = "ID";
+            this.SaleIDColumn.Name = "SaleIDColumn";
+            // 
+            // TimeColumn
+            // 
+            this.TimeColumn.HeaderText = "Time";
+            this.TimeColumn.Name = "TimeColumn";
+            // 
+            // SalesmanColumn
+            // 
+            this.SalesmanColumn.HeaderText = "Salesman";
+            this.SalesmanColumn.Name = "SalesmanColumn";
+            // 
+            // Customer
+            // 
+            this.Customer.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Customer.HeaderText = "Customer";
+            this.Customer.Name = "Customer";
+            this.Customer.Width = 76;
+            // 
+            // TotalBillColumn
+            // 
+            this.TotalBillColumn.HeaderText = "Total Bill";
+            this.TotalBillColumn.Name = "TotalBillColumn";
+            // 
+            // ProductsColumn
+            // 
+            this.ProductsColumn.HeaderText = "Products";
+            this.ProductsColumn.Name = "ProductsColumn";
+            this.ProductsColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ProductsColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // close
             // 
@@ -113,40 +148,6 @@
             this.label1.TabIndex = 67;
             this.label1.Text = "วันที่";
             // 
-            // SaleIDColumn
-            // 
-            this.SaleIDColumn.HeaderText = "ID";
-            this.SaleIDColumn.Name = "SaleIDColumn";
-            // 
-            // TimeColumn
-            // 
-            this.TimeColumn.HeaderText = "Time";
-            this.TimeColumn.Name = "TimeColumn";
-            // 
-            // SalesmanColumn
-            // 
-            this.SalesmanColumn.HeaderText = "Salesman";
-            this.SalesmanColumn.Name = "SalesmanColumn";
-            // 
-            // Customer
-            // 
-            this.Customer.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Customer.HeaderText = "Customer";
-            this.Customer.Name = "Customer";
-            this.Customer.Width = 76;
-            // 
-            // TotalBillColumn
-            // 
-            this.TotalBillColumn.HeaderText = "Total Bill";
-            this.TotalBillColumn.Name = "TotalBillColumn";
-            // 
-            // ProductsColumn
-            // 
-            this.ProductsColumn.HeaderText = "Products";
-            this.ProductsColumn.Name = "ProductsColumn";
-            this.ProductsColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ProductsColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
             // ViewAllSales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -158,6 +159,7 @@
             this.Controls.Add(this.close);
             this.Controls.Add(this.SalesGroupBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ViewAllSales";
             this.Text = "ViewAllSales";
             this.Load += new System.EventHandler(this.ViewAllSales_Load);

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Staff_Form));
             this.CheckOutButton = new System.Windows.Forms.Button();
             this.TotalBillBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -48,9 +49,9 @@
             this.addProduct = new System.Windows.Forms.ToolStripMenuItem();
             this.viewAllProducts = new System.Windows.Forms.ToolStripMenuItem();
             this.viewSales = new System.Windows.Forms.ToolStripMenuItem();
+            this.UserNameIDMenuLabel = new System.Windows.Forms.ToolStripMenuItem();
             this.Close = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.UserNameIDMenuLabel = new System.Windows.Forms.ToolStripMenuItem();
             this.BillGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProductsGridView)).BeginInit();
             this.ProductsGroupBox.SuspendLayout();
@@ -255,6 +256,17 @@
             this.viewSales.Text = "View Sales";
             this.viewSales.Click += new System.EventHandler(this.viewSales_Click);
             // 
+            // UserNameIDMenuLabel
+            // 
+            this.UserNameIDMenuLabel.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.UserNameIDMenuLabel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.UserNameIDMenuLabel.Enabled = false;
+            this.UserNameIDMenuLabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UserNameIDMenuLabel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.UserNameIDMenuLabel.Name = "UserNameIDMenuLabel";
+            this.UserNameIDMenuLabel.Size = new System.Drawing.Size(22, 20);
+            this.UserNameIDMenuLabel.Text = " ";
+            // 
             // Close
             // 
             this.Close.BackColor = System.Drawing.Color.SaddleBrown;
@@ -283,17 +295,6 @@
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
             // 
-            // UserNameIDMenuLabel
-            // 
-            this.UserNameIDMenuLabel.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.UserNameIDMenuLabel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.UserNameIDMenuLabel.Enabled = false;
-            this.UserNameIDMenuLabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UserNameIDMenuLabel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.UserNameIDMenuLabel.Name = "UserNameIDMenuLabel";
-            this.UserNameIDMenuLabel.Size = new System.Drawing.Size(22, 20);
-            this.UserNameIDMenuLabel.Text = " ";
-            // 
             // Staff_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -306,6 +307,7 @@
             this.Controls.Add(this.CategoryGroupBox);
             this.Controls.Add(this.MainMenuStrip);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Staff_Form";
             this.Text = "Staff_Form";
             this.Load += new System.EventHandler(this.Staff_Form_Load);

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewSaleItems));
             this.SalesGroupBox = new System.Windows.Forms.GroupBox();
             this.SaleItemsGridView = new System.Windows.Forms.DataGridView();
             this.ProductNameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -115,6 +116,7 @@
             this.Controls.Add(this.close);
             this.Controls.Add(this.SalesGroupBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ViewSaleItems";
             this.Text = "ViewSaleItems";
             this.Load += new System.EventHandler(this.ViewSaleItems_Load);

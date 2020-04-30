@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddCategory));
             this.AddCategoryButton = new System.Windows.Forms.Button();
             this.UploadButton = new System.Windows.Forms.Button();
             this.CategoryPictureBox = new System.Windows.Forms.PictureBox();
@@ -156,6 +157,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AddCategory";
             this.Text = "AddCategory";
             ((System.ComponentModel.ISupportInitialize)(this.CategoryPictureBox)).EndInit();

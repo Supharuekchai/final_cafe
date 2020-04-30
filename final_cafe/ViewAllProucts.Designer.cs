@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewAllProucts));
             this.ProductCategoryComboBox = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.ProductsGroupBox = new System.Windows.Forms.GroupBox();
@@ -176,6 +177,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ProductsGroupBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ViewAllProucts";
             this.Text = "ViewAllProucts";
             this.Load += new System.EventHandler(this.ViewAllProucts_Load);
