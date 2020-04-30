@@ -48,9 +48,9 @@
             this.addProduct = new System.Windows.Forms.ToolStripMenuItem();
             this.viewAllProducts = new System.Windows.Forms.ToolStripMenuItem();
             this.viewSales = new System.Windows.Forms.ToolStripMenuItem();
-            this.UserNameIDMenuLabel = new System.Windows.Forms.ToolStripMenuItem();
             this.Close = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.UserNameIDMenuLabel = new System.Windows.Forms.ToolStripMenuItem();
             this.BillGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProductsGridView)).BeginInit();
             this.ProductsGroupBox.SuspendLayout();
@@ -255,17 +255,6 @@
             this.viewSales.Text = "View Sales";
             this.viewSales.Click += new System.EventHandler(this.viewSales_Click);
             // 
-            // UserNameIDMenuLabel
-            // 
-            this.UserNameIDMenuLabel.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.UserNameIDMenuLabel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.UserNameIDMenuLabel.Enabled = false;
-            this.UserNameIDMenuLabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UserNameIDMenuLabel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.UserNameIDMenuLabel.Name = "UserNameIDMenuLabel";
-            this.UserNameIDMenuLabel.Size = new System.Drawing.Size(22, 20);
-            this.UserNameIDMenuLabel.Text = " ";
-            // 
             // Close
             // 
             this.Close.BackColor = System.Drawing.Color.SaddleBrown;
@@ -293,6 +282,17 @@
             this.groupBox1.Size = new System.Drawing.Size(449, 38);
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
+            // 
+            // UserNameIDMenuLabel
+            // 
+            this.UserNameIDMenuLabel.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.UserNameIDMenuLabel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.UserNameIDMenuLabel.Enabled = false;
+            this.UserNameIDMenuLabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UserNameIDMenuLabel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.UserNameIDMenuLabel.Name = "UserNameIDMenuLabel";
+            this.UserNameIDMenuLabel.Size = new System.Drawing.Size(22, 20);
+            this.UserNameIDMenuLabel.Text = " ";
             // 
             // Staff_Form
             // 
@@ -338,7 +338,6 @@
         private System.Windows.Forms.ToolStripMenuItem addProduct;
         private System.Windows.Forms.ToolStripMenuItem viewAllProducts;
         private System.Windows.Forms.ToolStripMenuItem viewSales;
-        private System.Windows.Forms.ToolStripMenuItem UserNameIDMenuLabel;
         private System.Windows.Forms.Button Close;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProductIDColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProductNameColumn;
@@ -347,5 +346,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TotalPriceColumn;
         private System.Windows.Forms.DataGridViewButtonColumn DeleteColumn;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.ToolStripMenuItem UserNameIDMenuLabel;
     }
 }

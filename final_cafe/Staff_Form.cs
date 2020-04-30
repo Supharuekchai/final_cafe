@@ -26,7 +26,7 @@ namespace final_cafe
 
         private void Staff_Form_Load(object sender, EventArgs e)
         {
-            UserNameIDMenuLabel.Text = Username + " (" + SalesmanID + ")";
+            UserNameIDMenuLabel.Text = Username;
 
             DataAccess _DataAccess = new DataAccess();
 
