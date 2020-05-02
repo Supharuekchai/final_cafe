@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A1FE75C0-6CD9-4C94-8955-715D7B0D4371}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>final_cafe</RootNamespace>
+    <AssemblyName>final_cafe</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.3.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.3.1\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.6.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.6.1\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.19.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.19\lib\net452\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Renci.SshNet, Version=2016.1.0.0, Culture=neutral, PublicKeyToken=1cee9f8bde3db106, processorArchitecture=MSIL">
+      <HintPath>..\packages\SSH.NET.2016.1.0\lib\net40\Renci.SshNet.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Ubiety.Dns.Core, Version=2.2.1.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.19\lib\net452\Ubiety.Dns.Core.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddCategory.Designer.cs">
+      <DependentUpon>AddCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddProduct.Designer.cs">
+      <DependentUpon>AddProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer_Form.Designer.cs">
+      <DependentUpon>Customer_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer_Login.Designer.cs">
+      <DependentUpon>Customer_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer_Signup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer_Signup.Designer.cs">
+      <DependentUpon>Customer_Signup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess.cs" />
+    <Compile Include="DB.cs" />
+    <Compile Include="Detail.cs" />
+    <Compile Include="Staff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Staff.Designer.cs">
+      <DependentUpon>Staff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Staff_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Staff_Form.Designer.cs">
+      <DependentUpon>Staff_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Staff_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Staff_Login.Designer.cs">
+      <DependentUpon>Staff_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SimpleHash.cs" />
+    <Compile Include="UpdateProducts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateProducts.Designer.cs">
+      <DependentUpon>UpdateProducts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateStaff.Designer.cs">
+      <DependentUpon>UpdateStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewAllProucts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewAllProucts.Designer.cs">
+      <DependentUpon>ViewAllProucts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewAllSales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewAllSales.Designer.cs">
+      <DependentUpon>ViewAllSales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewSaleItems.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewSaleItems.Designer.cs">
+      <DependentUpon>ViewSaleItems.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddCategory.resx">
+      <DependentUpon>AddCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddProduct.resx">
+      <DependentUpon>AddProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer_Form.resx">
+      <DependentUpon>Customer_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer_Login.resx">
+      <DependentUpon>Customer_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer_Signup.resx">
+      <DependentUpon>Customer_Signup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Staff.resx">
+      <DependentUpon>Staff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Staff_Form.resx">
+      <DependentUpon>Staff_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Staff_Login.resx">
+      <DependentUpon>Staff_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UpdateProducts.resx">
+      <DependentUpon>UpdateProducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateStaff.resx">
+      <DependentUpon>UpdateStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewAllProucts.resx">
+      <DependentUpon>ViewAllProucts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewAllSales.resx">
+      <DependentUpon>ViewAllSales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewSaleItems.resx">
+      <DependentUpon>ViewSaleItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngtree-tea-restaurant-poster-background-material-image_172982.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0b926ae748eab1a8c77bdb9cee6eb8c1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coffee pattern590.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\รูปภาพ3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coffee pattern5901.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coffee pattern5902.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coffee pattern5903.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
